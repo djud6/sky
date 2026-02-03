@@ -1,0 +1,524 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="color-scheme" content="light dark">
+   <meta name="supported-color-schemes" content="light dark">
+	<title>Fleet notification</title>
+   <style type="text/css">
+   	@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+      table {
+         border-spacing: 0;
+      }
+      td {
+         padding: 0;
+      }
+      p {
+         font-size: 15px;
+         word-break: break-all;
+      }
+      img {
+         border: 0;
+      }
+      a {
+         text-decoration: none;
+      }
+
+		@media screen and (max-width: 599.98px) {
+
+      }
+      @media screen and (max-width: 399.98px) {
+
+      }
+
+      /* Custom Dark Mode Colors *
+      :root {
+         color-scheme: light dark;
+         supported-color-schemes: light dark;
+      }
+      @media (prefers-color-scheme: dark) {
+         body, center, table {
+            background: #2d2d2d!important;
+            color: #ffffff!important;
+         }
+         .darkmode-transparent {
+            background-color: transparent!important;
+         }
+      }*/
+   </style>
+   
+	<!--[if (gte mso 9)|(IE)]>
+		<style type="text/css">
+			table {border-collapse: collapse !important;}
+		</style>
+	<![endif]-->
+	
+</head>
+<body style="Margin:0;padding:0;min-width:100%;background-color:#dde0e1;">
+
+   <!--[if (gte mso 9)|(IE)]>
+      <style type="text/css">
+         body {background-color:#dde0e1!important;}
+         body, table, td, p, a {font-family: sans-serif, Arial, Helvetica!important;}
+      </style>
+   <![endif]-->
+
+   <center style="width: 100%;table-layout: fixed;background-color:#dde0e1;padding-bottom: 40px;">
+      <div style="max-width: 600px;background-color: #fafdfe;box-shadow: 0 0 10px rgba(0, 0, 0, .2);">
+
+         <div style="font-size: 0px;color: #fafdfe;line-height: 1px;mso-line-height-rule:exactly;display: none;max-width: 0px;max-height: 0px;opacity: 0;overflow: hidden;mso-hide:all;">
+            A new notification regarding your fleet 
+         </div>
+
+         <!--[if (gte mso 9)|(IE)]>
+            <table width="600" align="center" style="border-spacing:0;color:#565656;" role="presentation">
+            <tr>
+            <td style="padding:0;">
+         <![endif]-->
+
+         <table align="center" style="border-spacing:0;color:#565656;font-family: 'Lato', sans-serif, Arial, Helvetica!important;background-color: #fafdfe;Margin:0;padding:0;width: 100%;max-width: 600px;" role="presentation">
+
+
+            <tr>
+               <td style="padding: 0;">
+                  <table width="100%" style="border-spacing: 0;background-color: #eaf6fb;" role="presentation">
+
+                     <tr>
+                        <td height="3" style="background-color: #21c6b8;"></td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: center;padding: 10px 0 8px 0;">
+                        
+                           <img src="https://i.ibb.co/yVGTLFj/jumbotron-bg-1.jpg"  alt="#" width="100%" border="0">
+                        
+                        </td>
+                     </tr>
+                     <tr>
+                        <td height="2" style="background-color: #21c6b8;"></td>
+                     </tr>
+
+                  </table>
+               </td>
+            </tr>
+
+            <tr>
+               <td style="padding: 0;">
+                  <table width="100%" style="border-spacing: 0;background-color: #fafdfe;" role="presentation">
+
+                     <tr>
+                        <td style="font-size:25px;padding: 20px 10px 20px 10px;text-align: center;">
+                           Donation of Asset VIN: %VIN%
+                        </td>
+                     </tr>
+
+                     <tr>
+                        <!-- CUSTOM_TEXT START -->
+                        <td style="font-size:25px;padding: 20px 0 20px 0;text-align: center;">
+                        <!-- CUSTOM_TEXT END -->
+                           %CUSTOM_TEXT%
+                        </td>
+                     </tr>
+
+                     <!-- available_pickup_date START -->
+                     <tr>
+                        <td style="font-size:20px;padding: 0 0 20px 0;text-align: center;">
+                           Available Pick up Date: %available_pick_up_date%
+                        </td>
+                     </tr>
+                     <!-- available_pickup_date END -->
+
+                  </table>
+               </td>
+            </tr>
+
+            <tr>
+               <td style="padding: 0;">
+                  <table width="100%" style="border-spacing: 0;background-color: #fafdfe;" role="presentation">
+
+                     <tr>
+                        <td style="padding: 20px;text-align: left;">
+                           Please sign and date the <b>Record of Contribution</b> attached in this email and forward to %manager_contact_email%.
+                        </td>
+                     </tr>
+
+                     <tr>
+                        <td style="padding: 20px;text-align: left;">
+                           Please also <b>reply</b> with your company's <b>Acknowledgement of Donation</b>.
+                        </td>
+                     </tr>
+
+                  </table>
+               </td>
+            </tr>
+
+            <!-- contact_name START -->
+            <tr>
+               <td>
+                  <table class="content" style="width: 100%;border-spacing: 0;text-align: left;" role="presentation">
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;"><b>Contact name</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;">%contact_name%</p>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            <!-- contact_name END -->
+
+            <!-- company START -->
+            <tr>
+               <td>
+                  <table class="content" style="width: 100%;border-spacing: 0;text-align: left;" role="presentation">
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;"><b>Company</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;">%company%</p>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            <!-- company END -->
+
+            <!-- company_address START -->
+            <tr>
+               <td>
+                  <table class="content" style="width: 100%;border-spacing: 0;text-align: left;" role="presentation">
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;"><b>Company address</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;">%company_address%</p>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            <!-- company_address END -->
+
+            <!-- contact_email START -->
+            <tr>
+               <td>
+                  <table class="content" style="width: 100%;border-spacing: 0;text-align: left;" role="presentation">
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;"><b>Contact email</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;">%contact_email%</p>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            <!-- contact_email END -->
+
+            <!-- date START -->
+            <tr>
+               <td>
+                  <table class="content" style="width: 100%;border-spacing: 0;text-align: left;" role="presentation">
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;"><b>Date</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;">%date%</p>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            <!-- date END -->
+
+            <tr>
+               <td style="padding: 0;">
+                  <table width="100%" style="border-spacing: 0;background-color: #DDDDDD;" role="presentation">
+
+                     <tr>
+                        <td style="font-size:20px;padding: 20px;text-align: left;">
+                           <b>Asset details</b>
+                        </td>
+                     </tr>
+
+                  </table>
+               </td>
+            </tr>
+
+            <tr>
+               <td>
+                  <table class="content" style="background-color: #d3fff8;width: 100%;border-spacing: 0;text-align: left;" role="presentation">
+                     <!-- vin START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;"><b>VIN</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;">%VIN%</p>
+                        </td>
+                     </tr>
+                     <!-- vin END -->
+
+                     <!-- asset_type START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;"><b>Asset type</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;">%asset_type%</p>
+                        </td>
+                     </tr>
+                     <!-- asset_type END -->
+                     
+                     <!-- year START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;"><b>Year</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;">%year%</p>
+                        </td>
+                     </tr>
+                     <!-- year END -->
+
+                     <!-- make START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;"><b>Make</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;">%make%</p>
+                        </td>
+                     </tr>
+                     <!-- make END -->
+
+                     <!-- model START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;"><b>Model</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;">%model%</p>
+                        </td>
+                     </tr>
+                     <!-- model END -->
+
+                     <!-- colour START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;"><b>Color</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;">%colour%</p>
+                        </td>
+                     </tr>
+                     <!-- colour END -->
+
+                     <!-- odometer START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;"><b>Odometer</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;">%odometer%</p>
+                        </td>
+                     </tr>
+                     <!-- odometer END -->
+
+                     <!-- engine_hours START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;"><b>Engine hours</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;">%engine_hours%</p>
+                        </td>
+                     </tr>
+                     <!-- engine_hours END -->
+
+                     <!-- location START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;"><b>Location</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;">%location%</p>
+                        </td>
+                     </tr>
+                     <!-- location END -->
+
+                     <!-- manager_contact_email START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;"><b>Contact Manager</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;">%manager_contact_email%</p>
+                        </td>
+                     </tr>
+                     <!-- manager_contact_email END -->
+                  </table>
+               </td>
+            </tr>
+
+            <tr>
+               <td style="padding: 0;">
+                  <table width="100%" style="border-spacing: 0;background-color: #DDDDDD;" role="presentation">
+
+                     <tr>
+                        <td style="font-size:20px;padding: 20px;text-align: left;">
+                           <b>Asset condition</b>
+                        </td>
+                     </tr>
+
+                  </table>
+               </td>
+            </tr>
+
+            <tr>
+               <td>
+                  <table class="content" style="background-color: #d3fff8;width: 100%;border-spacing: 0;text-align: left;" role="presentation">
+                     <!-- interior_condition START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;"><b>Interior condition</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;">%interior_condition%</p>
+                        </td>
+                     </tr>
+                     <!-- interior_condition END -->
+                     
+                     <!-- interior_condition_details START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;"><b>Interior condition details</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;">%interior_condition_details%</p>
+                        </td>
+                     </tr>
+                     <!-- interior_condition_details END -->
+
+                     <!-- exterior_condition START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;"><b>Exterior Condition</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;">%exterior_condition%</p>
+                        </td>
+                     </tr>
+                     <!-- exterior_condition END -->
+
+                     <!-- exterior_condition_details START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;"><b>Exterior Condition details</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;">%exterior_condition_details%</p>
+                        </td>
+                     </tr>
+                     <!-- exterior_condition_details END -->
+
+                     <!-- accident START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;"><b>Accident</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;">%accident%</p>
+                        </td>
+                     </tr>
+                     <!-- accident END -->
+
+                     <!-- equipment_failure START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;"><b>Equipment failure</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;">
+                           <p style="display: flex;align-items: center;">%equipment_failure%</p>
+                        </td>
+                     </tr>
+                     <!-- equipment_failure END -->
+                  </table>
+               </td>
+            </tr>
+            
+            <tr>
+               <td style="padding:0;">
+                  <table width="100%" style="border-spacing: 0;background-color: #eaf6fb;" role="presentation">
+                     <tr>
+                        <td height="2" style="background-color: #21c6b8;"></td>
+                     </tr>
+                     <tr>
+                        <td align="center" class="four-columns" style="padding: 0;font-size: 0;text-align: center;">
+
+                           <!--[if (gte mso 9)|(IE)]>
+                              <table width="100%" style="border-spacing: 0;" role="presentation">
+                              <tr>
+                              <td width="150" valign="middle" style="padding: 0;">
+                           <![endif]-->
+                           <center>
+                              <table class="column" style="border-spacing: 0;vertical-align: middle;width: 100%;max-width: 150px;margin: auto;" role="presentation">
+                                 <tr>
+                                    <td>
+   
+                                       <table class="content" style="border-spacing: 0;text-align: center;Margin-left:15px;" role="presentation">
+                                          <tr>
+                                             <td style="padding: 30px 0 30px 0;">
+                                                <img src="%logo%" alt="" width="120" style="max-width: 120px;border-radius: 5px;" border="0">
+                                             </td>
+                                          </tr>
+                                       </table>
+   
+                                    </td>
+                                 </tr>
+                              </table>
+                           </center>
+
+                           <!--[if (gte mso 9)|(IE)]>
+                              </td>
+                              </tr>
+                              </table>
+                           <![endif]-->
+
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+
+            <tr>
+               <td style="padding: 0;">
+                  <table width="100%" style="border-spacing: 0;" role="presentation">
+                     <tr>
+                        <td height="3" style="background-color: #21c6b8;"></td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+
+         </table>
+
+         <!--[if (gte mso 9)|(IE)]>
+         </td>
+         </tr>
+         </table>
+         <![endif]-->
+
+         
+      </div>
+   </center>
+
+</body>
+</html>

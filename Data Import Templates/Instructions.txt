@@ -1,0 +1,31 @@
+- Go through each template and extract the necessary information from the Asset Data Template.xlsx file that is returned by the customer.
+- Once the information has been inputted into a tempalte, convert that template into a CSV file.
+- Each template has a corresponding API that can import it into the system
+
+color of the label: green - required, blue - optional, yellow - one of the adjacent fields is needed
+
+
+
+
+Import files in the following order:
+	1. /api/v1/Upload/RolePermissions	--> role_permissions_template.xlsx
+	2. /api/v1/Upload/Locations	--> location_template.xlsx
+	3. /api/v1/Upload/Currency --> currency_template.xlsx (or copy currencies from another db into fresh db)
+	3. /api/v1/Upload/Company	--> company_template.xlsx
+	4. /api/v1/Upload/FuelTypes	--> fuel_type_template.xlsx
+	5. /api/v1/Upload/AssetTypeChecks --> asset_type_checks_template.xlsx
+	6. /api/v1/Upload/AssetTypes	--> asset_type_template.xlsx
+	7. /api/v1/Upload/Manufacturers	--> manufacturer_template.xlsx
+	8. /api/v1/Upload/ManufacturersAssetTypes	--> manufacturer_asset_type_template.xlsx
+	9. /api/v1/Upload/BusinessUnits	--> business_unit_template.xlsx
+	10. /api/v1/Upload/JobSpecifications --> job_specification_template.xlsx
+	11. /api/v1/Upload/EquipmentTypes	--> equipment_type_template.xlsx
+	12./api/v1/Upload/Assets	--> asset_template.xlsx
+	13./api/v1/Upload/AssetRequestJustifications	--> asset_request_justification_template.xlsx
+	14./api/v1/Upload/InspectionTypes	--> inspection_type_template.xlsx
+	15./api/v1/Upload/ApprovedVendorTasks	--> approved_vendor_task_template.xlsx
+	16./api/v1/Upload/ApprovedVendorDepartments	--> approved_vendor_department_template.xlsx
+	17./api/v1/Upload/ApprovedVendors	--> approved_vendor_template.xlsx
+	18./api/v1/Upload/Users	--> user_template.xlsx
+	19./api/v1/Upload/UserLocations	--> user_location_template.xlsx
+	20./api/v1/Upload/Maintenance/Rules --> maintenance_rule_template.xlsx

@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>Ramp Up Issue Reported</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Trispace:wght@200;300&display=swap');
+
+        body {
+            font-family: 'Trispace', sans-serif;
+            font-kerning: normal;
+            text-rendering: optimizeLegibility;
+        }
+
+        .SenderInfo {
+            margin: 0px;
+            font-size: 11px;
+        }
+
+        .MainHeader{
+            font-family: Arial;
+        }
+
+        .SectionHeader {
+            font-family: Arial;
+            margin: 0px;
+            background-color: #ebebeb;
+            padding: 4px;
+        }
+
+        .Info {
+            background-color: #f7f7f7;
+        }
+
+        .InfoTable {
+            vertical-align:top;
+            border: 0;
+            display: inline-block;
+            border-spacing: 20px 5px;
+            border-collapse: separate;
+        }
+
+        .FieldCol {
+            width: 140px;
+        }
+
+        .ValueCol {
+            width: 230px;
+        }
+
+        .FieldCell {
+            font-size: 11px;
+        }
+
+        .ValueCell {
+            background-color: #dce6f5;
+            padding: 3px;
+            font-size: 11px;
+            word-wrap: break-word;
+            max-width: 200px;
+            vertical-align: top;
+            text-align: left;
+        }
+
+        .AdditionalInfoHeader {
+            font-size: 11px;
+        }
+
+        .RepairCategoryCol {
+            width: 100px;
+        }
+
+        .TitleCol {
+            width: 180px;
+        }
+
+        .DescriptionCol {
+            width: 506px;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1 class="MainHeader">Newly Reported Accident</h1>
+    <h4 class="SectionHeader">Information</h4>
+
+    <div class="Info">
+        
+        <table class="InfoTable">
+            <col class="FieldCol"/>
+            <col class="ValueCol"/>
+            <tr>
+                <td class="FieldCell">ID</td>
+                <td class="ValueCell">%id%</td>
+            </tr>
+            <tr>
+                <td class="FieldCell">VIN</td>
+                <td class="ValueCell">%vin%</td>
+            </tr>
+            <tr>
+                <td class="FieldCell">Is Equipment Failure</td>
+                <td class="ValueCell">%is_equipment_failure%</td>
+            </tr>
+            <tr>
+                <td class="FieldCell">Is Preventable</td>
+                <td class="ValueCell">%is_preventable%</td>
+            </tr>
+        </table>
+        <table class="InfoTable">
+            <col class="FieldCol"/>
+            <col class="ValueCol"/>
+            <tr>
+                <td class="FieldCell">Evaluation Required</td>
+                <td class="ValueCell">%evaluation_required%</td>
+            </tr>
+            <tr>
+                <td class="FieldCell">Date Created</td>
+                <td class="ValueCell">%date_created%</td>
+            </tr>
+            <tr>
+                <td class="FieldCell">Date Updated</td>
+                <td class="ValueCell">%date_updated%</td>
+            </tr>
+            <tr>
+                <td class="FieldCell">Status</td>
+                <td class="ValueCell">%status%</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>

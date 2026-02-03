@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="color-scheme" content="light dark">
+   <meta name="supported-color-schemes" content="light dark">
+	<title>Fleet notification</title>
+   <style type="text/css">
+   	@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+      table {
+         border-spacing: 0;
+      }
+      td {
+         padding: 0;
+      }
+      p {
+         font-size: 15px;
+         word-break: break-all;
+      }
+      img {
+         border: 0;
+      }
+      a {
+         text-decoration: none;
+      }
+
+		@media screen and (max-width: 599.98px) {
+
+      }
+      @media screen and (max-width: 399.98px) {
+
+      }
+
+      /* Custom Dark Mode Colors *
+      :root {
+         color-scheme: light dark;
+         supported-color-schemes: light dark;
+      }
+      @media (prefers-color-scheme: dark) {
+         body, center, table {
+            background: #2d2d2d!important;
+            color: #ffffff!important;
+         }
+         .darkmode-transparent {
+            background-color: transparent!important;
+         }
+      }*/
+   </style>
+   
+	<!--[if (gte mso 9)|(IE)]>
+		<style type="text/css">
+			table {border-collapse: collapse !important;}
+		</style>
+	<![endif]-->
+	
+</head>
+<body style="Margin:0;padding:0;min-width:100%;background-color:#dde0e1;">
+
+   <!--[if (gte mso 9)|(IE)]>
+      <style type="text/css">
+         body {background-color:#dde0e1!important;}
+         body, table, td, p, a {font-family: sans-serif, Arial, Helvetica!important;}
+      </style>
+   <![endif]-->
+
+   <center style="width: 100%;table-layout: fixed;background-color:#dde0e1;padding-bottom: 40px;">
+      <div style="max-width: 600px;background-color: #fafdfe;box-shadow: 0 0 10px rgba(0, 0, 0, .2);">
+
+         <div style="font-size: 0px;color: #fafdfe;line-height: 1px;mso-line-height-rule:exactly;display: none;max-width: 0px;max-height: 0px;opacity: 0;overflow: hidden;mso-hide:all;">
+            A new notification regarding your fleet 
+         </div>
+
+         <!--[if (gte mso 9)|(IE)]>
+            <table width="600" align="center" style="border-spacing:0;color:#565656;" role="presentation">
+            <tr>
+            <td style="padding:0;">
+         <![endif]-->
+
+         <table align="center" style="border-spacing:0;color:#565656;font-family: 'Lato', sans-serif, Arial, Helvetica!important;background-color: #fafdfe;Margin:0;padding:0;width: 100%;max-width: 600px;" role="presentation">
+
+
+            <tr>
+               <td style="padding: 0;">
+                  <table width="100%" style="border-spacing: 0;background-color: #eaf6fb;" role="presentation">
+
+                     <tr>
+                        <td height="3" style="background-color: #21c6b8;"></td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: center;padding: 10px 0 8px 0;">
+                        
+                           <img src="https://i.ibb.co/yVGTLFj/jumbotron-bg-1.jpg"  alt="#" width="100%" border="0">
+                        
+                        </td>
+                     </tr>
+                     <tr>
+                        <td height="2" style="background-color: #21c6b8;"></td>
+                     </tr>
+
+                  </table>
+               </td>
+            </tr>
+
+            <tr>
+               <td style="padding: 0;">
+                  <table width="100%" style="border-spacing: 0;background-color: #fafdfe;" role="presentation">
+
+                     <tr>
+                        <td style="font-size:25px;padding: 20px 10px 20px 10px;text-align: left;">
+                           Hello %vendor_name%,
+                        </td>
+                     </tr>
+
+                  </table>
+               </td>
+            </tr>
+            
+            <tr>
+               <td style="padding: 0;">
+                  <table width="100%" style="border-spacing: 0;background-color: #fafdfe;" role="presentation">
+
+                     <tr>
+                        <td style="font-size:25px;padding: 20px 10px 20px 10px;text-align: center;">
+                           %HEADER%
+                        </td>
+                     </tr>
+
+                     <tr>
+                        <!-- CUSTOM_TEXT START -->
+                        <td style="font-size:25px;padding: 20px 10px 20px 10px;text-align: center;">
+                        <!-- CUSTOM_TEXT END -->
+                           %CUSTOM_TEXT%
+                        </td>
+                     </tr>
+
+                  </table>
+               </td>
+            </tr>
+
+            <tr>
+               <td style="padding: 0;">
+                  <table width="100%" style="border-spacing: 0;background-color: #DDDDDD;" role="presentation">
+
+                     <tr>
+                        <td style="font-size:25px;padding: 20px;text-align: left;">
+                           Information
+                        </td>
+                     </tr>
+
+                  </table>
+               </td>
+            </tr>
+
+            <tr>
+               <td>
+                  <table class="content" style="background-color: #d3fff8;width: 100%;border-spacing: 0;text-align: left;" role="presentation">
+                     <!-- request_id START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;width: 50">
+                           <p style="display: flex;align-items: center;"><b>Request ID</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;width: 50">
+                           <p style="display: flex;align-items: center;">%id%</p>
+                        </td>
+                     </tr>
+                     <!-- request_id END -->
+
+                     <!-- date_created START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;width: 50">
+                           <p style="display: flex;align-items: center;"><b>Date requested</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;width: 50">
+                           <p style="display: flex;align-items: center;">%date_created%</p>
+                        </td>
+                     </tr>
+                     <!-- date_created END -->
+
+                     <!-- date_required START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;width: 50">
+                           <p style="display: flex;align-items: center;"><b>Date required</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;width: 50">
+                           <p style="display: flex;align-items: center;">%date_required%</p>
+                        </td>
+                     </tr>
+                     <!-- date_required END -->
+
+                     <!-- business_unit START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;width: 50">
+                           <p style="display: flex;align-items: center;"><b>Business unit</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;width: 50">
+                           <p style="display: flex;align-items: center;">%business_unit%</p>
+                        </td>
+                     </tr>
+                     <!-- business_unit END -->
+
+                     <!-- equipment START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;width: 50">
+                           <p style="display: flex;align-items: center;"><b>Equipment</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;width: 50">
+                           <p style="display: flex;align-items: center;">%equipment%</p>
+                        </td>
+                     </tr>
+                     <!-- equipment END -->
+
+                     <!-- justification START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;width: 50">
+                           <p style="display: flex;align-items: center;"><b>Justification</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;width: 50">
+                           <p style="display: flex;align-items: center;">%justification%</p>
+                        </td>
+                     </tr>
+                     <!-- justification END -->
+
+                     <!-- nonstandard_description START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;width: 50">
+                           <p style="display: flex;align-items: center;"><b>Description</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;width: 50">
+                           <p style="display: flex;align-items: center;">%nonstandard_description%</p>
+                        </td>
+                     </tr>
+                     <!-- nonstandard_description END -->
+
+                     <!-- vendor_email START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;width: 50">
+                           <p style="display: flex;align-items: center;"><b>Vendor email</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;width: 50">
+                           <p style="display: flex;align-items: center;">%vendor_email%</p>
+                        </td>
+                     </tr>
+                     <!-- vendor_email END -->
+
+                     <!-- fleet_contact START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;width: 50">
+                           <p style="display: flex;align-items: center;"><b>Fleet contact</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;width: 50">
+                           <p style="display: flex;align-items: center;">%fleet_contact%</p>
+                        </td>
+                     </tr>
+                     <!-- fleet_contact END -->
+
+                     <!-- fleet_contact_name START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;width: 50">
+                           <p style="display: flex;align-items: center;"><b>Fleet contact name</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;width: 50">
+                           <p style="display: flex;align-items: center;">%fleet_contact_name%</p>
+                        </td>
+                     </tr>
+                     <!-- fleet_contact_name END -->
+
+                     <!-- status START -->
+                     <tr>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #EEEEEE;border-spacing: 0;vertical-align: middle;width: 50%;width: 50">
+                           <p style="display: flex;align-items: center;"><b>Status</b></p>
+                        </td>
+                        <td style="height: 40px;padding: 5px 20px;background-color: #d3fff8;border-spacing: 0;vertical-align: middle;width: 50%;width: 50">
+                           <p style="display: flex;align-items: center;">%status%</p>
+                        </td>
+                     </tr>
+                     <!-- status END -->
+                  </table>
+               </td>
+            </tr>
+
+            <tr>
+               <td style="padding: 0;">
+                  <table width="100%" style="border-spacing: 0;" role="presentation">
+
+                     <tr>
+                        <td style="font-size:20px;padding: 20px;text-align: left;">
+                           In your quote, please include:
+                           <ol>
+                              <li>Cash purchase price</li>
+                              <ul>
+                                 <li>Including fees, taxes, delivery costs</li>
+                              </ul>
+                              <br>
+                              <li>Lease options for 48 and 60 months</li>
+                              <ul>
+                                 <li>Including monthly payments, residual, taxes and fees</li>
+                                 <li>Advise if the lease is an open or closed</li>
+                                 <li>Provide the detailed terns and conditions of the lease</li>
+                              </ul>
+                           </ol>
+                           <br>
+                           Additionally, please include:
+                           <ul>
+                              <li>Detailed listing of standard specifications in the base unit, including dimensions, capacities and base price.</li>
+                              <li>Detailed list of optional equipment included, with pricing.</li>
+                              <li>Detailed information of the Manufacturer's Warranty.</li>
+                              <li>How long is each quote available for (deadline for acceptance)?</li>
+                              <li>Is the asset available in the location required?</li>
+                              <li>What is the lead time for s factory order?</li>
+                           </ul>
+                        </td>
+                     </tr>
+
+                  </table>
+               </td>
+            </tr>
+
+            <tr>
+               <td style="padding: 0;">
+                  <table width="100%" style="border-spacing: 0;" role="presentation">
+
+                     <tr>
+                        <td style="font-size:20px;padding: 10px 20px;text-align: left;">
+                           Thank you
+                        </td>
+                     </tr>
+
+                     <tr>
+                        <td style="font-size:20px;padding: 10px 20px;text-align: left;">
+                           %user_name_first% %user_name_last%
+                        </td>
+                     </tr>
+
+                  </table>
+               </td>
+            </tr>
+
+            <tr>
+               <td style="padding:0;">
+                  <table width="100%" style="border-spacing: 0;background-color: #eaf6fb;" role="presentation">
+                     <tr>
+                        <td height="2" style="background-color: #21c6b8;"></td>
+                     </tr>
+                     <tr>
+                        <td align="center" class="four-columns" style="padding: 0;font-size: 0;text-align: center;">
+
+                           <!--[if (gte mso 9)|(IE)]>
+                              <table width="100%" style="border-spacing: 0;" role="presentation">
+                              <tr>
+                              <td width="150" valign="middle" style="padding: 0;">
+                           <![endif]-->
+                           <center>
+                              <table class="column" style="border-spacing: 0;vertical-align: middle;width: 100%;max-width: 150px;margin: auto;" role="presentation">
+                                 <tr>
+                                    <td>
+   
+                                       <table class="content" style="border-spacing: 0;text-align: center;Margin-left:15px;" role="presentation">
+                                          <tr>
+                                             <td style="padding: 30px 0 30px 0;">
+                                                <img src="%logo%" alt="" width="120" style="max-width: 120px;border-radius: 5px;" border="0">
+                                             </td>
+                                          </tr>
+                                       </table>
+   
+                                    </td>
+                                 </tr>
+                              </table>
+                           </center>
+
+                           <!--[if (gte mso 9)|(IE)]>
+                              </td>
+                              </tr>
+                              </table>
+                           <![endif]-->
+
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+
+            <tr>
+               <td style="padding: 0;">
+                  <table width="100%" style="border-spacing: 0;" role="presentation">
+                     <tr>
+                        <td height="3" style="background-color: #21c6b8;"></td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+
+         </table>
+
+         <!--[if (gte mso 9)|(IE)]>
+         </td>
+         </tr>
+         </table>
+         <![endif]-->
+
+         
+      </div>
+   </center>
+
+</body>
+</html>

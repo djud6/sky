@@ -1,0 +1,18 @@
+2025-11-19 12:29:18,326 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-11-19 12:29:29,252 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): o587099.ingest.sentry.io:443
+2025-11-19 12:29:29,465 [DEBUG] urllib3.connectionpool: https://o587099.ingest.sentry.io:443 "POST /api/5738507/store/ HTTP/11" 200 0
+2025-11-19 12:30:22,100 [DEBUG] asyncio: Using proactor: IocpProactor
+2025-11-19 12:30:22,499 [DEBUG] asyncio: Using proactor: IocpProactor
+2025-11-19 12:34:27,764 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-11-19 12:34:37,443 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): o587099.ingest.sentry.io:443
+2025-11-19 12:34:38,164 [DEBUG] urllib3.connectionpool: https://o587099.ingest.sentry.io:443 "POST /api/5738507/store/ HTTP/11" 200 0
+2025-11-19 12:35:47,379 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-11-19 12:35:49,676 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): o587099.ingest.sentry.io:443
+2025-11-19 12:35:49,800 [DEBUG] urllib3.connectionpool: https://o587099.ingest.sentry.io:443 "POST /api/5738507/store/ HTTP/11" 200 0
+2025-11-19 12:38:47,748 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-11-19 12:38:52,264 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): o587099.ingest.sentry.io:443
+2025-11-19 12:38:52,405 [DEBUG] urllib3.connectionpool: https://o587099.ingest.sentry.io:443 "POST /api/5738507/store/ HTTP/11" 200 0
+2025-11-19 12:41:19,008 [INFO] django.utils.autoreload: C:\Users\David\Documents\GBCS\GSEWebApp.Backend\api_ghg\Views\GHGCalculateRouter.py changed, reloading.
+2025-11-19 12:41:22,539 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-11-19 12:41:25,809 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): o587099.ingest.sentry.io:443
+2025-11-19 12:41:25,943 [DEBUG] urllib3.connectionpool: https://o587099.ingest.sentry.io:443 "POST /api/5738507/store/ HTTP/11" 200 0

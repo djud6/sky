@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>Ramp Up Issue Reported</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Trispace:wght@200;300&display=swap');
+
+        body {
+            font-family: 'Trispace', sans-serif;
+            font-kerning: normal;
+            text-rendering: optimizeLegibility;
+        }
+
+        .SenderInfo {
+            margin: 0px;
+            font-size: 11px;
+        }
+
+        .MainHeader{
+            font-family: Arial;
+        }
+
+        .CriticalText{
+            font-family: Arial;
+            color: red
+        }
+
+        .SectionHeader {
+            font-family: Arial;
+            margin: 0px;
+            background-color: #ebebeb;
+            padding: 4px;
+        }
+
+        .Info {
+            background-color: #f7f7f7;
+        }
+
+        .InfoTable {
+            border: 0;
+            display: inline-block;
+            border-spacing: 20px 5px;
+            border-collapse: separate;
+        }
+
+        .FieldCol {
+            width: 140px;
+        }
+
+        .ValueCol {
+            width: 230px;
+        }
+
+        .FieldCell {
+            font-size: 11px;
+        }
+
+        .ValueCell {
+            background-color: #dce6f5;
+            padding: 3px;
+            font-size: 11px;
+            word-wrap: break-word;
+            max-width: 200px;
+            vertical-align: top;
+            text-align: left;
+        }
+
+        .AdditionalInfoHeader {
+            font-size: 11px;
+        }
+
+        .RepairCategoryCol {
+            width: 100px;
+        }
+
+        .TitleCol {
+            width: 180px;
+        }
+
+        .DescriptionCol {
+            width: 506px;
+        }
+
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <div>
+        <p class="SenderInfo">%CompanyName%</p>
+        <p class="SenderInfo">%CompanyAddress%</p>
+        <p class="SenderInfo">%CompanyPhone%</p>
+    </div>
+
+
+    <h1 class="MainHeader"><span class="CriticalText">%URGENT%</span>Repair Request Order</h1>
+    <h4 class="SectionHeader">Vehicle Information</h4>
+
+    <div class="Info">
+        
+        <table class="InfoTable">
+            <col class="FieldCol"/>
+            <col class="ValueCol"/>
+            <tr>
+                <td class="FieldCell">Asset #</td>
+                <td class="ValueCell">%Asset#%</td>
+            </tr>
+            <tr>
+                <td class="FieldCell">Serial #</td>
+                <td class="ValueCell">%Serial#%</td>
+            </tr>
+            <tr>
+                <td class="FieldCell">License</td>
+                <td class="ValueCell">%License%</td>
+            </tr>
+            <tr>
+                <td class="FieldCell">Engine Type</td>
+                <td class="ValueCell">%EngineType%</td>
+            </tr>
+        </table>
+        <table class="InfoTable">
+            <col class="FieldCol"/>
+            <col class="ValueCol"/>
+            <tr>
+                <td class="FieldCell">Odometer</td>
+                <td class="ValueCell">%Odometer%</td>
+            </tr>
+            <tr>
+                <td class="FieldCell">Engine Hours</td>
+                <td class="ValueCell">%EngineHours%</td>
+            </tr>
+            <tr>
+                <td class="FieldCell">Make</td>
+                <td class="ValueCell">%Make%</td>
+            </tr>
+            <tr>
+                <td class="FieldCell">Model</td>
+                <td class="ValueCell">%Model%</td>
+            </tr>
+        </table>
+    </div>
+
+    <h4 class="SectionHeader">Repair Request Details</h4>
+
+    <div class="Info">
+        <table class="InfoTable">
+            <col class="FieldCol"/>
+            <col class="ValueCol"/>
+            <tr>
+                <td class="FieldCell">Fleet Contact</td>
+                <td class="ValueCell">%FleetContact%</td>
+            </tr>
+            <tr>
+                <td class="FieldCell">PO #</td>
+                <td class="ValueCell">%PO#%</td>
+            </tr>
+            <tr>
+                <td class="FieldCell">WO #</td>
+                <td class="ValueCell">%WO#%</td>
+            </tr>
+            <tr>
+                <td class="FieldCell">Invoice To</td>
+                <td class="ValueCell">%InvoiceTo%</td>
+            </tr>
+        </table>
+        <table class="InfoTable">
+            <col class="FieldCol"/>
+            <col class="ValueCol"/>
+            <tr>
+                <td class="FieldCell">Vendor Pickup Date</td>
+                <td class="ValueCell">%VendorPickupDate%</td>
+            </tr>
+            <tr>
+                <td class="FieldCell">Est. Return Date</td>
+                <td class="ValueCell">%EstReturnDate%</td>
+            </tr>
+            <tr>
+                <td class="FieldCell">Pick-Up Location</td>
+                <td class="ValueCell">%PickUpLocation%</td>
+            </tr>
+            <tr>
+                <td class="FieldCell">Drop-Off Location</td>
+                <td class="ValueCell">%DropOffLocation%</td>
+            </tr>
+        </table>
+    </div>
+
+    <h4 class="SectionHeader">Additional Information</h4>
+
+    <div class="AdditionalInfo">
+        <table class="InfoTable">
+            <col class="RepairCategoryCol"/>
+            <col class="TitleCol"/>
+            <col class="DescriptionCol"/>
+            <tr>
+                <th class="AdditionalInfoHeader">Category</th>
+                <th class="AdditionalInfoHeader">Title</th>
+                <th class="AdditionalInfoHeader">Description</th>
+            </tr>
+
+            <!-- Insert Issue Here -->
+
+        </table>
+    </div>
+
+</body>
+
+</html>
