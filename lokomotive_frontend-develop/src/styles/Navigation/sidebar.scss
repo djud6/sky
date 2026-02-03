@@ -1,0 +1,673 @@
+@import "../variables.scss";
+
+.layout-sidebar-blue .layout-sidebar {
+  background: none;
+  box-shadow: none;
+}
+
+.dark-sidebar {
+  width: 18.2rem !important;
+  transition: all 250ms;
+  z-index: 1000;
+
+  .logo {
+    transition: all 100ms;
+    padding: 0 0;
+
+    .logo-image {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-right: 0;
+
+      img {
+        height: 42px;
+      }
+    }
+    .logo-back-btn {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      margin-left: 2rem !important;
+    }
+  }
+  .logo-hide {
+    opacity: 0;
+  }
+  .menu-compact-toggle-container {
+    transform: translateY(-0.5rem);
+    padding-left: 0.7rem;
+    cursor: pointer;
+    .menu-compact-toggle {
+      font-size: 2rem;
+      color: map-get($map: $app-theme, $key: "baseWhite");
+      transition: all 100ms;
+    }
+    .rotate-icon {
+      transform: rotate(180deg);
+    }
+  }
+  .sidebar-bottom-nav {
+    display: none;
+  }
+  .sidebar-bottom-btn-group{
+    display: block;
+  }
+  .layout-root-menuitem .active-route {
+    background-color: map-get($map: $app-theme, $key: "primaryLight") !important;
+    position: relative;
+    border-radius: 6px !important;
+  }
+
+  .p-badge {
+    border-radius: 4px;
+    background-color: map-get($map: $app-theme, $key: "tertiaryTransparent");
+  }
+
+  .p-badge-dot {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 100% !important;
+  }
+
+  .layout-root-menuitem {
+    height: 40px;
+    position: relative;
+    margin: 2.5rem 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:first-child {
+      margin-top: 1rem;
+    }
+
+    .dot-indicator-container{
+      display: grid;
+
+      .dot-indicator {
+        width: 3px;
+        height: 3px;
+        background: map-get($map: $app-theme, $key: "baseDimDust");
+        border-radius: 50%;
+        margin: 10px 0px;
+      }
+    }
+
+    .layout-root-menuitem {
+      height: 40px;
+      pointer-events: none !important;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      transition: all 100ms;
+      padding-left: 3rem;
+      
+      .layout-menuitem-root-text {
+        padding: 0 !important;
+        letter-spacing: 1.5px;
+        text-transform: capitalize !important;
+        color: white !important;
+        font-weight: 100;
+        font-size: 1rem;
+        margin-left: 0.5rem;
+
+        .p-badge {
+          transform: none;
+          background-color: map-get($map: $app-theme, $key: "tertiaryTransparent");
+          padding: 0 0.3rem;
+        }
+      }
+
+
+      .pi {
+        color: white;
+        margin-left: auto;
+        margin-right: 1em;
+        transform: rotate(0deg);
+        transition: all 0.5s ease;
+      }
+    }
+    .sidebar-mobile-icon {
+      display: block;
+      height: 20px !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+    }
+    .layout-menu-enter-done {
+      min-width: 240px;
+      padding: 0.5rem 1rem;
+      display: none;
+      background: #43373d !important;
+      border: 1px solid white;
+
+      li {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+
+      .active-route {
+        background-color: transparent !important;
+      }
+    }
+    .layout-menu-compact {
+      left: 5rem !important;
+    }
+  }
+  .layout-root-menuitem-compact {
+    margin: 1rem 0;
+  }
+
+  .layout-menu-container {
+    border-right: 1px solid map-get($map: $app-theme, $key: "baseTransparentWhite");
+    padding: 0;
+    height: 100%;
+    
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: map-get($map: $app-theme, $key: "primaryDark") !important; 
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: map-get($map: $app-theme, $key: "primaryElectricHover") !important;
+    }
+
+    .sidebar-static-bottom-btn-group {
+      padding-left: 4rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      .setting-button {
+        margin-top: auto;
+        margin-bottom: 5rem;
+        .btn-text {
+          padding: 0 !important;
+          letter-spacing: 1.5px;
+          text-transform: capitalize !important;
+          color: white !important;
+          font-weight: 100;
+          font-size: 1.1rem;
+          margin-left: 1.4rem;
+          &:hover {
+            color: map-get($map: $app-theme, $key: "primary") !important;
+          }
+        }
+      }
+    }
+
+    .sidebar-bottom-btn-group {
+      margin-bottom: 1rem;
+      width: 80%;
+      height: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      position: absolute;
+      bottom: 0;
+    
+      .config-button {
+        padding: 0.5rem;
+        width: fit-content;
+        background-color: transparent;
+        transition: background-color 0.5s;
+        margin: auto;
+      }
+  
+      .config-button-hovered {
+        background-color: map-get($map: $app-theme, $key: "primary");
+        padding: 0.5rem;
+        width: fit-content;
+        border-radius: 0.3rem;
+        transition: background-color 0.5s;
+        cursor: pointer;
+      }
+  
+      .config-txt {
+        color: transparent;
+        font-size: 0.8rem;
+        transition: color 0.5s;
+      }
+  
+      .config-txt-hovered {
+        color: white;
+        font-size: 0.8rem;
+        transition: color 0.5s;
+        
+      }
+    }
+  }
+}
+.layout-sidebar-compact {
+  width: 5rem !important;
+
+  .sidebar-bottom-btn-group {
+    width: 100% !important;
+    position: inherit !important;
+  }
+}
+
+.p-inputswitch {
+  &:not(.p-disabled):hover {
+    .p-inputswitch-slider {
+      border: 4px solid white;
+      background: transparent;
+    }
+  }
+
+  .p-inputswitch-slider {
+    border: 4px solid white;
+    background: transparent;
+  }
+
+  &.p-inputswitch-checked {
+    .p-inputswitch-slider {
+      background: map-get($map: $app-theme, $key: "secondaryTechno") !important;
+      border: 0 !important;
+      &::before {
+        background: map-get($map: $app-theme, $key: "primaryDark");
+        border: 0;
+        left: 0.25rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        margin-top: -0.625rem;
+      }
+    }
+  }
+
+  .p-inputswitch-slider:before {
+    background: transparent;
+    border: 4px solid white;
+    left: -0.1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: -0.73rem;
+  }
+}
+
+// ============================ active styles ============================
+.dark-sidebar {
+  .active-root-menu::before {
+    content: "";
+    position: absolute;
+    background-color: map-get($map: $app-theme, $key: "baseTransparentWhite");
+    width: 102%;
+    height: 1px;
+    top: -8px;
+    left: -5px;
+  }
+  
+  .active-root-menu::after {
+    content: "";
+    position: absolute;
+    background-color: map-get($map: $app-theme, $key: "baseTransparentWhite");
+    width: 102%;
+    height: 1px;
+    bottom: -8px;
+    left: -5px;
+  }
+
+  .active-root-menu {
+    position: relative;
+    background: transparent linear-gradient(90deg, rgba(179, 64, 191, 0.28) 0%, rgba(90, 32, 96, 0) 25%);
+    border-left: 5px solid map-get($map: $app-theme, $key: "primary");
+    
+    .layout-root-menuitem {
+      .layout-menuitem-root-text {
+        color: map-get($map: $app-theme, $key: "primaryLight") !important;
+      }
+    }
+  }
+  
+  .active-dropdown-mobile {
+    .layout-root-menuitem {
+      position: relative;
+
+      .dot-indicator-container{
+        .dot-indicator {
+          background: map-get($map: $app-theme, $key: "baseWhite");;;
+        }
+      }
+
+      .layout-menuitem-root-text {
+        color: map-get($map: $app-theme, $key: "primaryLight") !important;
+      }
+    }
+  }  
+}
+
+
+@media only screen and (min-width: 992px) {
+  .dark-sidebar {
+    .logo {
+      height: 70px;
+
+      .mobile-back-btn {
+        display: none;
+      }
+    }
+    
+    .layout-menu-enter-done {
+      left: 8rem !important;
+      background: map-get($map: $app-theme, $key: "primary") 0% 0% no-repeat padding-box !important;
+      border: 1px solid map-get($map: $app-theme, $key: "baseTransparentWhite") !important;
+      border-color: map-get($map: $app-theme, $key: "baseTransparentWhite");
+      border-width: 1px 1px 1px 0;
+
+      li {
+        border-bottom: 0.5px solid #83818179;
+      }
+      li:last-child {
+        border: none !important;
+      }
+      .p-pt-3 {
+        padding-top: 0.5rem !important;
+      }
+      .layout-menuitem-text {
+        font-weight: 100;
+        letter-spacing: 1px;
+        color: map-get($map: $app-theme, $key: "baseWhite");
+      }
+    }
+    .layout-menuitem-text {
+      letter-spacing: 1.4px;
+      color: map-get($map: $app-theme, $key: "baseWhite");
+    }
+  }
+
+  .active-dropdown-mobile {
+    .layout-root-menuitem {
+      position: relative;
+    }
+    .layout-menu-enter-done {
+      display: inline-block !important;
+      animation: open 1s ease-in-out forwards;
+      border-radius: 0px !important;
+      background: map-get($map: $app-theme, $key: "primaryKlein") 0% 0% no-repeat padding-box !important;
+      position: fixed;
+      left: 18.2rem !important;
+      z-index: 60000;
+      li {
+        margin: 0 1em;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+.dark-sidebar {
+  .sidebar-bottom-btn-group {
+    width: 100% !important;
+    margin-top: 4vh;
+    position: inherit !important;
+  }    
+}
+
+// ========================= MOBILE STYLING ================================
+@media only screen and (max-width: 992px) {
+  .dark-sidebar {
+    background-color: map-get($map: $app-theme, $key: "primaryDarkPurple") !important;
+
+    .sidebar-profile-btn svg {
+      height: 24px;
+      width: auto;
+    }
+    .sidebar-manage-acc {
+      font-size: 2rem;
+    }
+    width: 18.2rem !important;
+    .logo {
+      display: flex;
+      border: none !important;
+      padding-bottom: 0;
+      .home-btn-sidebar {
+        display: none;
+      }
+      .mobile-back-btn {
+        &.p-button {
+          padding: 2em 0 0 0 !important;
+        }
+      }
+    }
+    .layout-menu-container {
+      padding-bottom: 6rem;
+      
+    }
+    // .layout-menu {
+    //   li:nth-child(5),
+    //   li:nth-child(7),
+    //   li:nth-child(8) {
+    //     .layout-root-menuitem img {
+    //       width: 25px !important;
+    //     }
+    //   }
+    //   li:nth-child(9) {
+    //     .layout-root-menuitem img {
+    //       padding: 0 6px;
+    //     }
+    //   }
+    // }
+    .layout-root-menuitem {
+      position: relative;
+      margin: 2rem 0;
+
+      .layout-root-menuitem {
+        pointer-events: none !important;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 2em;
+        padding-left: 2rem;
+
+        .layout-menuitem-root-text {
+          padding: 0 !important;
+          letter-spacing: 1.5px;
+          text-transform: capitalize !important;
+          color: white !important;
+          font-weight: 500;
+          font-size: 1.1rem;
+        }
+        .pi {
+          color: white;
+          margin-left: auto;
+          margin-right: 1em;
+          transform: rotate(0deg);
+          transition: all 0.5s ease;
+        }
+      }
+      .sidebar-mobile-icon {
+        display: block;
+        height: 20px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+      }
+      .layout-menu-enter-done {
+        border-radius: 6px;
+        .active-route {
+          background-color: transparent !important;
+        }
+        .layout-menuitem-icon {
+          display: none;
+        }
+        .layout-menuitem-text {
+          font-weight: 300;
+          letter-spacing: 1.0px;
+          color: map-get($map: $app-theme, $key: "baseWhite");
+        }
+      }
+    }
+  }
+
+  // ============================ active styles ============================
+  .dark-sidebar {
+    .active-root-menu {
+      .layout-root-menuitem .layout-menuitem-root-text {
+        color: map-get($map: $app-theme, $key: "primaryLight") !important;
+      }
+    }
+
+    .active-dropdown-mobile {
+      .layout-root-menuitem {
+        position: relative;
+        .layout-menuitem-root-text {
+          color: map-get($map: $app-theme, $key: "primaryLight") !important;
+        }
+
+        .pi {
+          transform: rotate(180deg) !important;
+        }
+      }
+      .layout-menu-enter-done {
+        display: inline-block;
+        animation: open2 100ms ease-in-out forwards;
+        transform-origin: top center;
+        border-top-right-radius: 0px !important;
+        border-top-left-radius: 0px !important;
+        border: none !important;
+        background: map-get($map: $app-theme, $key: "primaryKlein") 0% 0% no-repeat padding-box !important;
+        position: absolute;
+        width: 100%;
+        left: 0 !important;
+        z-index: 1000;
+        margin-top: -1em;
+        li {
+          padding: 0.3em 0;
+          margin: 0 1rem;
+          font-weight: 600;
+          font-size: 0.9rem;
+          border-bottom: 1px solid map-get($map: $app-theme, $key: "baseTransparentWhite");
+
+          &:last-child {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+    .sidebar-bottom-nav {
+      display: block !important;
+
+    hr {
+      width: 70%;
+      margin: auto;
+      border-color: map-get($map: $app-theme, $key: "baseDimDust");
+    }
+  }
+  .sidebar-bottom-btn-group {
+    display: none !important;
+  }
+  .sidebar-bottom-nav-group {
+    padding: 1rem 0;
+    margin: 0 2rem;
+    button {
+      width: 100%;
+      border: none;
+      background: transparent;
+      letter-spacing: 2.1px;
+      color: map-get($map: $app-theme, $key: "baseFormal");
+      display: flex;
+      align-items: center;
+      font-size: 1.1rem;
+      span {
+        margin-left: 1em;
+      }
+      img {
+        height: 24px !important;
+        width: auto;
+        opacity: 0.89;
+      }
+      .overlay-badge {
+        position: relative;
+
+        .p-badge {
+          position: absolute;
+          left: 3px;
+          top: -17px;
+        }
+      }
+    }
+  }
+}
+
+// ========================= ANIMATIONS ================================
+@keyframes open {
+  0% {
+    transform: translateZ(200px) transLateY(40px) scale(0.5);
+  }
+  80% {
+    transform: translateZ(-10px) transLateY(0px) scale(0.8);
+  }
+  100% {
+    transform: translateZ(0px) transLateY(0px) scale(1);
+  }
+}
+
+@keyframes open2 {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  70% {
+    transform: rotateX(20deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes open3 {
+  0% {
+    transform: rotateY(90deg);
+  }
+  80% {
+    transform: rotateY(-10deg);
+  }
+  100% {
+    transform: rotateY(0);
+  }
+}
+
+@keyframes open4 {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes open5 {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes open6 {
+  0% {
+    transform: translateZ(200px) transLateY(40px);
+  }
+  80% {
+    transform: translateZ(-10px) transLateY(0px);
+  }
+  100% {
+    transform: translateZ(0px) transLateY(0px);
+  }
+}
+}

@@ -1,0 +1,18 @@
+
+@import "../variables.scss";
+
+.report-issues-form-container {
+  background: transparent !important;
+  .p-card {
+    background: transparent !important;
+  }
+  .report-issue-title {
+    color: white;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .report-issue-title {
+    font-size: 20px;
+  }
+}

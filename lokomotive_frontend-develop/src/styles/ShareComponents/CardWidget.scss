@@ -1,0 +1,69 @@
+@import "../variables.scss";
+
+.cardWid {
+  background: map-get($map: $app-theme, $key: "baseBlackTransparent");
+  border: none !important;
+  letter-spacing: 1.1px;
+  color: map-get($map: $app-theme, $key: "baseLightWhite");
+
+  label {
+    font-size: 1.2rem;
+  }
+
+  &.widget-overview-box-3 {
+    border-left: 4px solid map-get($map: $app-theme, $key: "secondaryTechno") !important;
+  }
+  &.widget-overview-box-4 {
+    border-left: 4px solid map-get($map: $app-theme, $key: "primaryElectricDark") !important;
+  }
+
+  &.blue-bg {
+    background: map-get($map: $app-theme, $key: "baseBlack") !important;
+  }
+
+  &.light-bg {
+    background: map-get($map: $app-theme, $key: "baseTransparentWhite") !important;
+  }
+
+  //Radio button styles
+  .p-radiobutton,
+  .p-radiobutton-box,
+  .p-radiobutton-icon {
+    transition: none !important;
+  }
+
+  .p-radiobutton-box {
+    border: 2px solid map-get($map: $app-theme, $key: "baseLightGrey");
+    background-color: transparent;
+  }
+  .p-radiobutton-box:hover {
+    border: 2px solid map-get($map: $app-theme, $key: "baseLightGrey") !important;
+  }
+
+  .p-radiobutton  {
+    .p-highlight,
+    .p-radiobutton-checked,
+    .p-radiobutton-focused,
+    .p-focused {
+      border-radius: 50%;
+      box-shadow: 0px 0px 25px map-get($map: $app-theme, $key: "primaryElectric") !important;
+    }
+  }
+
+  .p-highlight {
+    border: 2px solid white !important;
+    background-color: transparent !important;
+  }
+  .p-highlight:hover {
+    border: 2px solid white !important;
+    background-color: transparent !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .cardWid {
+    label {
+      font-size: 16px !important;
+    }
+  }
+}

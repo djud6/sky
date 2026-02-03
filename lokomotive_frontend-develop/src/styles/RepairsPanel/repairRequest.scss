@@ -1,0 +1,33 @@
+@import "../variables.scss";
+
+// =================== Repair request table header =============
+.repair-request-table {
+  p {
+    letter-spacing: 1.4px;
+    color: map-get($map: $app-theme, $key: "baseWhite");
+    font-size: 1.4rem;
+    margin-bottom: 0;
+  }
+}
+
+// ===================== Repair request form ===================
+.repair-request-form {
+  .p-card {
+    background-color: transparent;
+  }
+  .repair-form-title {
+    letter-spacing: 1.4px;
+    color: map-get($map: $app-theme, $key: "baseWhite");
+  }
+  .FORMDROP {
+    width: 100%;
+    .p-inputgroup {
+      padding: 0;
+    }
+  }
+  .repair-form-urgent-msg {
+    color: white;
+    margin-bottom: 1em;
+    background-color: transparent;
+  }
+}

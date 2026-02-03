@@ -1,0 +1,63 @@
+@import "../variables.scss";
+
+.op-mobile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .subheader-1 {
+    padding: 2rem 0 0.5rem 0;
+    font-size: 22px;
+    color: map-get($map: $app-theme, $key: "baseFormal");
+    letter-spacing: 1.8px;
+  }
+
+  .subheader-2 {
+    padding: 0.5rem 0 2rem 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: map-get($map: $app-theme, $key: "baseWhite");
+    letter-spacing: 0.9px;
+  }
+}
+
+.edit-dashboard {
+  height: 2rem;
+  width: 2rem;
+  margin-left: auto;
+  margin-top: 1rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  background-size: 100% 100%;
+}
+
+.edit-layout-icon {
+  background-image: url('../../images/icons/layout.png');
+}
+.save-layout-icon {
+  background-image: url('../../images/icons/save.png');
+}
+
+.drag-chart-handle {
+  background-image: url('../../images/icons/drag.png');
+  height: 2rem;
+  width: 2rem;
+  left: 50%;
+  transform: translateX(-50%);  margin-top: -1rem;
+  background-size: 100% 100%;
+  cursor: grab;
+}
+
+@media only screen and (max-width: 530px) {
+  .op-mobile-header {
+    .subheader-1 {
+      padding: 1.5rem 0 0.5rem 0;
+      font-size: 17px;
+    }
+  
+    .subheader-2 {
+      padding: 0.5rem 0 1rem 0;
+      font-size: 17px;
+    }
+  }
+}

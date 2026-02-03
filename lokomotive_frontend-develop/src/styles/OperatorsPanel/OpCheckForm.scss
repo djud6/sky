@@ -1,0 +1,42 @@
+@import "../variables.scss";
+
+.op-check-form {
+  h4, h5 {
+    letter-spacing: 1.4px;
+    color: map-get($map: $app-theme, $key: "baseWhite");
+    font-weight: 500;
+  }
+
+  hr {
+    margin: 2rem 0 !important;
+    color: map-get($map: $app-theme, $key: "baseWhite");
+    background-color: map-get($map: $app-theme, $key: "baseWhite");
+  }
+
+  .check-list {
+    .p-inputtext {
+      width: 250px;
+      color: white;
+      background: map-get($map: $app-theme, $key: "baseTransparentWhite");
+      border: 1px solid map-get($map: $app-theme, $key: "baseTransparentWhite");
+      font-size: 17px;
+    }
+
+    .list-subtitle {
+      color: map-get($map: $app-theme, $key: "baseLightGrey");
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .op-check-form {
+    h4 {
+      font-size: 20px;
+      letter-spacing: 1.2px;
+    }
+    h5 {
+      font-size: 17px;
+      letter-spacing: 1.2px;
+    }
+  }
+}

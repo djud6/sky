@@ -1,0 +1,2 @@
+export const CTRL_AUDIO_PLAY = "CTRL_AUDIO_PLAY";
+export const AUDIO_DATA_UPDATE = "AUDIO_DATA_UPDATE";

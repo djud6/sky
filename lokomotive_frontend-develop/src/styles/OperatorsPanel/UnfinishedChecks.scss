@@ -1,0 +1,59 @@
+@import "../variables.scss";
+
+.unfinished-checks-panel {
+  .unfinished-table {
+    height: 80vh;
+    //max-width: 45%;
+    padding: 1rem 1rem;
+    margin: 1rem 1rem;
+    background: map-get($map: $app-theme, $key: "baseBlackTransparent");
+    border: 2px solid map-get($map: $app-theme, $key: "primaryElectricDark");
+    border-radius: 2px;
+    overflow-y: scroll;
+    flex: 1;
+
+
+    ::-webkit-scrollbar-thumb {
+      background: map-get($map: $app-theme, $key: "baseLightGrey");
+    }
+  }
+
+  .unfinished-checks-form {
+    flex: 1;
+    align-content:end;
+    height: 80vh;
+    //max-width:45%;
+    padding: 1rem 2rem;
+    margin: 1rem 1rem;
+    background: map-get($map: $app-theme, $key: "baseBlackTransparent");
+    box-shadow: 0px 5px 25px map-get($map: $app-theme, $key: "tertiaryTangyShade");
+    border: 2px solid map-get($map: $app-theme, $key: "primaryElectricDark");
+    border-radius: 2px;
+    overflow-y: scroll;
+    position: relative;
+
+    ::-webkit-scrollbar-thumb {
+      background: map-get($map: $app-theme, $key: "baseLightGrey");
+    }
+
+    .cardWid {
+      background: map-get($map: $app-theme, $key: "baseBlack");
+    }
+
+    .loading-screen {
+      height: 70vh;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) and (min-width: 769px) {
+  .unfinished-table {
+    height: auto !important;
+  }
+}
+//@media only screen and (min-width: 1024px) {
+//  .unfinished-table {
+//    height: auto !important;
+//    //width:
+//  }
+//}

@@ -1,0 +1,229 @@
+@import "../variables.scss";
+
+.manage-notifications {
+  margin: 2rem 2rem 0 2rem;
+
+  .header-container {
+    .panel-date {
+      display: none;
+    }
+    .heading {
+      font-weight: bold;
+    }
+  }
+
+  .main-container {
+    background: map-get($map: $app-theme, $key: "baseBlackTransparent");
+    box-shadow: 0px 13px 25px map-get($map: $app-theme, $key: "baseBoxShadowSec");
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    border-left: 4px solid map-get($map: $app-theme, $key: "primaryElectricDark");
+    min-height: 70vh;
+    display: flex;
+    min-width: 1000px;
+  }
+
+  .input-container{
+    margin-top: 50px;
+  }
+
+  .input-dropdown{
+    max-width: 100px;
+  }
+
+  .input-asset-container{
+    margin-top: 50px;
+    
+    .input-switch-function-container-r{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 400px;
+      height:50px;
+
+      .b-a{    
+        margin-top: 15px; 
+       display: flex;
+       align-items: center;
+       justify-content: center;
+      }
+
+      .before-after-dropdown{
+        font-size: 10px;
+      }
+    }
+
+    .input-switch-function-container-r-first{
+      width: 90px;
+    }
+
+    .input-switch-function-container-r-second{
+      width: 50px;
+    }
+  }
+}
+
+
+.custom-radio-btn{
+  display:flex;
+  flex-direction: column;
+}
+
+
+.notification-dropdown {
+  background: transparent;
+
+  .p-inputtext {
+    background: transparent;
+    border: 1px solid map-get($map: $app-theme, $key: "baseDimDust");
+    border-radius: 0;
+    letter-spacing: 1.4px;
+    color: map-get($map: $app-theme, $key: "baseLightWhite");
+
+    &::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: map-get($map: $app-theme, $key: "baseDimDust");
+    }
+  }
+  .p-dropdown {
+    background: transparent;
+    border: 1px solid map-get($map: $app-theme, $key: "baseDimDust");
+    border-radius: 0;
+
+    .p-inputtext {
+      border: none !important;
+      &:hover,
+      &:focus {
+        border: none;
+      }
+    }
+
+    .p-dropdown-label {
+      &.p-placeholder {
+        color: map-get($map: $app-theme, $key: "baseDimDust");
+        text-align: left;
+      }
+    }
+
+    .p-dropdown-trigger {
+      .pi {
+        color: map-get($map: $app-theme, $key: "baseLightWhite");
+      }
+    }
+
+    &.p-focus {
+      box-shadow: none;
+    }
+
+    &:hover,
+    &:focus-within {
+      border: 1px solid map-get($map: $app-theme, $key: "primaryElectric");
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+}
+
+.notification-dropdown-panel {
+  &.p-dropdown-panel {
+    background: map-get($map: $app-theme, $key: "baseGrey");
+    box-shadow: 0px 0px 7px map-get($map: $app-theme, $key: "baseLightWhite") !important;
+    .p-dropdown-header {
+      background: map-get($map: $app-theme, $key: "baseGrey");
+      .p-dropdown-filter-container {
+        .p-inputtext {
+          background: map-get($map: $app-theme, $key: "baseTransparentWhite") 0% 0% no-repeat
+            padding-box;
+          border: 1px solid map-get($map: $app-theme, $key: "baseTransparentWhite");
+          color: map-get($map: $app-theme, $key: "baseWhite");
+          font-weight: bold;
+          letter-spacing: 1.5px;
+
+          &:hover {
+            border: 1px solid map-get($map: $app-theme, $key: "primaryElectric");
+          }
+        }
+      }
+    }
+
+    .p-dropdown-items-wrapper {
+      .p-dropdown-items {
+        .p-dropdown-item {
+          letter-spacing: 2px;
+          color: map-get($map: $app-theme, $key: "baseLightWhite");
+
+          &.p-highlight,
+          &:hover {
+            background: map-get($map: $app-theme, $key: "primaryButton") 0% 0% no-repeat padding-box !important;
+            color: map-get($map: $app-theme, $key: "baseWhite") !important;
+          }
+        }
+
+        .p-dropdown-empty-message {
+          color: map-get($map: $app-theme, $key: "baseLightWhite") !important;
+          font-weight: bold;
+          letter-spacing: 1.5px;
+        }
+      }
+    }
+  }
+}
+
+.input-switch-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.input-switch-function-container {
+  display: flex;
+  justify-content: start; //options : start |  center | space-between | space-around | space-evenly
+  align-items:center;
+  margin-bottom: 10px;
+  margin-right: 100px;
+  width: 400px;
+}
+
+.input-switch-function {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.input-switch-function-r {
+  display: inline-block;
+  vertical-align: middle;
+  width: 40px;
+}
+
+
+.input-label {
+  width: 100px;
+}
+
+
+p {
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: middle;
+  color: white;
+}
+
+h4 {
+  color: white;
+}
+
+.input-asset-container {
+  justify-content: flex-start; //options : start |  center | space-between | space-around | space-evenly
+  align-items: flex-start;
+  align: left;
+}
+
+input {
+  color: white;
+  background: map-get($map: $app-theme, $key: "baseTransparentWhite") 0% 0% no-repeat padding-box !important;
+  border: 0px;
+}

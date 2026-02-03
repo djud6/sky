@@ -1,0 +1,103 @@
+@import "../../variables.scss";
+
+// First active tab with orange underline, second active tab with blue underline
+.darkSubTab-2 {
+  margin-top: 0.5rem;
+
+  .p-tabview-nav {
+    background: transparent !important;
+    border: none !important;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    li {
+      position: relative;
+    }
+    li:not(:first-child):after {
+      content: "";
+      position: absolute;
+      height: 75%;
+      width: 1px;
+      left: -15px;
+      top: 25%;
+      background-color: map-get($map: $app-theme, $key: "baseFormal");
+    }
+    background-color: transparent;
+    border: none;
+
+    .p-unselectable-text:not(:last-child) {
+      .p-tabview-nav-link {
+        padding-right: 30px !important;
+      }
+    }
+    .p-tabview-nav-link {
+      font-size: 22px;
+      letter-spacing: 3.15px;
+      border: none !important;
+      padding: 0 2px !important;
+      padding-top: 8px !important;
+
+      .p-tabview-title {
+        color: map-get($map: $app-theme, $key: "baseFormal");
+        font-weight: normal;
+      }
+
+      &:hover {
+        background-color: transparent !important;
+        .p-tabview-title {
+          transform: scale(1.01);
+        }
+      }
+    }
+
+    li:first-child {
+      &.p-highlight {
+        background-color: transparent !important;
+        .p-tabview-nav-link {
+          .p-tabview-title {
+            color: map-get($map: $app-theme, $key: "baseWhite") !important;
+            font-weight: bold;
+            padding-bottom: 0.2rem;
+            border-bottom: 2px solid map-get($map: $app-theme, $key: "tertiaryTangy") !important;
+            transform: none !important;
+          }
+        }
+      }
+    }
+
+    li:nth-child(2) {
+      &.p-highlight {
+        background-color: transparent !important;
+        .p-tabview-nav-link {
+          .p-tabview-title {
+            color: map-get($map: $app-theme, $key: "baseWhite") !important;
+            font-weight: bold;
+            padding-bottom: 0.2rem;
+            border-bottom: 2px solid map-get($map: $app-theme, $key: "primaryElectricDark") !important;
+            transform: none !important;
+          }
+        }
+      }
+    }
+
+    li:nth-child(3) {
+      &.p-highlight {
+        background-color: transparent !important;
+        .p-tabview-nav-link {
+          .p-tabview-title {
+            color: map-get($map: $app-theme, $key: "baseWhite") !important;
+            font-weight: bold;
+            padding-bottom: 0.2rem;
+            border-bottom: 2px solid map-get($map: $app-theme, $key: "secondaryTechno") !important;
+            transform: none !important;
+          }
+        }
+      }
+    }
+  }
+
+  .p-unselectable-text:hover {
+    .p-tabview-nav-link {
+      background-color: transparent !important;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+
+@import "../variables.scss";
+
+//Styling for button 2 dark blue- light on hover ============================
+.btn-5 {
+  .p-button {
+    border: 2px solid map-get($map: $app-theme, $key: "baseFormal");
+    background: transparent;
+    box-shadow: 0px 8px 24px map-get($map: $app-theme, $key: "baseBoxShadow");
+    border-radius: 3px;
+    letter-spacing: 1.8px;
+    color: map-get($map: $app-theme, $key: "baseFormal");
+    font-weight: 600;
+
+    &:hover {
+      border: 2px solid map-get($map: $app-theme, $key: "primaryButton");
+      background: map-get($map: $app-theme, $key: "primaryButton");
+      color: map-get($map: $app-theme, $key: "baseLightWhite");
+    }
+  }
+
+  &.active-bg {
+    .p-button {
+      border: 2px solid map-get($map: $app-theme, $key: "primaryFaded") !important;
+      background: map-get($map: $app-theme, $key: "primaryFaded") !important;
+
+      &:hover {
+        border: 2px solid map-get($map: $app-theme, $key: "primaryButton") !important;
+        background: map-get($map: $app-theme, $key: "primaryButton") !important;
+      }
+    }
+  }
+
+  &.disable-bg {
+    .p-button:hover {  
+      border: 2px solid map-get($map: $app-theme, $key: "baseFormal");
+      background: rgba(175,175,175,0.5);
+      color: map-get($map: $app-theme, $key: "baseFormal");
+    }
+  }
+
+  &.active-bg {
+    .p-button {
+      background: map-get($map: $app-theme, $key: "secondaryDark");
+      border: 2px solid map-get($map: $app-theme, $key: "secondaryDark");
+      color: map-get($map: $app-theme, $key: "baseLightWhite");
+
+      &:hover {
+        background: map-get($map: $app-theme, $key: "secondary");
+        border: 2px solid map-get($map: $app-theme, $key: "secondary");
+      }
+    }
+  }
+}

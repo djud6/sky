@@ -1,0 +1,54 @@
+.assistant-overlay {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 1000000;
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  &-1 {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &-2, &-3 {
+    top: 0;
+    bottom: 0;
+    left: 18.2rem;
+    right: 0;
+  }
+
+  &-4 {
+    top: 70px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &-5 {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.opac {
+  opacity: 1;
+}
+
+@media screen and (max-height: 874px) {
+  .assistant-overlay {
+    &-2, &-3 {
+      top: 0;
+      bottom: 0;
+      left: 18.2rem !important;
+      right: 0;
+    }
+  }
+}

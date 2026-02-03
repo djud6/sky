@@ -1,0 +1,27 @@
+@media only screen and (min-width: 992px) {
+    .layout-topbar {
+        margin-left: -10rem !important;
+        &::before {
+            content: '';
+            background: inherit;
+            position: relative;
+            width: 9rem;
+            height: inherit;
+            left: -8rem;
+            z-index: -1;
+        }
+    }
+}
+
+.layout-content-wrapper-compact {
+    margin-left: 4.5rem !important;
+}
+
+.layout-menu-container {
+    padding-top: 0;
+}
+
+.logo {
+    border-bottom: 0 !important;
+}
+

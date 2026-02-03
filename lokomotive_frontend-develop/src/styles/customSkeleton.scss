@@ -1,0 +1,5 @@
+@import "./variables.scss";
+
+.p-skeleton {
+  background: map-get($map: $app-theme, $key: "baseBlackTransparent") !important;
+}

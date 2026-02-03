@@ -1,0 +1,157 @@
+@import "../../variables.scss";
+
+.custom-detail-view {
+  border: 1px solid map-get($map: $app-theme, $key: "primaryElectric");
+
+  .p-dialog-header-icons {
+    background: map-get($map: $app-theme, $key: "baseWhite");
+    border-radius: 50%;
+
+    .p-dialog-header-close-icon {
+      color: map-get($map: $app-theme, $key: "primaryDark");
+    }
+  }
+
+  .p-dialog-header {
+    background: map-get($map: $app-theme, $key: "baseGreyBlack");
+    color: map-get($map: $app-theme, $key: "baseWhite") !important;
+
+    h4 {
+      color: map-get($map: $app-theme, $key: "baseFormal") !important;
+    }
+  }
+  .p-dialog-content {
+    background: map-get($map: $app-theme, $key: "baseGreyBlack");
+    color: map-get($map: $app-theme, $key: "baseWhite") !important;
+
+    a {
+      color: map-get($map: $app-theme, $key: "baseWhite") !important;
+    }
+
+    .p-button-label {
+      font-weight: 500;
+    }
+
+    // For additional description section
+    .add-descr-section {
+      .clickable-id {
+        cursor: pointer;
+        text-decoration: underline;
+        color: map-get($map: $app-theme, $key: "primaryElectricDark") !important;
+      }
+    }
+  }
+  .p-dialog-footer {
+    background: map-get($map: $app-theme, $key: "baseGreyBlack");
+    color: map-get($map: $app-theme, $key: "baseWhite") !important;
+    text-align: center;
+
+    button {
+      margin: 0;
+    }
+
+    .p-button.p-button-link {
+      color: map-get($map: $app-theme, $key: "baseWhite");
+      text-decoration: underline;
+      letter-spacing: 1.8px;
+    }
+  }
+
+  hr {
+    margin: 8px 0 !important;
+    color: map-get($map: $app-theme, $key: "baseDimDust");
+    background-color: map-get($map: $app-theme, $key: "baseDimDust");
+  }
+  span {
+    font-size: 16px !important;
+  }
+
+  .detail-edit-btn {
+    .p-button {
+      background: map-get($map: $app-theme, $key: "baseGreyBlack");
+      border: map-get($map: $app-theme, $key: "primaryButton") 2px solid;
+    }
+    .p-button:hover {
+      background: map-get($map: $app-theme, $key: "primaryButton");
+    }
+  }
+
+  .detail-action-color-1 {
+    .p-button {
+      background: #1F7474;
+      border: map-get($map: $app-theme, $key: "secondaryDark");
+    }
+  }
+
+  .detail-action-color-2 {
+    .p-button {
+      background: map-get($map: $app-theme, $key: "secondaryDynamicDark");
+      border: map-get($map: $app-theme, $key: "secondaryDynamicDark");
+      color: black;
+    }
+  }
+
+  .detail-action-color-3 {
+    .p-button {
+      background: map-get($map: $app-theme, $key: "tertiaryBlood");
+      border: map-get($map: $app-theme, $key: "tertiaryBlood");
+    }
+  }
+
+  .asset-details-btns {
+    .p-button {
+      width: 160px;
+      color: map-get($map: $app-theme, $key: "baseFormal");
+      letter-spacing: 0.9px;
+      background: transparent;
+      box-shadow: 0px 8px 24px map-get($map: $app-theme, $key: "baseBoxShadow");
+      border: 1px solid map-get($map: $app-theme, $key: "baseLightDust");
+      border-radius: 6px;
+    }
+
+    .p-button:hover {
+      color: map-get($map: $app-theme, $key: "baseLightWhite");
+      background: map-get($map: $app-theme, $key: "primaryButton");
+      box-shadow: 0px 8px 24px map-get($map: $app-theme, $key: "baseBoxShadow");
+      border: 1px solid map-get($map: $app-theme, $key: "primaryButton");
+      border-radius: 6px;
+    }
+  }
+
+  .asset-details-log {
+    .p-inputtext {
+      width: 387px;
+      height: 40px;
+      color: white;
+      letter-spacing: 1.8px;
+      background: map-get($map: $app-theme, $key: "baseTransparentWhite");
+      box-shadow: 0px 13px 25px map-get($map: $app-theme, $key: "baseBoxShadow");
+      border: none;
+    }
+  }
+  .asset-details-log-btn {
+    .p-button {
+      width: 100px;
+      color: map-get($map: $app-theme, $key: "baseLightWhite");
+      background: map-get($map: $app-theme, $key: "primaryButton") 0% 0% no-repeat padding-box;
+      box-shadow: 0px 8px 24px map-get($map: $app-theme, $key: "baseBoxShadow");
+      border-radius: 6px;
+      border: 1px solid map-get($map: $app-theme, $key: "primaryButton");
+      border-radius: 6px;
+
+      &.p-disabled {
+        color: map-get($map: $app-theme, $key: "baseLight");
+        background: map-get($map: $app-theme, $key: "baseDust") 0% 0% no-repeat padding-box;
+        border: 1px solid map-get($map: $app-theme, $key: "baseDust");
+      }
+    }
+
+    .p-button:hover {
+      color: map-get($map: $app-theme, $key: "baseLightWhite");
+      background: map-get($map: $app-theme, $key: "primaryFaded");
+      box-shadow: 0px 8px 24px map-get($map: $app-theme, $key: "baseBoxShadow");
+      border: 1px solid map-get($map: $app-theme, $key: "primaryFaded");
+      border-radius: 6px;
+    }
+  }
+}

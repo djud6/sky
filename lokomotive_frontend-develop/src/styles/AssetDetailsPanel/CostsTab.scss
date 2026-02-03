@@ -1,0 +1,105 @@
+@import "../variables.scss";
+
+.detail-cost-tab {
+  margin-top: 2rem;
+
+  .p-tabview {
+    .p-tabview-nav {
+      &::before {
+        content: none !important;
+      }
+    }
+  }
+
+  .spaced-tabs {
+    .p-tabview-nav {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px 10px;
+      .p-unselectable-text {
+        margin: 0 !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .detail-cost-tab {
+    margin-top: 1.5rem;
+
+    hr {
+      display: none;
+    }
+
+    .cost-tab-title {
+      color: map-get($map: $app-theme, $key: "baseWhite");
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .p-tabview-nav {
+      .p-tabview-nav-link {
+        overflow: visible;
+        .p-tabview-title {
+          letter-spacing: 2px;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .p-field {
+      margin-bottom: 0 !important;
+
+      label {
+        color: map-get($map: $app-theme, $key: "baseWhite");
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: 1.8px;
+      }
+
+      .form-group {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .detail-cost-tab {
+    .p-tabview-nav {
+      margin-bottom: 1rem;
+      .p-tabview-nav-link {
+        .p-tabview-title {
+          letter-spacing: 1.5px !important;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .detail-cost-tab {
+    .p-tabview-nav {
+      .p-tabview-nav-link {
+        .p-tabview-title {
+          letter-spacing: 0.5px !important;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .p-field {
+      label {
+        color: map-get($map: $app-theme, $key: "baseWhite");
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.4px;
+      }
+
+      .form-group {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}

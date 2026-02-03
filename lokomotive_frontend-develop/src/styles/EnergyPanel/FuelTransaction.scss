@@ -1,0 +1,70 @@
+@import "../variables.scss";
+
+.fuel-transaction {
+  .page-title {
+    font-size: 24px;
+    letter-spacing: 1.4px;
+    color: map-get($map: $app-theme, $key: "baseWhite");
+    margin-top: 2rem;
+  }
+
+  .darkSubTab {
+    margin-top: 1rem;
+  }
+
+  .transaction-form {
+    margin: 2rem 0;
+    .cost-input {
+      .form-group {
+        margin-bottom: 0 !important;
+      }
+
+      label {
+        font-size: 16px;
+        letter-spacing: 1.4px;
+        color: map-get($map: $app-theme, $key: "baseWhite");
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 521px) and (max-width: 768px) {
+  .fuel-transaction {
+    .page-title {
+      margin-left: 0.5rem;
+      font-weight: bold !important;
+      letter-spacing: 3.0px;
+    }
+  }
+}
+
+@media screen and (min-width: 467px) and (max-width: 520px) {
+  .fuel-transaction {
+    .page-title {
+      margin-left: 0.5rem;
+      font-size: 22px !important;
+      letter-spacing: 1.0px;
+    }
+  }
+}
+
+@media screen and (max-width: 466px) {
+  .fuel-transaction {
+    .page-title {
+      margin-top: 1.5rem !important;
+      margin-left: 0.5rem;
+      font-size: 19px !important;
+      letter-spacing: 1.0px;
+    }
+  
+    .transaction-form {
+      margin: 1rem 0 !important;
+      .cost-input {
+        margin-bottom: 0 !important;
+      }
+      .cost-input-btn {
+        margin-top: 1rem !important;
+      }
+    }
+  }
+}

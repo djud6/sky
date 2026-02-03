@@ -1,0 +1,428 @@
+@import "../../variables.scss";
+
+.topbar-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.pi-spinner::before {
+  color: #ffffff;
+}
+
+.topbar-cont-outter {
+  height: 70px;
+  background: rgba(10, 0, 6, 0.8) 0% 0% no-repeat padding-box;
+  backdrop-filter: blur(50px);
+  border: none;
+  padding: 0 !important;
+  .topbar-right {
+    width: 100%;
+    height: 100%;
+  }
+  .topbar-left {
+    .topbar-son {
+      display: none;
+    }
+  }
+  .topbar-menu {
+    display: flex;
+    height: 100%;
+
+    li {
+      ul {
+        background: map-get($map: $app-theme, $key: "baseWhite") 0% 0% no-repeat padding-box;
+        border-radius: 6px;
+        backdrop-filter: blur(35px);
+        -webkit-backdrop-filter: blur(35px);
+        opacity: 0.9;
+        padding: 0.5rem 1rem;
+        top: 5rem !important;
+        right: unset !important;
+      }
+    }
+  }
+  .topbar-greeting {
+    letter-spacing: 3.2px;
+    color: map-get($map: $app-theme, $key: "baseWhite");
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 0 4em !important;
+  }
+  .topbar-son {
+    margin-left: auto !important;
+    height: 3.5rem;
+    width: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid map-get($map: $app-theme, $key: "primaryElectric");
+    margin-right: 3em;
+    background-image: url("../../../images/background/topbar_robot_bg.png");
+    background-size: cover;
+
+    &.topbar-son-active {
+      border: 1px solid map-get($map: $app-theme, $key: "tertiaryTangy");
+    }
+
+    &.topbar-son-hide {
+      visibility: hidden;
+    }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+
+    img {
+      height: 3rem;
+      width: 3rem;
+      // transform: translate(2px, 2px);
+    }
+  }
+
+  .topbar-badge {
+    width: unset !important;
+    border-radius: 30% !important;
+    padding: 0 1px;
+  }
+
+  .p-inputtext {
+    background: map-get($map: $app-theme, $key: "baseTransparentWhite") 0% 0% no-repeat padding-box;
+    border-radius: 24px;
+    border: none;
+    min-width: 330px;
+    height: 40px;
+    letter-spacing: 2.2px;
+    color: map-get($map: $app-theme, $key: "baseFormal");
+    padding-left: 15px;
+    margin-right: 2em;
+    &::placeholder {
+      letter-spacing: 2.2px;
+      color: map-get($map: $app-theme, $key: "baseFormal");
+    }
+  }
+  .feedback-item {
+    border-bottom: 2px solid map-get($map: $app-theme, $key: "primaryElectric");
+    height: 100%;
+    display: flex;
+    align-items: center;
+    button:hover {
+      background-color: transparent !important;
+      transition: transform 0.3s ease;
+      transform: scale(1.2) translateX(4px);
+    }
+    img {
+      height: 25px;
+      width: auto;
+    }
+    .p-button {
+      background: transparent !important;
+      border: none;
+      padding: 0;
+    }
+  }
+  .messages-item {
+    img:hover {
+      background-color: transparent !important;
+      transition: transform 0.5s ease;
+      transform: translateY(-5px) scale(1.1);
+    }
+    img {
+      height: 20px;
+      width: auto;
+    }
+    padding-left: 25px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid map-get($map: $app-theme, $key: "primaryElectric");
+    margin-left: 0 !important;
+  }
+  .notifications-item {
+    img {
+      height: 25px;
+      width: auto;
+    }
+    .p-link:hover {
+      background-color: transparent !important;
+    }
+    img:hover {
+      transition: transform 0.3s ease;
+      transform: rotate(14deg);
+    }
+    padding-left: 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid map-get($map: $app-theme, $key: "primaryElectric");
+    margin-left: 0 !important;
+  }
+  .notifications-menu,
+  .profile-menu {
+    background: map-get($map: $app-theme, $key: "baseWhite") 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+    backdrop-filter: blur(35px);
+    -webkit-backdrop-filter: blur(35px);
+    opacity: 0.6;
+
+    .p-link {
+      i {
+        font-size: 18px;
+      }
+      span {
+        margin-left: 1em !important;
+        color: map-get($map: $app-theme, $key: "baseBlack") !important;
+        font-size: 16px;
+        letter-spacing: 2.3px;
+      }
+    }
+  }
+  .profile-item {
+    display: flex;
+    align-items: center;
+    border: none !important;
+    height: 100%;
+    border-bottom: 2px solid map-get($map: $app-theme, $key: "primaryElectric") !important;
+    margin-left: 0 !important;
+    padding-left: 25px !important;
+    padding-right: 40px !important;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 45px;
+      right: 0;
+      background-color: map-get($map: $app-theme, $key: "baseBlack");
+      bottom: -2px;
+      clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      width: 45px;
+      background-color: map-get($map: $app-theme, $key: "primaryElectric");
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      clip-path: polygon(98% 0, 100% 0, 100% 100%, 0 100%, 0 98%);
+    }
+    img {
+      width: 3.5rem !important;
+      height: 3.5rem !important;
+      border-radius: 50%;
+    }
+    .main-btn {
+      .p-link:hover {
+        background-color: map-get($map: $app-theme, $key: "primaryDark") !important;
+      }
+    }
+    .profile-info {
+      text-align: left;
+      padding-left: 5px;
+      line-height: 19px;
+      .profile-name {
+        font-size: 19px;
+        letter-spacing: 2.4px;
+        font-weight: bold;
+        color: map-get($map: $app-theme, $key: "baseWhite");
+      }
+      .profile-role {
+        font-size: 12px !important;
+        letter-spacing: 1.4px;
+        color: map-get($map: $app-theme, $key: "baseWhite");
+        font-weight: 300;
+        font-size: 0.7rem;
+      }
+      .pi {
+        color: white;
+        font-size: 0.8rem;
+        padding-left: 5px;
+      }
+    }
+  }
+}
+
+//======================== dropdown ====================================
+//Not using dropdown (header)//
+.closed {
+  display: none !important;
+}
+.opac-0 {
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.dropdown-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  background: transparent;
+  border: none;
+  .pi {
+    color: #939393;
+    font-size: 1.3rem;
+  }
+  &:hover {
+    background-color: transparent !important;
+  }
+  &-hide {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    letter-spacing: 2.4px;
+    color: #9d9d9d;
+    background: transparent;
+    border: none;
+  }
+}
+
+.topbar-dropdown {
+  position: relative;
+  background: #0b1864 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px map-get($map: $app-theme, $key: "baseBoxShadow");
+  opacity: 1;
+  backdrop-filter: blur(27px);
+  overflow: hidden;
+  color: white;
+  border: none !important;
+}
+
+//======================== media queries ===============================
+@media only screen and (min-width: 992px) {
+  .topbar-cont-outter {
+    .topbar-left {
+      .menu-button {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  .topbar-cont-outter {
+    .topbar-greeting {
+      margin: 0 1em !important;
+    }
+    .topbar-son {
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .topbar-cont-outter {
+    .p-inputtext {
+      min-width: 200px;
+    }
+    .topbar-greeting {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .topbar-cont-outter {
+    .topbar-greeting {
+      display: none;
+    }
+    .topbar-son {
+      margin-right: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .topbar-cont-outter {
+    .topbar-right {
+      height: 70px !important;
+    }
+
+    .p-inputtext {
+      min-width: 300px !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .topbar-dropdown {
+    display: none;
+  }
+  .topbar-cont-outter {
+    .p-inputtext {
+      min-width: 200px !important;
+      height: 32px;
+    }
+  }
+}
+
+// ============== mobile styling =================
+
+@media only screen and (max-width: 991px) {
+  .topbar-cont-outter {
+    height: auto !important;
+    border-bottom: 2px solid map-get($map: $app-theme, $key: "primaryElectric");
+    .topbar-left {
+      border: none !important;
+      padding-top: 15px !important;
+      .menu-button {
+        background: transparent;
+        color: white;
+        margin-left: 1.5em;
+        .pi {
+          font-size: 2rem;
+        }
+      }
+      .topbar-son {
+        display: flex;
+        height: 3.2rem;
+        width: 3.2rem;
+
+        img {
+          height: 2.8rem;
+          width: 2.8rem;
+        }
+      }
+    }
+    .topbar-right {
+      padding-top: 0 !important;
+    }
+    .mobile-logo {
+      margin-right: 10px;
+    }
+    .profile-item:after,
+    .profile-item:before,
+    .dropdown-btn,
+    .feedback-item,
+    .notifications-item,
+    .profile-item {
+      display: none;
+    }
+    .topbar-menu .topbar-son {
+      display: none;
+    }
+    .topbar-greeting {
+      display: block !important;
+      color: map-get($map: $app-theme, $key: "baseLightWhite");
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      margin-bottom: 5px !important;
+    }
+    .topbar-menu {
+      flex-direction: column !important;
+      .search-item {
+        width: 80%;
+        .p-inputwrapper {
+          display: block;
+        }
+        .p-inputtext {
+          width: 100%;
+          height: 33px;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

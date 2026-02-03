@@ -1,0 +1,60 @@
+@import "../variables.scss";
+
+.p-autocomplete-panel {
+  &.hide-panel {
+    display: none;
+  }
+  margin-top: 0.4rem;
+  background: map-get($map: $app-theme, $key: "baseNight") 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 5px map-get($map: $app-theme, $key: "baseLight");
+
+  .p-autocomplete-items {
+    background: map-get($map: $app-theme, $key: "baseNight") 0% 0% no-repeat padding-box;
+    position: relative;
+    text-transform: capitalize;
+  
+    .p-autocomplete-item, .p-autocomplete-item a div {
+      background: map-get($map: $app-theme, $key: "baseNight") 0% 0% no-repeat padding-box !important;
+      text-align: left;
+      font: normal normal bold 18px;
+      letter-spacing: 0.9px;
+      color: map-get($map: $app-theme, $key: "baseFormal") !important;
+      opacity: 1;
+      border-bottom: 1px solid map-get($map: $app-theme, $key: "baseDimDust");
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin: 0 1rem !important;
+      &:hover {
+        color: map-get($map: $app-theme, $key: "baseLightGrey") !important;
+      }
+
+      a {
+        text-decoration: none !important;
+        div {
+          border-bottom: 0 !important;
+        }
+      }
+
+      &:last-child {
+        border-bottom: 0px;
+      }
+    }
+  
+    .p-highlight.p-autocomplete-item {
+      color: map-get($map: $app-theme, $key: "baseLightGrey") !important;
+      background: map-get($map: $app-theme, $key: "primaryLight") 0% 0% no-repeat padding-box !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .p-autocomplete-panel {
+    box-shadow: 0px 0px 10px map-get($map: $app-theme, $key: "baseLight");
+
+    .p-autocomplete-items {
+      li {
+        padding: 10px 0 !important;
+      }
+    }
+  }
+}

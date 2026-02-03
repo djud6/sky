@@ -1,0 +1,292 @@
+@import "../variables.scss";
+
+.disposal-panel {
+  .mobile-searchbar {
+    background: map-get($map: $app-theme, $key: "baseBlackTransparent");
+    box-shadow: 0px 13px 25px map-get($map: $app-theme, $key: "baseBoxShadow");
+    border: 1px solid map-get($map: $app-theme, $key: "baseDimDust");
+    border-radius: 2px;
+
+    .title {
+      margin: 1rem;
+      font-size: 18px;
+      letter-spacing: 1px;
+      color: map-get($map: $app-theme, $key: "baseWhite");
+    }
+  }
+
+  .disposal-table {
+    padding: 1em 0;
+  }
+
+  .p-progressbar {
+    background: map-get($map: $app-theme, $key: "baseTransparentWhite");
+    border-radius: 20px;
+
+    .p-progressbar-value {
+      background: map-get($map: $app-theme, $key: "primaryButton");
+    }
+    .p-progressbar-label {
+      color: map-get($map: $app-theme, $key: "baseWhite");
+    }
+  }
+
+  .disposal-form-container {
+    margin: 1em 0 0 0;
+    padding: 1em 2em;
+    background: map-get($map: $app-theme, $key: "baseBlackTransparent");
+    box-shadow: 0px 13px 25px map-get($map: $app-theme, $key: "baseBoxShadow");
+    border: 2px solid map-get($map: $app-theme, $key: "primaryElectric");
+    border-radius: 3px;
+
+    h5 {
+      font-size: 20px;
+      letter-spacing: 1.2px;
+      color: map-get($map: $app-theme, $key: "baseFormal");
+    }
+
+    .upload-files-input {
+      .header {
+        font-size: 20px;
+        letter-spacing: 1.2px;
+        color: map-get($map: $app-theme, $key: "baseFormal");
+        margin-bottom: 1rem;
+      }
+      label {
+        font-size: 15px;
+        letter-spacing: 1.5px;
+        color: map-get($map: $app-theme, $key: "baseWhite");
+      }
+    }
+
+    .upload-files-preview {
+      width: 100%;
+      height: 100%;
+      background: map-get($map: $app-theme, $key: "baseBlack");
+      border-radius: 6px;
+
+      label {
+        font-size: 20px;
+        letter-spacing: 1.2px;
+        color: map-get($map: $app-theme, $key: "baseLightGrey");
+        margin: 1.5em 1em;
+      }
+
+      .image-section {
+        margin: 1em 2em;
+        .image-style {
+          width: 28%;
+          margin-right: 2em;
+        }
+      }
+    }
+
+    .asset-disposal-form {
+      .form-q-container {
+        background: map-get($map: $app-theme, $key: "baseBlack");
+        border-radius: 6px;
+        flex: 1;
+        padding: 1em 1em 0 1em;
+      }
+    }
+
+    .asset-refurbish-form {
+      .refurbish-q-container {
+        background: map-get($map: $app-theme, $key: "baseBlack");
+        border-radius: 6px;
+        padding: 1em 1em 0.1em 1em;
+
+        .cal-disable-status {
+          .p-calendar {
+            width: 100%;
+          }
+          .cal {
+            .p-inputtext {
+              border-left: none;
+              &:hover,
+              &:enabled {
+                border-left: none;
+              }
+            }
+            &.cal-active .p-inputtext {
+              border-left: none !important;
+            }
+          }
+        }
+      }
+    }
+
+    .disposal-method-form {
+      .method-items-outer {
+        .method-items {
+          width: 98%;
+          display: flex;
+          flex-flow: row wrap;
+          align-items: center;
+          padding: 0.5em 1em;
+          background: map-get($map: $app-theme, $key: "primaryDark");
+          border-radius: 6px;
+          margin-bottom: 0.5em;
+
+          label {
+            font-size: 17px;
+            color: map-get($map: $app-theme, $key: "baseFormal");
+            letter-spacing: 1.5px;
+          }
+
+          svg {
+            font-size: 1.3rem;
+          }
+
+          &.selected {
+            background: map-get($map: $app-theme, $key: "primaryButton");
+            label {
+              color: map-get($map: $app-theme, $key: "baseWhite");
+            }
+          }
+        }
+      }
+    }
+
+    .recipient-container {
+      .recipient-content {
+        label {
+          color: map-get($map: $app-theme, $key: "baseWhite");
+          letter-spacing: 1.1px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .repurpose-form-container {
+      .repurpose-form-content {
+        background: map-get($map: $app-theme, $key: "baseBlack");
+        border-radius: 6px;
+        flex: 1;
+        padding: 1em 1em 0.1em 1em;
+        .form-group {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .scrap-form-container {
+      .scrap-form-content {
+        background: map-get($map: $app-theme, $key: "baseBlack");
+        border-radius: 6px;
+        flex: 1;
+        padding: 1em 1em 0.1em 1em;
+      }
+    }
+
+    .trasfer-form-container {
+      .trasfer-form-content {
+        background: map-get($map: $app-theme, $key: "primary");
+        border-radius: 6px;
+        flex: 1;
+        padding: 1em 1em 0.1em 1em;
+      }
+      .form-group {
+        margin-bottom: 0;
+      }
+    }
+
+    .preview-left-container {
+      .widget-overview-box {
+        .p-col-6:first-child {
+          border-right: none;
+        }
+      }
+
+      label {
+        font-size: 17px;
+        color: map-get($map: $app-theme, $key: "baseLightWhite");
+      }
+
+      .h6 {
+        font-size: 17px !important;
+      }
+    }
+  }
+}
+
+
+/* For Mobile View */
+@media screen and (max-width: 768px) {
+  .disposal-panel {
+    .disposal-form-container {
+      padding: 0 0;
+
+      .form-q-container {
+        .title {
+          font-size: 17px !important;
+          font-weight: bold;
+          letter-spacing: 1.5px !important;
+          color: map-get($map: $app-theme, $key: "baseWhite");
+        }
+
+        .disposal-radio {
+          label {
+            font-size: 17px !important;
+            font-weight: normal !important;
+          }
+        }
+      }
+
+      .disposal-method-form {
+        .method-items-outer {
+          .method-items {
+            svg {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .card {
+      padding: 0.75rem 0.75rem;
+
+    }
+
+    .upload-files-input {
+      .header {
+        font-size: 17px !important;
+        letter-spacing: 0.9px;
+        color: map-get($map: $app-theme, $key: "baseFormal");
+      }
+    }
+
+    .upload-files-preview {
+      label {
+        font-size: 19px !important;
+        letter-spacing: 0.9px !important;
+        margin: 1rem 1rem !important;
+      }
+
+      .image-section {
+        margin: 0 1rem !important;
+        .image-style {
+          width: 30% !important;
+          margin-right: 1rem !important;
+        }
+      }
+    }
+
+    .asset-disposal-form, 
+    .asset-refurbish-form, 
+    .disposal-method-form, 
+    .recipient-container,
+    .repurpose-form-container,
+    .trasfer-form-container,
+    .scrap-form-container,
+    .preview-left-container {
+      h5 {
+        font-size: 19px !important;
+        font-weight: bold;
+        letter-spacing: 0.9px;
+        color: map-get($map: $app-theme, $key: "baseFormal");
+      }
+    }
+  }
+}

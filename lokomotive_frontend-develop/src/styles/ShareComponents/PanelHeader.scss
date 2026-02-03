@@ -1,0 +1,56 @@
+.panel-header {
+  margin: 0rem -5rem 0 -5rem;
+  padding: 2rem 5rem 2rem 5rem;
+  background: transparent;
+  position: relative;
+
+  &.disable-bg {
+    background: none !important;
+  }
+
+  .panel-date {
+    letter-spacing: 1.5px;
+  }
+  .heading {
+    letter-spacing: 1.7px;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .panel-header{
+    margin: 0rem -2rem 0 -2rem;
+    padding: 1.5rem 3rem 1rem 3.5rem;
+
+    &.mobile-bg {
+      background: rgba(11, 24, 100, 0.2);
+      backdrop-filter: blur(27px) brightness(0.6);
+      -webkit-backdrop-filter: blur(27px) brightness(0.6);
+    }
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .panel-header{
+    padding: 1.5rem 2.5rem 1.5rem 3rem;
+
+    .heading {
+      letter-spacing: 1.2px;
+      font-weight: 600;
+    }
+
+    &.mobile-bg {
+      background: rgba(11, 24, 100, 0.2);
+      backdrop-filter: blur(27px) brightness(0.6);
+      -webkit-backdrop-filter: blur(27px) brightness(0.6);
+    }
+  }
+
+  .panel-text {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+  }
+  .panel-date {
+    font-size: 1.2em;
+  }
+}

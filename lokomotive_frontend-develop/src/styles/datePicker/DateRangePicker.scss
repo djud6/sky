@@ -1,0 +1,15 @@
+@import "../variables.scss";
+s button {
+  color: white;
+  background: map-get($map: $app-theme, $key: "baseTransparentWhite") 0% 0% no-repeat padding-box !important;
+  border: 0px;
+}
+
+.date-picker-container {
+}
+#popover-basic {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}

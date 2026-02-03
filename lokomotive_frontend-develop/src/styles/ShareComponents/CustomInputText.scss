@@ -1,0 +1,38 @@
+@import "../variables.scss";
+
+.custom-input-text {
+  .p-inputtext {
+    color: white;
+    width: 100%;
+    background: map-get($map: $app-theme, $key: "baseTransparentWhite");
+    border: 1px solid map-get($map: $app-theme, $key: "baseTransparentWhiteLight");
+    height: 46px;
+    font-size: 18px !important;
+    letter-spacing: 0.8px;
+  }
+  .p-inputtext:enabled:focus {
+    border-color: map-get($map: $app-theme, $key: "primaryElectricDark");
+  }
+  .p-inputtext:hover {
+    border-color: map-get($map: $app-theme, $key: "primaryElectricDark");
+  }
+
+  &.left-status {
+    .p-inputtext {
+      border-left: 4px solid map-get($map: $app-theme, $key: "primaryElectricDark");
+
+      &.p-filled {
+        border-left: 4px solid map-get($map: $app-theme, $key: "secondaryTechno");
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .custom-input-text {
+    .p-inputtext {
+      font-size: 15px;
+      height: 39px;
+    }
+  }
+}

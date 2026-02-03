@@ -1,0 +1,5 @@
+@import "../variables.scss";
+
+.react-grid-item.react-grid-placeholder {
+  background-color: map-get($map: $app-theme, $key: "primaryLogin");
+}

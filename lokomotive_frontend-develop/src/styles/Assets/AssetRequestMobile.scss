@@ -1,0 +1,16 @@
+@import "../variables.scss";
+
+.asset-request-mobile {
+  width: 100%;
+  background: transparent;
+  border: 1px solid map-get($map: $app-theme, $key: "primaryElectricDark");
+  border-radius: 3px;
+  padding: 1.5em 2em;
+
+  h3 {
+    color: map-get($map: $app-theme, $key: "baseDimDust") !important;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}

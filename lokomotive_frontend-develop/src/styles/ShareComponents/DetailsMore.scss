@@ -1,0 +1,67 @@
+@import "../variables.scss";
+
+.detailsMore {
+  background: transparent linear-gradient(124deg, map-get($map: $app-theme, $key: "baseBlackTransparent"), map-get($map: $app-theme, $key: "primaryKlein")) 0 0 no-repeat padding-box;
+  border-radius: 10px;
+
+  .p-button.p-button-link {
+    color: map-get($map: $app-theme, $key: "baseWhite");
+    padding: 0 1em;
+    letter-spacing: 1.3px;
+    font-size: 20px;
+    font-weight: bold;
+    overflow: unset;
+
+    &:hover {
+      color: map-get($map: $app-theme, $key: "primary");
+    }
+  }
+
+  hr {
+    border: 0.5px solid map-get($map: $app-theme, $key: "baseDimDust");
+    margin: 0 1em 1em 1em;
+  }
+
+  .section-view {
+    background:  transparent;
+  }
+
+  .p-tabview-panels {
+    margin: 1em 1em 0 1em;
+    background: transparent;
+    border-radius: 6px;
+  }
+
+  .p-toolbar {
+    background: rgba(0, 0, 0, 0.45);
+    color: white !important;
+    border: none;
+  }
+  
+  .parts-labor-cost-table .p-toolbar {
+    background: transparent !important;
+    border-radius: none !important;
+    border: none !important;
+  }
+
+  .p-datatable-tbody {
+    .edit-delete-btn {
+      .p-button-edit-cost {
+        background: map-get($map: $app-theme, $key: "secondaryDark") !important;
+        border: 1px solid map-get($map: $app-theme, $key: "secondaryDark") !important;
+      }
+      .p-button-delete-cost {
+        background: map-get($map: $app-theme, $key: "tertiaryBlood");
+        border: 1px solid map-get($map: $app-theme, $key: "tertiaryBlood");
+      }
+    }
+  }
+
+  // For progress bar
+  .p-steps .p-steps-item .p-menuitem-link {
+    background: transparent;
+  }
+  .p-steps .p-steps-item.p-highlight .p-steps-title {
+    color: white;
+  }
+}

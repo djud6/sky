@@ -1,0 +1,127 @@
+@import "../variables.scss";
+
+.fleet-main-header {
+  margin: 0rem -5rem 0 -5rem;
+  padding: 0rem 5rem 1rem 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  .header-left {
+    width: 50%;
+
+    .panel-header {
+      margin: 0 0 0 0 !important;
+      padding: 0 0 1rem 0 !important;
+      backdrop-filter: unset;
+      background: unset;
+    }
+
+    .info-text {
+      color: map-get($map: $app-theme, $key: "baseDimDust");
+      letter-spacing: 0.7px;
+    }
+  }
+
+  .header-right {
+    margin-top: 2rem;
+
+    .weather-widget {
+      position: relative;
+      height: 220px;
+
+      .infoCard {
+        background-color: unset;
+        height: unset;
+  
+        &::after {
+          display: none;
+        }
+        
+        .weather-widget-inner{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+    
+          .weather-left {
+            margin: 1.5rem 5rem 0 2rem;
+  
+            .time {
+              font-size: 16px;
+              letter-spacing: 1.8px;
+              color: map-get($map: $app-theme, $key: "baseWhite");
+              text-align: left;
+            }
+    
+            .description {
+              font-size: 20px;
+              letter-spacing: 3.6px;
+              color: map-get($map: $app-theme, $key: "baseWhite");
+              text-align: left;
+              margin-bottom: 0.4rem;
+            }
+  
+            .temp {
+              font-size: 45px;
+              letter-spacing: 5.7px;
+              color: map-get($map: $app-theme, $key: "baseWhite");
+              text-align: left;
+            }
+          }
+    
+          .weather-right {
+            margin: 1.5rem 2rem 0 0;
+            .loc-name {
+              font-size: 20px;
+              letter-spacing: 1.8px;
+              color: map-get($map: $app-theme, $key: "baseWhite");
+              text-align: right;
+              text-transform: uppercase;
+            }
+            .temp-range {
+              font-size: 16px;
+              letter-spacing: 2.4px;
+              color: map-get($map: $app-theme, $key: "baseWhite");
+              text-align: right;
+            }
+          }
+        }
+      }
+
+      .weather-img {
+        position: absolute;
+        right: 80px;
+        top: 90px;
+
+        img {
+          width: 140px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1280px) {
+  .fleet-main-header {
+    .header-left {
+      width: 100%;
+      margin: 2rem 0 1rem 0;
+    }
+    .header-right {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .fleet-main-header {
+    margin: 0rem -1rem 0 -1rem;
+    padding: 0rem 1.5rem 0.5rem 1.5rem;
+    background: rgba(0, 6, 82, 0.6);
+    box-shadow: 0px 8px 24px map-get($map: $app-theme, $key: "baseBoxShadow");
+    backdrop-filter: blur(27px);
+    -webkit-backdrop-filter: blur(27px);
+  }
+}

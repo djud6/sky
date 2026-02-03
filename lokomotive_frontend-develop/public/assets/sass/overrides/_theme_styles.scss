@@ -1,0 +1,150 @@
+/* Add your customizations of the theme styles here */
+/* 
+Styling changes not in overrides
+1. _sidebar_slim.scss: delete the whole "layout-menu-enter-active" class 
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+/* ============= Global font ======================= */
+.p-component {
+  font-family: 'Noto Sans', sans-serif;
+}
+.p-link {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* ============= Global styling ======================= */
+*:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+
+/* ============= Skeleton ======================= */
+.p-skeleton {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeHolderShimmer;
+  -webkit-animation-timing-function: linear;
+  background: #00000073;
+  background-image: linear-gradient(to right, #00000073 0%, #00000073 40%, #00000073 100%);
+}
+
+/* ============= Navigation (Top and Side) ======================= */
+.logo-image {
+  width: auto !important;
+}
+
+.profile-info {
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.layout-menu-container a:hover{
+  text-decoration: none;
+}
+
+.layout-sidebar .logo {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+@media screen and (max-width: 991px) {
+  .layout-wrapper .layout-content-wrapper {
+    padding-top: 10rem !important;
+  }
+}
+
+/* ============= Asset ======================= */
+.asset-images .p-galleria-thumbnail-items-container {
+  flex: 1;
+}
+
+/* ============= Tab ======================= */
+.p-tabview-nav-link:hover {
+  text-decoration: none;
+}
+
+.p-tabview .p-tabview-nav li .p-tabview-nav-link {
+  background: none;
+}
+
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+  background: none;
+}
+
+.p-tabview .p-tabview-panels {
+  background: transparent;
+  padding: 0 0;
+}
+
+/* ============= Dialog ======================= */
+.p-dialog-mask.p-component-overlay {
+  background-color: rgba(0, 0, 0, 0.65) !important;
+}
+
+/* ============= Date Picker ======================= */
+.p-datepicker {
+  width: 28rem !important;
+}
+
+/* ============= Dropdown ======================= */
+.p-dropdown-panel {
+  z-index: 1200 !important;
+}
+
+/* ============= Cards ======================= */
+.card {
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12) !important;
+  margin-bottom: 1rem !important;
+}
+
+/* ============= Input Widget ======================= */
+.widget-overview-box {
+  min-height: 6rem !important;
+  position: relative !important;
+  border-left: 4px solid !important;
+}
+
+.widget-overview-box.widget-overview-box-3 {
+  border-left-color: #A5D6A7 !important;
+  width: auto !important;
+}
+
+.widget-overview-box.widget-overview-box-4 {
+  border-left-color: #64B5F6 !important;
+  width: auto !important;
+}
+
+/* ============= Report Form layout (Incident, Repair Request, Issues, Maintenance, Operator check) ======================= */
+.no-underline {
+  text-decoration: none !important;
+}
+
+/* ============= For responsive table view in schedule maintenance ======================= */
+.schedule-maintenance-hours-mileage .p-inputtext {
+  width: 100%;
+}
+
+/* ============= Parts and Labor cost style ======================= */
+.parts-labor-cost-table .p-dropdown {
+  width: 65px !important;
+}
+
+.tax-button .p-button {
+  padding: 0.2rem 0.4rem;
+  font-size: 9px;
+  overflow: inherit;
+}
+
+/* ============= Fuel Charts ======================= */
+.fuel-dropdown .p-dropdown {
+  width: auto !important;
+}
+
+/* ============= Daily Op check sm screen ======================= */
+.op-ckeck-button .p-selectbutton .p-button {
+  width: 50%;
+  height: 40px;
+}

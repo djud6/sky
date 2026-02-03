@@ -1,0 +1,18 @@
+
+.custom-select-comment {
+  .p-button {
+    font-size: 16px !important;
+  }
+}
+
+.custom-select-comment [aria-label="Satisfactory"][aria-pressed="true"] {
+  background: #00A32E !important;
+  border-color: #00A32E !important;
+  color: #ffffff !important;
+}
+
+.custom-select-comment [aria-label="Unsatisfactory"][aria-pressed="true"] {
+  background: #CC4D19 !important;
+  border-color: #CC4D19 !important;
+  color: #ffffff !important;
+}

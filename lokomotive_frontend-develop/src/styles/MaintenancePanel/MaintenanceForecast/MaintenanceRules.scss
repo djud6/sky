@@ -1,0 +1,133 @@
+@import "../../variables.scss";
+
+.maintenance-rule {
+  background: map-get($map: $app-theme, $key: "baseBlackTransparent");
+  border: 1px solid map-get($map: $app-theme, $key: "baseTransparentWhite");
+  border-radius: 3px;
+  height: 68vh;
+  padding: 1.5rem 2rem;
+  overflow-y: scroll;
+
+  ::-webkit-scrollbar-thumb {
+    background: map-get($map: $app-theme, $key: "baseLightGrey");
+  }
+
+  .table-title {
+    h5 {
+      font-size: 22px;
+      letter-spacing: 1.2px;
+      color: map-get($map: $app-theme, $key: "baseFormal");
+    }
+  }
+
+  .title-hint {
+    h5 {
+      text-align: center;
+      font-size: 17px;
+      letter-spacing: 2.7px;
+      color: map-get($map: $app-theme, $key: "baseLight");
+    }
+  }
+
+  .form-wrapper {
+    width: 50%;
+    margin-top: 1rem;
+
+    .no-style-btn {
+      .p-button {
+        .p-button-label {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .form-title {
+      background: map-get($map: $app-theme, $key: "primaryShade");
+      padding: 1rem 1rem;
+      margin-bottom: 2rem;
+      border-radius: 3px;
+      border-left: 4px solid map-get($map: $app-theme, $key: "secondaryTechno") !important;
+
+      h5 {
+        margin: 0 0;
+        color: map-get($map: $app-theme, $key: "baseWhite");
+      }
+    }
+
+    .rule-form {
+      label {
+        font-size: 22px;
+        letter-spacing: 1.1px;
+        color: map-get($map: $app-theme, $key: "baseWhite");
+      }
+      .subtitle {
+        label {
+          color: map-get($map: $app-theme, $key: "baseFormal");
+        }
+      }
+      .sub-form {
+        label {
+          font-size: 18px;
+        }
+
+        &.apply-similar {
+          .p-checkbox {
+            .p-checkbox-box {
+              background: transparent;
+    
+              &.p-focus {
+                box-shadow: none;
+                border-color: #ced4da;
+              }
+    
+              &.p-highlight {
+                border-color: #ced4da;
+              }
+            }
+          }
+    
+          .apply-text {
+            color: #ffffff;
+            letter-spacing: 1.5px;
+            margin-left: 0.7rem;
+          }
+        }
+      }
+    }
+
+    .save-rule-btn {
+      .p-button {
+        .p-button-label {
+          font-size: 17px;
+        }
+      }
+    }
+
+    .custom-warning-msg {
+      .p-message {
+        margin: 1rem 0;
+  
+        .p-message-summary {
+          font-size: 14px;
+          letter-spacing: 1.5px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 781px) {
+  .maintenance-rule {
+    .form-wrapper {
+      width: 80% !important;
+    }
+  }
+} 
+
+@media only screen and (max-width: 780px) {
+  .maintenance-rule {
+    .form-wrapper {
+      width: 100% !important;
+    }
+  }
+} 

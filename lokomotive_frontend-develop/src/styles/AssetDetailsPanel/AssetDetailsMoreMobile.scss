@@ -1,0 +1,250 @@
+@import "../variables.scss";
+
+.asset-details-more-mobile {
+  .asset-log {
+    .asset-log-title {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 0.9px;
+      color: map-get($map: $app-theme, $key: "baseWhite");
+      margin: 1rem 1rem;
+    }
+
+    .timeline {
+      .add-comment {
+        background: map-get($map: $app-theme, $key: "primaryDark");
+        margin: 1rem 0.5rem;
+        padding: 1rem 1rem;
+        border-radius: 4px;
+
+        h4 {
+          font-size: 19px;
+          color: map-get($map: $app-theme, $key: "baseWhite") !important;
+        }
+
+        .asset-details-log {
+          width: 100%;
+          padding-right: 10px;
+      
+          .p-inputtext {
+            width: 100%;
+            height: 42px;
+            color: white;
+            font-size: 18px;
+            letter-spacing: 1.8px;
+            background: map-get($map: $app-theme, $key: "baseTransparentWhite");
+            border: none;
+          }
+        }
+
+        .asset-details-log-btn {        
+          .p-button {
+            width: 100%;
+            height: 42px;
+            color: map-get($map: $app-theme, $key: "baseLightWhite");
+            background: map-get($map: $app-theme, $key: "primaryButton") 0% 0% no-repeat padding-box;
+            border-radius: 6px;
+            border: 1px solid map-get($map: $app-theme, $key: "primaryButton");
+            border-radius: 6px;
+      
+            &.p-disabled {
+              color: map-get($map: $app-theme, $key: "baseLightDust");
+              background: map-get($map: $app-theme, $key: "primaryHover") 0% 0% no-repeat padding-box;
+              border: 1px solid map-get($map: $app-theme, $key: "primaryHover");
+            }
+          }
+      
+          .p-button:hover {
+            color: map-get($map: $app-theme, $key: "baseLightWhite");
+            background: map-get($map: $app-theme, $key: "primaryFaded");
+            box-shadow: 0px 8px 24px map-get($map: $app-theme, $key: "baseBoxShadow");
+            border: 1px solid map-get($map: $app-theme, $key: "primaryFaded");
+            border-radius: 6px;
+          }
+        }
+      }
+
+      .select-event-mobile {
+        margin: 0 1rem 0.5rem 0.5rem;
+
+        .p-togglebutton {
+          background: transparent;
+          .p-button-label {
+            color: map-get($map: $app-theme, $key: "baseLightWhite");
+          }
+
+          &.p-highlight {
+            background: map-get($map: $app-theme, $key: "primaryButton");
+            border: 1px solid map-get($map: $app-theme, $key: "primaryButton");
+          }
+        }
+
+        .event-formdropdown {
+          width: 60%;
+          .form-group {
+            margin-bottom: 0.5rem !important;
+          }
+        }
+      }
+    }
+  }
+
+  .history-tables {
+    h5 {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.9px;
+      color: map-get($map: $app-theme, $key: "baseWhite");
+      margin: 1.5rem 1rem 1rem 1rem;
+    }
+
+    .darkTable {
+      .p-datatable-header {
+        display: none;
+      }
+    }
+  }
+
+  .downtime-tab {
+    .downtime-tab-title {
+      color: map-get($map: $app-theme, $key: "baseWhite");
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .downtime-container {
+      font-size: 1.2rem;
+      background: map-get($map: $app-theme, $key: "baseBlackTransparent");
+      border: 1px solid map-get($map: $app-theme, $key: "primaryElectric");
+      border-radius: 3px;
+      color: map-get($map: $app-theme, $key: "baseWhite");
+    }
+  }
+
+  .linked-asset-container {
+    h5 {
+      font-size: 22px;
+      font-weight: 700;
+      color: map-get($map: $app-theme, $key: "baseWhite") !important;
+    }
+
+    .btn-2 {
+      margin-bottom: 1rem;
+    }
+
+    .add-asset {
+      padding: 1.5rem 1.5rem;
+      background: map-get($map: $app-theme, $key: "primaryDark") !important;
+      border-radius: 5px;
+
+      .close-btn {
+        h5 {
+          margin-bottom: 0;
+        }
+        .p-button {
+          background: map-get($map: $app-theme, $key: "baseLight");
+          border: 1px solid map-get($map: $app-theme, $key: "baseLight");
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+        }
+        .pi-times {
+          color: map-get($map: $app-theme, $key: "primaryDark");
+        }
+      }
+
+      .add-assets-form {
+        .add-assets-q {
+          color: map-get($map: $app-theme, $key: "baseWhite") !important;
+          letter-spacing: 1.5px;
+
+          .label-container {
+            width: 100%;
+            label {
+              font-weight: bold;
+            }
+          }
+
+          .input-container {
+            .VIN {
+              margin: 0.5rem 0 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 451px) and (max-width: 599px) {
+  .asset-details-more-mobile {
+    .asset-log {
+      .asset-log-title {
+        font-size: 23px;
+        font-weight: bold;
+        margin: 1.5rem 1.5rem;
+      }
+
+      .timeline {
+        .add-comment {
+          margin: 1rem 1.5rem;
+          padding: 1rem 1rem;
+  
+          h4 {
+            font-size: 20px;
+            color: map-get($map: $app-theme, $key: "baseWhite") !important;
+          }
+        }
+  
+        .select-event-mobile {
+          margin: 1.5rem 2rem 1rem 1rem;
+        }
+      }
+    }
+
+    .issue-history {
+      h5 {
+        font-size: 23px;
+        font-weight: bold;
+        margin: 1.5rem 1rem 1rem 1rem;
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 600px) {
+  .asset-details-more-mobile {
+    .asset-log {
+      .asset-log-title {
+        font-size: 25px;
+        font-weight: bold;
+        margin: 2rem 2rem;
+      }
+
+      .timeline {
+        .add-comment {
+          margin: 1rem 2rem;
+          padding: 1rem 1rem;
+  
+          h4 {
+            font-size: 23px;
+            color: map-get($map: $app-theme, $key: "baseWhite") !important;
+          }
+        }
+  
+        .select-event-mobile {
+          margin: 2rem 3rem 1rem 2.2rem;
+        }
+      }
+    }
+
+    .issue-history {
+      h5 {
+        font-size: 25px;
+        font-weight: bold;
+        margin: 1.5rem 1rem 1rem 1rem;
+      }
+    }
+  }
+}

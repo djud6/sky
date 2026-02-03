@@ -1,0 +1,13 @@
+@import "../variables.scss";
+
+//=========Styling for text field =====================
+.txtField-2 {
+  .p-inputtext {
+    background: map-get($map: $app-theme, $key: "baseTransparentWhite") 0% 0% no-repeat padding-box;
+    color: white;
+    border: 1px solid map-get($map: $app-theme, $key: "baseTransparentWhite");
+    &:hover {
+      border: 1px solid map-get($map: $app-theme, $key: "primaryElectric");
+    }
+  }
+}

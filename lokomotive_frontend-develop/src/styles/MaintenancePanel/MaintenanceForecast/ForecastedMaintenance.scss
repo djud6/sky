@@ -1,0 +1,130 @@
+@import "../../variables.scss";
+
+.forecasted-maintenance {
+  background: map-get($map: $app-theme, $key: "baseBlackTransparent");
+  border: 1px solid map-get($map: $app-theme, $key: "baseTransparentWhite");
+  border-radius: 3px;
+  height: 68vh;
+  padding: 1.5rem 2rem;
+  overflow-y: scroll;
+
+  ::-webkit-scrollbar-thumb {
+    background: map-get($map: $app-theme, $key: "baseLightGrey");
+  }
+
+  .title-hint {
+    h5 {
+      text-align: center;
+      font-size: 17px;
+      letter-spacing: 1.4px;
+      color: map-get($map: $app-theme, $key: "baseLight");
+    }
+  }
+
+  .search-bar-container {
+    margin: 2rem 0;
+    .form-mtype {
+      .m-type-title {
+        background: map-get($map: $app-theme, $key: "primaryButton");
+        height: 100%;
+        padding: 0 1rem;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        display: flex;
+        align-items: center;
+
+        span {
+          font-size: 18px;
+          letter-spacing: 0.8px;
+          color: map-get($map: $app-theme, $key: "baseLightWhite");
+        }
+      }
+
+      .form-group {
+        margin-bottom: 0 !important;
+        flex-grow: 1;
+
+        .p-inputwrapper {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+
+    .form-select-date {
+      .select-date-title {
+        background: map-get($map: $app-theme, $key: "primaryButton");
+        height: 100%;
+        padding: 0 1rem;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        display: flex;
+        align-items: center;
+
+        span {
+          font-size: 18px;
+          letter-spacing: 0.8px;
+          color: map-get($map: $app-theme, $key: "baseLightWhite");
+        }
+      }
+
+      .custom-datepicker {
+        flex-grow: 1;
+        .cal {
+          .p-inputtext {
+            border-radius: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .schedule-btn {
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+// Preventative Maintenance Calendar Styling
+.pm-calendar-dialog {
+  .calendar-wrapper {
+    padding: 1rem;
+    background: #262525;
+    border-radius: 3px;
+
+    .fc-toolbar {
+      .fc-toolbar-title {
+        font-weight: bold;
+      }
+
+      .fc-toolbar-chunk {
+        &:last-child {
+          display: flex;
+          flex-direction: row;
+
+          .fc-button {
+            text-transform: capitalize;
+            letter-spacing: 1.5px;
+            background: map-get($map: $app-theme, $key: "primaryButton");
+          }
+        }
+      }
+    }
+
+    .fc-col-header {
+      width: 100% !important;
+    }
+
+    .fc-scrollgrid-sync-table, .fc-daygrid-body, .fc-daygrid-body-balanced {
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    .fc-view-harness {
+      a {
+        color: map-get($map: $app-theme, $key: "baseLight");
+      }
+    }
+  }
+}

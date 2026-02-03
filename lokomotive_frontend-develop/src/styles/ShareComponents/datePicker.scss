@@ -1,0 +1,121 @@
+@import "../variables.scss";
+
+.custom-datepicker {
+  .p-calendar {
+    width: 100%;
+  }
+  .react-datepicker__header {
+    padding-top: 0px;
+  }
+  
+  .react-datepicker__current-month,
+  .react-datepicker-time__header,
+  .react-datepicker-year-header {
+    color: map-get($map: $theme-colors, $key: "light");
+    background-color: map-get($map: $theme-colors, $key: "tablehighlight");
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  
+  .cal {
+    border-radius: 6px;
+  
+    .p-inputtext {
+      font-size: 18px;
+      background: map-get($map: $app-theme, $key: "baseTransparentWhite");
+      border: 2px solid map-get($map: $app-theme, $key: "baseTransparentWhiteLight");
+      color: map-get($map: $app-theme, $key: "baseFormal");
+    }
+    &.cal-active .p-inputtext {
+      color: white;
+    }
+
+    .p-button {
+      background: map-get($map: $app-theme, $key: "primaryButton");
+      border: 1px solid map-get($map: $app-theme, $key: "primaryButton");
+    }
+  }
+
+  &.left-status {
+    .cal {
+      .p-inputtext {
+        border-left: 4px solid map-get($map: $app-theme, $key: "primaryElectricDark");
+        &:hover,
+        &:enabled {
+          border-left: 4px solid map-get($map: $app-theme, $key: "primaryElectricDark");
+        }
+      }
+      &.cal-active .p-inputtext {
+        border-left: 4px solid map-get($map: $app-theme, $key: "secondaryTechno") !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cal {  
+    .p-inputtext {
+      font-size: 18px !important;
+      height: 37px !important;
+    }
+  }
+}
+
+// ============================== Styling for the dropdown calendar ==============
+.dropdown-content-cal.p-datepicker,
+.dropdown-content-cal .p-datepicker-header {
+  background-color: rgb(43, 43, 55) !important;
+}
+
+.dropdown-content-cal {
+  .p-datepicker-header {
+    color: map-get($map: $app-theme, $key: "baseWhite") !important;
+    border: none !important;
+    .p-datepicker-month {
+      font-weight: 700 !important;
+    }
+    .p-datepicker-year {
+      font-weight: 400 !important;
+    }
+
+    .p-datepicker-title {
+      .p-dropdown {
+        background: map-get($map: $app-theme, $key: "baseTransparentWhite") 0% 0% no-repeat padding-box;
+        border: 1px solid map-get($map: $app-theme, $key: "baseTransparentWhite");
+
+        .p-dropdown-label {
+          letter-spacing: 0.9px;
+          color: map-get($map: $app-theme, $key: "baseLightWhite");
+          font-weight: bold;
+        }
+        .p-dropdown-trigger {
+          .pi {
+            color: map-get($map: $app-theme, $key: "baseLightWhite");
+          }
+        }
+      }
+    }
+  }
+}
+
+.dropdown-content-cal {
+  th {
+    background-color: rgb(76, 76, 79);
+    color: rgb(199, 199, 199);
+    border-left: 1px solid rgb(116, 116, 124);
+    border-bottom: 1px solid rgb(116, 116, 124);
+  }
+  td {
+    color: rgb(213, 206, 206);
+    span:hover {
+      background-color: rgb(213, 213, 213) !important;
+      color: rgb(43, 43, 55) !important;
+    }
+  }
+  &-buttonbar {
+    border-top-color: rgb(116, 116, 124) !important;
+    .p-button-label {
+      color: rgb(199, 199, 199);
+    }
+  }
+}

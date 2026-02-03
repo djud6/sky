@@ -1,0 +1,103 @@
+@import "../../variables.scss";
+
+@mixin animation($str) {
+  animation: #{$str};
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+@include keyframes(robotAnim) {
+  0% {
+    background-position: 0 0, 12rem 0;
+  }
+  50% {
+    background-position: -12rem 0, 0 0;
+  }
+  100% {
+    background-position: 0 0, 12rem 0;
+  }
+}
+
+@include keyframes(textAnim) {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.skeleton-outer-container {
+  width: 100%;
+  background: map-get($map: $app-theme, $key: "baseTransparentWhite");
+  border-radius: 5px;
+
+  &.error-container {
+    background: transparent;
+  }
+
+  .animated-skeleton-container {
+    margin: auto;
+    .text-container {
+      .placeholder-text {
+        font-size: 1.7rem;
+        letter-spacing: 0.9rem;
+        color: map-get($map: $app-theme, $key: "baseWhite");
+        text-shadow: 0px 0px 6px map-get($map: $app-theme, $key: "primaryElectric");
+        opacity: 1;
+        @include animation("textAnim 1s ease-out infinite");
+      }
+      .error-text {
+        font-size: 1.3rem;
+        letter-spacing: 3.5px;
+        color: #ffffff;
+        text-shadow: 0px 0px 6px #2feeee;
+        opacity: 1;
+        @include animation("textAnim 1s ease-out infinite");
+      }
+    }
+
+    .fleetguru-error {
+      background-image: url(../../../images/robots/robot-404.png);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 11rem;
+      width: 11rem;
+    }
+
+    .fleetguru-animated {
+      background-image: url(../../../images/robots/robot-loading-1.png),
+        url(../../../images/robots/robot-loading-2.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 0 0, 12rem 0;
+      height: 12rem;
+      width: 12rem;
+      @include animation("robotAnim 1s steps(1) infinite");
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .skeleton-outer-container {
+    .animated-skeleton-container {
+      .text-container {
+        .error-text {
+          font-size: 1rem;
+        }
+      }
+
+      .fleetguru-error {
+        height: 10rem;
+        width: 10rem;
+      }
+    }
+  }
+}

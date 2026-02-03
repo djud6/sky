@@ -1,0 +1,167 @@
+@import "../variables.scss";
+
+.operator-panel {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  .access-container {
+    width: 30%;
+    height: 400px;
+    margin: 1rem;
+    border: 1px solid map-get($map: $app-theme, $key: "baseTransparentWhite");
+    border-radius: 2px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    .container-text {
+      margin: 1rem 1.5rem;
+      color: white;
+      font-size: 38px;
+      font-style: italic;
+      letter-spacing: 7.0px;
+    }
+
+    &:hover, &:focus {
+      cursor: pointer;
+    }
+
+    .footer-btn {
+      height: 40%;
+      width: 100%;
+      bottom: 0;
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      .indicator-img {
+        position: absolute;
+        left: -50px;
+        bottom: -80px;
+        width: 350px;
+        height: 350px;
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          display: block;
+        }
+      }
+
+      .p-button {
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        border: 1px solid map-get($map: $app-theme, $key: "baseTransparentWhite");
+
+        .pi {
+          font-size: 2rem;
+          color: map-get($map: $app-theme, $key: "secondary");
+        }
+      }
+    }
+  }
+
+  .access-container:hover {
+    opacity: 1 !important;
+    z-index: 0;
+  }
+}
+
+@media screen and (min-width: "1301px") and (max-width: "1630px") {
+  .operator-panel {
+    .access-container {
+      .footer-btn {
+        .indicator-img {
+          width: 300px;
+          height: 300px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: "1181px") and (max-width: "1300px") {
+  .operator-panel {
+    .access-container {
+      width: 32%;
+
+      .footer-btn {
+        .indicator-img {
+          left: -40px;
+          bottom: -20px;
+          width: 200px;
+          height: 200px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: "769px") and (max-width: "1180px") {
+  .operator-panel {
+    .access-container {
+      width: 45%;
+
+      .footer-btn {
+        .indicator-img {
+          left: -40px;
+          bottom: -20px;
+          width: 280px;
+          height: 280px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: "551px") and (max-width: "768px") {
+  .operator-panel {
+    margin-top: unset;
+    margin-bottom: 3rem;
+    .access-container {
+      width: 65%;
+
+      .footer-btn {
+        .indicator-img {
+          left: -10px;
+          bottom: -10px;
+          width: 270px;
+          height: 270px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: "551px") {
+  .operator-panel {
+    margin-top: unset;
+    margin-bottom: 3rem;
+    .access-container {
+      width: 80%;
+      height: 300px;
+      .container-text {
+        margin: 1rem 1.5rem;
+        font-size: 30px;
+        letter-spacing: 5.0px;
+      }
+
+      .footer-btn {
+        .indicator-img {
+          left: -10px;
+          bottom: -20px;
+          width: 230px;
+          height: 230px;
+        }
+        .p-button {
+          padding: 3px 7px;
+          width: 70px;
+          height: 70px;
+        }
+      }
+    }
+  }
+}

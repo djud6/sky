@@ -1,0 +1,60 @@
+@import "../variables.scss";
+
+.details-card-title {
+  font-size: 22px;
+  letter-spacing: 0.9px;
+  color: map-get($map: $app-theme, $key: "baseWhite");
+  margin-bottom: 1rem;
+}
+
+.asset-details-container {
+  .mobile-container {
+    .details-card {
+      .details-card-title {
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 0.9px;
+        color: map-get($map: $app-theme, $key: "baseWhite");
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .desktop-container {
+    .left-container {
+      width: 30%;
+    }
+  
+    .right-container {
+      width: 65%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1300px) {
+  .asset-details-container {
+    .desktop-container {
+      .left-container {
+        width: 25%;
+      }
+    
+      .right-container {
+        width: 75%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1199px) {
+  .asset-details-container {
+    .desktop-container {
+      .left-container {
+        width: 100%;
+      }
+    
+      .right-container {
+        width: 100%;
+      }
+    }
+  }
+}

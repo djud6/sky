@@ -1,0 +1,35 @@
+.custom-timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 40px;
+}
+
+.timeline-event {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.timeline-event-left {
+  flex-direction: row;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #115a98;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.timeline-content {
+  margin-left: 40px;
+  flex: 1;
+}

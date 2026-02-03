@@ -1,0 +1,95 @@
+@import "../variables.scss";
+
+.quick-access-tabs {
+  width: 100%;
+  height: 53px;
+  padding: 5px;
+  display: flex;
+  background:
+    linear-gradient(to right, map-get($map: $app-theme, $key: "baseDimDust") 1px, transparent 1px) 0 0,
+    linear-gradient(to right, map-get($map: $app-theme, $key: "baseDimDust") 1px, transparent 1px) 0 100%,
+    linear-gradient(to left, map-get($map: $app-theme, $key: "baseDimDust") 1px, transparent 1px) 100% 0,
+    linear-gradient(to left, map-get($map: $app-theme, $key: "baseDimDust") 1px, transparent 1px) 100% 100%,
+    linear-gradient(to bottom, map-get($map: $app-theme, $key: "baseDimDust") 1px, transparent 1px) 0 0,
+    linear-gradient(to bottom, map-get($map: $app-theme, $key: "baseDimDust") 1px, transparent 1px) 100% 0,
+    linear-gradient(to top, map-get($map: $app-theme, $key: "baseDimDust") 1px, transparent 1px) 0 100%,
+    linear-gradient(to top, map-get($map: $app-theme, $key: "baseDimDust") 1px, transparent 1px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 5px 5px;
+
+  .access-tab {
+    flex: 1 1;
+    height: 100%;
+    background: transparent !important;
+    border: 1px solid map-get($map: $app-theme, $key: "baseTransparentWhite");
+    color: map-get($map: $app-theme, $key: "baseLight");
+    transition: 0.5s;
+    border-left: none;
+    text-align: center;
+    display: table;
+    overflow: hidden;
+
+    span {
+      text-align: center;
+      color: map-get($map: $app-theme, $key: "baseLightWhite");
+      display:table-cell;
+      vertical-align:middle;
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      background: transparent !important;
+      border: 1px solid map-get($map: $app-theme, $key: "primary");
+      color: map-get($map: $app-theme, $key: "baseWhite");
+
+      &:first-child {
+        border-left: 1px solid map-get($map: $app-theme, $key: "primary");
+      }
+    }
+
+    &.active-tab{
+      background: transparent !important;
+      border: 1px solid map-get($map: $app-theme, $key: "primary");
+
+      &:first-child {
+        border-left: 1px solid map-get($map: $app-theme, $key: "primary");
+      }
+
+      span {
+        color: map-get($map: $app-theme, $key: "primary") !important;
+      }
+    }
+  }
+
+  .access-tab:first-child {
+    border-left: 1px solid map-get($map: $app-theme, $key: "baseTransparentWhite");
+  }
+
+  .access-tab:last-child {
+    margin-right: 0 !important;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+@media only screen and (max-width: 768px) and (min-width: 521px) {
+  .access-tab {
+    span {
+      font-size: 15px !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .access-tab {
+    span {
+      text-align: center;
+      font-size: 15px !important;
+      font-weight: normal !important;
+      letter-spacing: unset !important;
+    }
+  }
+}

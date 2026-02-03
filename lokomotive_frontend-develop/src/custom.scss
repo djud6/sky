@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&display=swap");
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: "Noto Sans", sans-serif !important;
+  margin: 0;
+  padding: 0;
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* width & height */
+  ::-webkit-scrollbar {
+    width: 2px;
+    height: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #b340bf;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #00071b;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #031036;
+  }
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+$font-family-base: "Noto Sans", sans-serif;
+$theme-colors: (
+  "dark": rgb(21, 43, 64),
+  "info": rgb(21, 146, 230),
+  "secondary": #46889e,
+  "active": rgb(42, 100, 139),
+  "grey": #999,
+  "primary": rgb(2, 7, 115),
+  "light": rgb(248, 249, 252),
+  "danger": rgb(242, 69, 29),
+  "tablehighlight": rgb(98, 110, 209),
+);
+
+$table-dark-bg: rgb(32, 82, 115);
+
+.card {
+  box-shadow: #333 1px 1px;
+}
+
+@import "~bootstrap/scss/bootstrap";
+
+.content-card {
+  box-shadow: 2px 2px 2px 2px #eeeff2;
+  border: none;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.datepicker-days .month-bar {
+  color: white;
+  background-color: map-get($theme-colors, "tablehighlight");
+  font-size: 0.9em;
+}
+
+.datepicker-days .dow-head {
+  background-color: map-get($theme-colors, "grey");
+}
+
+.datepicker-days .active.day {
+  background-color: map-get($theme-colors, "danger") !important;
+  background-image: none !important;
+}
+
+.datepicker.dropdown-menu {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.datepicker-days thead th {
+  border-radius: 0 !important;
+}
+
+.datepicker .datepicker-switch:hover,
+.datepicker .next:hover,
+.datepicker .prev:hover,
+.datepicker tfoot tr th:hover {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+td {
+  overflow-wrap: break-word;
+}
+
+// font size responsive
+$enable-responsive-font-sizes: true !default;
+
+@media (max-width: 992px) {
+  body {
+    font-size: 0.8rem;
+  }
+
+  .input-group-text {
+    font-size: 0.8rem;
+  }
+}

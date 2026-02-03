@@ -1,0 +1,84 @@
+@import "./variables.scss";
+
+.feedback-panel {
+  .panel-date {
+    display: none;
+  }
+
+  .form-container {
+    width: 100%;
+
+    .form-q-wrapper {
+      margin-bottom: 1rem;
+      .form-q {
+        width: 25%;
+        font-size: 22px;
+        letter-spacing: 1.1px;
+        color: map-get($map: $app-theme, $key: "baseFormal");
+      }
+  
+      .form-input {
+        width: 75%;
+
+        .form-group {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .submit-btn {
+      margin: 1rem 0;
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .feedback-panel {
+    .form-container {
+      width: 95%;
+      margin-top: 1rem;
+  
+      .form-q-wrapper {
+        margin-bottom: 1rem;
+        .form-q {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .feedback-panel {
+    .form-container {
+      .form-q-wrapper {
+        .form-q {
+          width: 100% !important;
+          font-size: 18px;
+          font-weight: 700;
+        }
+    
+        .form-input {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .feedback-panel {
+    .form-container {
+      .form-q-wrapper {
+        margin-bottom: 0.5rem !important;
+        .form-q {
+          font-size: 18px;
+          font-weight: 600;
+        }
+        .form-input {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}

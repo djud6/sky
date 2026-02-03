@@ -1,0 +1,203 @@
+@import "../../variables.scss";
+
+.details-view-mobile {
+  background: map-get($map: $app-theme, $key: "baseBlackTransparent");
+  border: 1px solid map-get($map: $app-theme, $key: "primaryElectric");
+  border-radius: 6px;
+  padding: 2em 2em;
+
+  hr {
+    margin: 1.3em 0;
+    color: map-get($map: $app-theme, $key: "baseDimDust");
+    background-color: map-get($map: $app-theme, $key: "baseDimDust");
+  }
+
+  .header {
+    color: map-get($map: $app-theme, $key: "baseLight");
+    font-size: 4vw;
+    letter-spacing: 0.9px;
+  }
+
+  .header-grey {
+    color: map-get($map: $app-theme, $key: "baseFormal");
+    font-size: 4vw !important;
+    letter-spacing: 0.9px;
+  }
+
+  .main-details {
+    margin: 0.5em 0;
+    .title {
+      color: map-get($map: $app-theme, $key: "baseFormal");
+      font-size: 3vw;
+      letter-spacing: 0.65px;
+      max-width: 50%;
+    }
+    .value {
+      color: map-get($map: $app-theme, $key: "baseWhite");
+      font-size: 3vw;
+      letter-spacing: 0.65px;
+      font-weight: normal;
+      word-wrap: break-word;
+      text-align: right;
+      max-width: 50%;
+
+      a {
+        color: map-get($map: $app-theme, $key: "baseWhite") !important;
+      }
+
+      &.clickable-id {
+        cursor: pointer;
+        text-decoration: underline;
+        color: map-get($map: $app-theme, $key: "primaryElectricDark") !important;
+      }
+    }
+
+    .sub-title,
+    .detail-title {
+      color: map-get($map: $app-theme, $key: "baseFormal");
+      font-size: 16px;
+      letter-spacing: 0.65px;
+      font-weight: 600;
+      max-width: 50%;
+    }
+    .sub-value {
+      color: map-get($map: $app-theme, $key: "baseWhite");
+      font-size: 16px;
+      letter-spacing: 0.65px;
+      word-wrap: break-word;
+
+      a {
+        color: map-get($map: $app-theme, $key: "baseWhite") !important;
+      }
+    }
+    .detail-title {
+      max-width: unset;
+    }
+    .op-title {
+      width: 100%;
+      color: map-get($map: $app-theme, $key: "baseFormal");
+      letter-spacing: 0.65px;
+      font-weight: 600;
+    }
+    .op-values {
+      font-size: 17px;
+      letter-spacing: 0.65px;
+    }
+
+    &.description,
+    &.files {
+      .title,
+      .value {
+        max-width: 100%;
+        text-align: left;
+      }
+    }
+  }
+
+  .button-container {
+    margin-top: 1em;
+    .p-button {
+      .p-button-label {
+        font-size: 3vw;
+      }
+    }
+  }
+
+  .detail-edit-btn {
+    .p-button {
+      background: transparent;
+      border: map-get($map: $app-theme, $key: "primaryElectric") 2px solid;
+    }
+    .p-button:hover {
+      background: transparent;
+    }
+  }
+
+  .detail-action-color-1 {
+    .p-button {
+      background: map-get($map: $app-theme, $key: "secondaryDark");
+      border: map-get($map: $app-theme, $key: "secondaryDark");
+    }
+  }
+
+  .detail-action-color-2 {
+    .p-button {
+      background: map-get($map: $app-theme, $key: "secondaryDynamicDark");
+      border: map-get($map: $app-theme, $key: "secondaryDynamicDark");
+      color: black;
+    }
+  }
+
+  .detail-action-color-3 {
+    .p-button {
+      background: map-get($map: $app-theme, $key: "tertiaryBlood");
+      border: map-get($map: $app-theme, $key: "tertiaryBlood");
+    }
+  }
+
+  .more-details {
+    .options {
+      margin-top: 1rem;
+
+      .p-button {
+        width: 100%;
+        padding: 0 0;
+        span {
+          font-size: 1.5rem;
+          letter-spacing: 0.9px;
+          color: map-get($map: $app-theme, $key: "baseWhite");
+        }
+        &.p-button-link {
+          color: map-get($map: $app-theme, $key: "baseWhite") !important;
+        }
+      }
+
+      hr {
+        margin: 0.7em 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .details-view-mobile {
+    padding: 1em 1em !important;
+
+    .header {
+      font-size: 20px !important;
+    }
+
+    .header-grey {
+      font-size: 22px !important;
+    }
+
+    .main-details {
+      margin: 0.4em 0 !important;
+      .title {
+        font-size: 18px !important;
+      }
+      .value {
+        font-size: 18px !important;
+      }
+    }
+  }
+
+  .button-container {
+    margin-top: 1em !important;
+    .p-button {
+      .p-button-label {
+        font-size: 18px !important;
+      }
+    }
+  }
+
+  .more-details {
+    .options {
+      .p-button {
+        span {
+          font-size: 18px !important;
+        }
+      }
+    }
+  }
+}

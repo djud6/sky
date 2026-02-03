@@ -1,0 +1,38 @@
+@import "../variables.scss";
+
+//Styling for button 2 dark blue- light on hover ============================
+.btn-2 {
+  .p-button {
+    border: none;
+    background: map-get($map: $app-theme, $key: "primaryFaded") 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+    letter-spacing: 1.1px;
+    color: map-get($map: $app-theme, $key: "baseWhite");
+    &:hover {
+      background: map-get($map: $app-theme, $key: "primaryButton") 0% 0% no-repeat padding-box;
+    }
+  }
+}
+.btn-2.table-export-btn-addn {
+  .p-button {
+    background: map-get($map: $app-theme, $key: "secondary") 0% 0% no-repeat padding-box;
+  }
+}
+
+.btn-2-select {
+  .p-button {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 5px 12px;
+  }
+}
+
+@media only screen and (max-width: 768px)  {
+  .btn-2 {
+    .p-button {
+      &-label {
+        font-size: 16px;
+      }
+    }
+  }
+}

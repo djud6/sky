@@ -1,0 +1,263 @@
+@import "../variables.scss";
+
+// ============== Account profile Header ======================
+.profile-page {
+  .header-container {
+    .panel-date {
+      display: none;
+    }
+    .heading {
+      font-weight: bold;
+    }
+  }
+}
+// ============== Account profile info ======================
+.infoCard {
+  height: calc(100% - 6em);
+  position: relative;
+  margin: 3em 0;
+  margin-right: 5em;
+  max-height: 70vh;
+  .chart-card-title {
+    font-size: 1.9rem;
+    letter-spacing: 1.4px;
+    color: map-get($map: $app-theme, $key: "baseLight");
+    margin: 2rem 2rem 1rem 2rem;
+  }
+  .fleet-card-title {
+    border-bottom: none !important;
+    height: unset;
+  }
+  .d-flex {
+    color: white;
+    margin-left: 2em !important;
+    margin-right: 6em !important;
+    padding-right: 0 !important;
+  }
+  .flex-row {
+    border-bottom: 1px solid map-get($map: $app-theme, $key: "baseDust");
+  }
+
+  .profile-item-wrapper {
+    padding: 0 8rem 0 4rem;
+
+    .profile-item-title {
+      letter-spacing: 1.4px;
+      color: map-get($map: $app-theme, $key: "baseWhite");
+      font-size: 17px;
+      padding-bottom: 0 !important;
+      padding-top: 10px !important;
+    }
+
+    .profile-item-value {
+      letter-spacing: 2.2px;
+      color: map-get($map: $app-theme, $key: "baseWhite");
+      font-size: 17px;
+      padding-bottom: 0 !important;
+      padding-top: 10px !important;
+
+      a:link {
+        color: map-get($map: $app-theme, $key: "baseLightGrey") !important;
+      }
+    }
+
+    hr {
+      margin: 2px 0;
+      color: map-get($map: $app-theme, $key: "baseDimDust");
+      background-color: map-get($map: $app-theme, $key: "baseDimDust");
+    }
+  }
+}
+//===================left column picture + buttons =========
+.profile-left {
+  background: transparent;
+  .profile-user-info-avatar {
+    position: relative;
+    max-height: 300px;
+    max-width: 300px;
+    border: 3px solid map-get($map: $app-theme, $key: "primaryElectric");
+    margin: 3em 0;
+    overflow: visible;
+    img {
+      border-radius: 50%;
+    }
+  }
+  .text-name {
+    letter-spacing: 4px;
+    color: map-get($map: $app-theme, $key: "baseWhite");
+    font-weight: 600;
+    font-size: 2.2rem;
+  }
+  .text-role {
+    letter-spacing: 2.4px;
+    color: map-get($map: $app-theme, $key: "baseWhite");
+    font-weight: 300;
+  }
+  .profile-img-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: map-get($map: $app-theme, $key: "tertiaryTangy") 0% 0% no-repeat padding-box !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .pi-camera {
+      font-size: 2rem;
+    }
+    &:hover {
+      background-color: map-get($map: $app-theme, $key: "tertiaryTangy") !important;
+      .pi-camera {
+        font-size: 2.3rem;
+      }
+    }
+  }
+
+  .profile-pass-btn {
+    background: transparent !important;
+    box-shadow: 0px 0px 25px map-get($map: $app-theme, $key: "baseBoxShadow");
+    border: 1px solid map-get($map: $app-theme, $key: "baseLightGrey");
+    border-radius: 0px;
+    letter-spacing: 1.4px;
+    color: map-get($map: $app-theme, $key: "baseLightGrey");
+    font-size: 1.1rem;
+    width: auto !important;
+    padding: 0.5em 1em !important;
+    margin-bottom: 1em;
+    font-family: 'Noto Sans', sans-serif;
+    &:hover {
+      background: map-get($map: $app-theme, $key: "primaryFaded") 0% 0% no-repeat padding-box !important;
+      box-shadow: 0px 13px 25px map-get($map: $app-theme, $key: "baseBoxShadow");
+      color: map-get($map: $app-theme, $key: "baseWhite");
+      border-color: map-get($map: $app-theme, $key: "primaryFaded");
+      font-size: 1.2rem;
+      margin-bottom: 4.35em !important;
+    }
+    .pi-pencil {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+//===================profile container =====================
+
+.profile-cont {
+  .col-img {
+    flex: 5 !important;
+  }
+  .col-chart {
+    flex: 6 !important;
+  }
+  background: map-get($map: $app-theme, $key: "baseBlackTransparent");
+  border-radius: 5px;
+  backdrop-filter: blur(30px);
+  border-left: 5px solid map-get($map: $app-theme, $key: "primaryElectric");
+  margin: 3em 2em;
+  &-outter {
+    max-width: none;
+  }
+}
+@media only screen and (max-width: 1465px) {
+  .infoCard .chart-card-title {
+    padding-bottom: 0 !important;
+  }
+  .col-4 {
+    letter-spacing: 1.2px !important;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .infoCard {
+    margin-right: 1em !important;
+  }
+}
+
+//=============Mobile styling ==================
+
+@media only screen and (max-width: 814px) {
+  .profile-left {
+    .profile-pass-btn {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .profile-cont {
+    margin: 1rem 1rem;
+  }
+
+  .profile-left {
+    .profile-user-info-avatar {
+      height: 250px;
+      width: 250px;
+    }
+    .text-name {
+      font-size: 24px;
+    }
+    .text-role {
+      letter-spacing: 2.4px;
+      color: map-get($map: $app-theme, $key: "baseWhite");
+      font-weight: 300;
+    }
+  }
+  .infoCard {
+    .chart-card-title {
+      font-size: 20px;
+    }
+
+    .profile-item-wrapper {
+      padding: 0 6rem 0 4rem;
+  
+      .profile-item-title {
+        letter-spacing: 1.6px;
+        font-size: 15px;
+        padding-top: 6px !important;
+      }
+  
+      .profile-item-value {
+        letter-spacing: 1.6px;
+        color: map-get($map: $app-theme, $key: "baseWhite");
+        font-size: 15px;
+        padding-top: 6px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .profile-left {
+    .profile-user-info-avatar {
+      height: 220px;
+      width: 220px;
+    }
+  }
+  .infoCard {
+    .d-flex {
+      margin-left: 0.5rem !important;
+      margin-right: 0 !important;
+    }
+
+    .chart-card-title {
+      font-size: 20px;
+    }
+
+    .profile-item-wrapper {
+      padding: 0 4rem 0 2rem;
+  
+      .profile-item-title {
+        letter-spacing: 1.6px;
+        font-size: 15px;
+        padding-top: 6px !important;
+      }
+  
+      .profile-item-value {
+        letter-spacing: 1.6px;
+        color: map-get($map: $app-theme, $key: "baseWhite");
+        font-size: 15px;
+        padding-top: 6px !important;
+      }
+    }
+  }
+}

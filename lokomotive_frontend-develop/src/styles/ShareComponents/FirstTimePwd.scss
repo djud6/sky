@@ -1,0 +1,60 @@
+@import "../variables.scss";
+
+.first-password-overlay {
+  position: fixed;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+  z-index: 2000;
+  opacity: 0;
+  transition: opacity 0.3s;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  .password-section {
+    background: map-get($map: $app-theme, $key: "primaryDark");
+    border: 1px solid map-get($map: $app-theme, $key: "primaryElectric");
+    border-radius: 3px;
+    width: 480px;
+    margin: auto auto;
+    padding: 1rem 2rem;
+
+    .title {
+      margin: 1rem auto;
+      h4 {
+        color: map-get($map: $app-theme, $key: "baseWhite");
+        letter-spacing: 1.5px;
+        font-weight: bold;
+      }
+    }
+
+    label {
+      color: map-get($map: $app-theme, $key: "baseWhite");
+      letter-spacing: 1.5px;
+      font-size: 17px;
+    }
+
+    .custom-input-text {
+      &.is-invalid{
+        .p-inputtext {
+          border: 1px solid map-get($map: $app-theme, $key: "tertiaryTangy");
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
+
+.opac {
+  opacity: 1;
+}
+
+@media screen and (max-width: 500px) {
+  .first-password-overlay {
+    .password-section {
+      width: 93vw !important;
+    }
+  }
+}

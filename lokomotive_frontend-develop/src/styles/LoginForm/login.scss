@@ -1,0 +1,323 @@
+@import "../variables.scss";
+
+.loading-video {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .login-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .login-bg-vid {
+      object-fit: cover;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .form-signin {
+      margin: 0 auto;
+
+      .login-logo {
+        display: flex;
+        margin-bottom: 5em;
+
+        img {
+          margin: auto;
+        }
+      }
+
+      .login-inputs {
+        display: flex;
+        flex-direction: row;
+        background: linear-gradient(
+              to bottom,
+              map-get($map: $app-theme, $key: "baseDust") 2px,
+              transparent 1px
+            )
+            0 0,
+          linear-gradient(
+              to bottom,
+              map-get($map: $app-theme, $key: "baseDust") 2px,
+              transparent 2px
+            )
+            100% 0,
+          linear-gradient(to top, map-get($map: $app-theme, $key: "baseDust") 2px, transparent 2px)
+            0 100%,
+          linear-gradient(to top, map-get($map: $app-theme, $key: "baseDust") 2px, transparent 2px)
+            100% 100%;
+        background-repeat: no-repeat;
+        background-size: 5px;
+
+        .login-email-text,
+        .login-pass-text {
+          display: none;
+        }
+
+        .login-input-email,
+        .login-input-pass {
+          width: 350px;
+          height: 50px;
+          background: transparent;
+          border: 1px solid map-get($map: $app-theme, $key: "baseBlackLight");
+          text-align: left;
+          letter-spacing: 2.4px;
+          color: map-get($map: $app-theme, $key: "baseWhite");
+          caret-color: map-get($map: $app-theme, $key: "baseWhite");
+          padding-top: 0 !important;
+          padding-left: 15px;
+          border-radius: 0 !important;
+        }
+
+        .pass-wrapper {
+          width: 350px;
+          position: relative;
+
+          .login-input-pass {
+            border-left: none;
+          }
+          .login-input-pass-icon {
+            display: flex;
+            width: 24px;
+            height: 24px;
+            background: map-get($map: $app-theme, $key: "baseLight");
+            position: absolute;
+            right: 10px;
+            top: 13px;
+            box-shadow: 0px 0px 5px map-get($map: $app-theme, $key: "baseWhite");
+
+            img {
+              margin: auto;
+            }
+          }
+        }
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+          transition: background-color 5000s ease-in-out 0s;
+          -webkit-text-fill-color: map-get($map: $app-theme, $key: "baseWhite");
+        }
+      }
+
+      .login-btns {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .forgot-pwd-btn {
+          height: 23px;
+          padding: 0 0;
+          letter-spacing: 2.4px;
+          color: map-get($map: $app-theme, $key: "baseLight");
+
+          &:hover {
+            color: map-get($map: $app-theme, $key: "primary");
+            text-decoration: none !important;
+          }
+        }
+
+        .sign-in-btn {
+          height: 48px;
+          background: transparent;
+          border: 1px solid map-get($map: $app-theme, $key: "baseDimDust");
+          letter-spacing: 2.4px;
+          color: map-get($map: $app-theme, $key: "baseLight");
+          transition: 0.5s;
+          padding: 0.5rem 1.3rem;
+
+          &:hover {
+            border: 1px solid map-get($map: $app-theme, $key: "primary");
+            color: map-get($map: $app-theme, $key: "primary");
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  .login-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .login-bg-vid {
+      object-fit: cover;
+      width: 100vw;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .form-signin {
+      .login-logo {
+        display: flex;
+        margin-bottom: 5em;
+
+        img {
+          margin: auto;
+        }
+      }
+
+      .login-inputs {
+        display: flex;
+        flex-direction: column;
+
+        .login-email-text,
+        .login-pass-text {
+          text-transform: uppercase;
+          font-size: 18px;
+          color: map-get($map: $app-theme, $key: "baseDimDust");
+          letter-spacing: 1px;
+          width: 100%;
+          text-align: center;
+        }
+
+        .login-pass-text {
+          margin-top: 3rem;
+        }
+
+        .login-input-email,
+        .login-input-pass {
+          width: 350px;
+          height: 50px;
+          background: transparent;
+          border-color: map-get($map: $app-theme, $key: "baseBlackLight");
+          border-width: 0 0 1px 0;
+          text-align: left;
+          letter-spacing: 2.4px;
+          color: map-get($map: $app-theme, $key: "baseWhite");
+          caret-color: map-get($map: $app-theme, $key: "baseWhite");
+          padding-top: 0 !important;
+          padding-left: 15px;
+          text-align: center;
+          font-size: 17px;
+          border-radius: 0 !important;
+        }
+
+        .pass-wrapper {
+          width: 350px;
+          position: relative;
+
+          .login-input-pass {
+            border-left: none;
+          }
+          .login-input-pass-icon {
+            display: flex;
+            width: 24px;
+            height: 24px;
+            background: map-get($map: $app-theme, $key: "baseLight");
+            position: absolute;
+            right: 10px;
+            top: 13px;
+            box-shadow: 0px 0px 5px map-get($map: $app-theme, $key: "baseWhite");
+
+            img {
+              margin: auto;
+            }
+          }
+        }
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+          transition: background-color 5000s ease-in-out 0s;
+          -webkit-text-fill-color: map-get($map: $app-theme, $key: "baseWhite");
+        }
+      }
+
+      .login-btns {
+        display: flex;
+        flex-direction: column;
+
+        .forgot-btn-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+
+          .forgot-pwd-btn {
+            height: 23px;
+            padding: 0 0;
+            letter-spacing: 2.4px;
+            color: map-get($map: $app-theme, $key: "baseLight");
+            margin-top: 15px;
+
+            &:hover {
+              color: map-get($map: $app-theme, $key: "primary");
+              text-decoration: none !important;
+            }
+          }
+        }
+
+        .signin-btn-container {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          margin-top: 2rem;
+
+          .sign-in-btn {
+            height: 48px;
+            background: transparent;
+            border: 1px solid map-get($map: $app-theme, $key: "baseDimDust");
+            letter-spacing: 2.4px;
+            color: map-get($map: $app-theme, $key: "baseLight");
+            transition: 0.5s;
+            font-size: 15px;
+            padding: 0.3rem 1.2rem;
+
+            &:hover {
+              border: 1px solid map-get($map: $app-theme, $key: "primary");
+              color: map-get($map: $app-theme, $key: "primary");
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .login-wrapper {
+    .form-signin {
+      .login-inputs {
+        .login-input-email,
+        .login-input-pass {
+          width: 75vw;
+        }
+
+        .pass-wrapper {
+          width: 75vw;
+        }
+      }
+    }
+  }
+}

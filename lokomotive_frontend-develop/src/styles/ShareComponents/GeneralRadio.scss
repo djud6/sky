@@ -1,0 +1,37 @@
+@import "../variables.scss";
+
+.custom-radio-btn {
+  .p-radiobutton,
+  .p-radiobutton-box,
+  .p-radiobutton-icon {
+    transition: none !important;
+  }
+
+  .custom-button-style {
+    font-size: 18px !important;
+  }
+  .p-radiobutton {
+    box-shadow: none !important;
+    &.p-radiobutton-checked {
+      box-shadow: 0px 0px 25px map-get($map: $app-theme, $key: "primaryElectric") !important;
+      border-radius: 50%;
+      .p-radiobutton-box {
+        border: 2px solid white !important;
+        background-color: transparent;
+      }
+    }
+    .p-radiobutton-box,
+    .p-radiobutton-box:hover {
+      border: 2px solid map-get($map: $app-theme, $key: "baseLightGrey") !important;
+      background-color: transparent !important;
+    }
+    .p-radiobutton-box:not(.p-disabled).p-highlight:hover {
+      border: 2px solid white !important;
+    }
+    .p-radiobutton-box:not(.p-disabled).p-focus {
+      box-shadow: none !important;
+      border: 2px solid map-get($map: $app-theme, $key: "baseLightGrey");
+      background: transparent !important;
+    }
+  }
+}

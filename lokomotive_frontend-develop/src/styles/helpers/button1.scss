@@ -1,0 +1,21 @@
+@import "../variables.scss";
+
+// Styling for button 1 ============================
+.btn-1 {
+  .p-button {
+    height: 38px;
+    background: transparent;
+    border: 1px solid map-get($map: $app-theme, $key: "baseDimDust");
+    letter-spacing: 1.5px;
+    color: map-get($map: $app-theme, $key: "baseLight");
+    transition: 0.5s;
+    border-radius: 3px;
+
+    &:hover {
+      background: map-get($map: $app-theme, $key: "primary");
+      border: 1px solid map-get($map: $app-theme, $key: "primary");
+      color: map-get($map: $app-theme, $key: "baseWhite");
+      font-weight: bold;
+    }
+  }
+}

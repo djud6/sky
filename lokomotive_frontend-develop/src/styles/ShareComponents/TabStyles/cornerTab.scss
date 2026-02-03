@@ -1,0 +1,61 @@
+@import "../../variables.scss";
+
+.custom-tab-corner {
+  .p-tabview-nav {
+    height: 53px;
+    padding: 5px;
+    margin: 1px;
+    background: transparent;
+    border: none;
+    display: flex;
+    background:
+      linear-gradient(to right, map-get($map: $app-theme, $key: "baseDimDust") 1px, transparent 1px) 0 0,
+      linear-gradient(to right, map-get($map: $app-theme, $key: "baseDimDust") 1px, transparent 1px) 0 100%,
+      linear-gradient(to left, map-get($map: $app-theme, $key: "baseDimDust") 1px, transparent 1px) 100% 0,
+      linear-gradient(to left, map-get($map: $app-theme, $key: "baseDimDust") 1px, transparent 1px) 100% 100%,
+      linear-gradient(to bottom, map-get($map: $app-theme, $key: "baseDimDust") 1px, transparent 1px) 0 0,
+      linear-gradient(to bottom, map-get($map: $app-theme, $key: "baseDimDust") 1px, transparent 1px) 100% 0,
+      linear-gradient(to top, map-get($map: $app-theme, $key: "baseDimDust") 1px, transparent 1px) 0 100%,
+      linear-gradient(to top, map-get($map: $app-theme, $key: "baseDimDust") 1px, transparent 1px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 5px 5px;
+
+    .p-unselectable-text {
+      flex: 1;
+
+      .p-tabview-nav-link {
+        border: 1px solid map-get($map: $app-theme, $key: "baseTransparentWhite");
+        border-radius: 0px;
+        color: map-get($map: $app-theme, $key: "baseLight");
+        font-weight: normal;
+        display: flex;
+        justify-content: center;
+
+        &:hover {
+          color: map-get($map: $app-theme, $key: "baseLight") !important;
+          border: 1px solid map-get($map: $app-theme, $key: "primary") !important;
+          background: transparent !important;
+        }
+      }
+      
+      &.p-highlight {
+        .p-tabview-nav-link {
+          border: 1px solid map-get($map: $app-theme, $key: "primary") !important;
+          color: map-get($map: $app-theme, $key: "primary") !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 445px) {
+  .custom-tab-corner {
+    .p-tabview-nav {
+      .p-unselectable-text {
+        .p-tabview-nav-link {
+          padding: 1rem 0;
+        }
+      }
+    }
+  }
+}

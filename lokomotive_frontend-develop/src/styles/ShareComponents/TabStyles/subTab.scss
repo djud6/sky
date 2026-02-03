@@ -1,0 +1,99 @@
+@import "../../variables.scss";
+
+.darkSubTab {
+  &.p-tabview {
+    .p-tabview-nav {
+      background: none;
+      border: none;
+      padding: 0.2rem 0.5rem 1rem 0rem;
+
+      .p-unselectable-text {
+        .p-tabview-nav-link {
+          border: 1px solid map-get($map: $app-theme, $key: "baseTransparentWhite");
+          border-radius: 0;
+          padding: 0.7rem 0.9rem;
+
+          span {
+            padding: 10px 10px;
+          }
+        }
+        &.p-highlight {
+          .p-tabview-nav-link {
+            border: 1px solid map-get($map: $app-theme, $key: "baseTransparentWhite") !important;
+
+            span {
+              padding: 10px 10px;
+              color: map-get($map: $app-theme, $key: "baseLight");
+              background: map-get($map: $app-theme, $key: "primaryLogin");
+            }
+          }
+        }
+
+        &:first-child {
+          .p-tabview-nav-link {
+            border-right: 0;
+            background:
+              linear-gradient(to bottom, map-get($map: $app-theme, $key: "baseDimDust") 1px, transparent 1px) 0 0,
+              linear-gradient(to top, map-get($map: $app-theme, $key: "baseDimDust") 1px, transparent 1px) 0 100%;
+            background-repeat: no-repeat;
+            background-size: 5px 5px;
+          }
+        }
+        &:nth-child(2) {
+          .p-tabview-nav-link {
+            border-left: 0;
+            background:
+              linear-gradient(to bottom, map-get($map: $app-theme, $key: "baseDimDust") 1px, transparent 1px) 100% 0,
+              linear-gradient(to top, map-get($map: $app-theme, $key: "baseDimDust") 1px, transparent 1px) 100% 100%;
+            background-repeat: no-repeat;
+            background-size: 5px 5px;
+          }
+        }
+
+        &.p-highlight {
+          &:first-child {
+            .p-tabview-nav-link {
+              border-right: 0 !important;
+            }
+          }
+
+          &:nth-child(2) {
+            .p-tabview-nav-link {
+              border-left: 0 !important;
+            }
+          }
+        }
+
+        &:hover {
+          &:not(.p-highlight) {
+            .p-tabview-nav-link {
+              background: none !important;
+              border-color: map-get($map: $app-theme, $key: "baseTransparentWhite") !important;
+
+              span {
+                padding: 10px 10px;
+                background: map-get($map: $app-theme, $key: "baseTransparentWhite");
+                color: map-get($map: $app-theme, $key: "baseLight");
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .darkSubTab {
+    &.p-tabview {
+      .p-tabview-nav {
+        padding: 0.5rem 0 2rem 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .darkSubTab {
+  }
+}

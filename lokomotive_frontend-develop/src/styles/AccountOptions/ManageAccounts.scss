@@ -1,0 +1,771 @@
+@import "../variables.scss";
+
+.manage-accounts {
+  margin: 2rem 2rem 0 2rem;
+
+  .header-container {
+    .panel-date {
+      display: none;
+    }
+    .heading {
+      font-weight: bold;
+    }
+  }
+
+  .main-container {
+    background: map-get($map: $app-theme, $key: "baseBlackTransparent");
+    box-shadow: 0px 13px 25px map-get($map: $app-theme, $key: "baseBoxShadowSec");
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    border-left: 4px solid map-get($map: $app-theme, $key: "primaryElectricDark");
+    min-height: 70vh;
+    display: flex;
+
+    .manage-options {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      flex: 1;
+
+      .option-container {
+        width: 35%;
+        height: 75%;
+        margin: 1rem;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+
+        &:hover,
+        &:focus {
+          cursor: pointer;
+
+          &:after {
+            display: block;
+            content: "";
+            width: 85%;
+            height: 85%;
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            border-top: 3px solid map-get($map: $app-theme, $key: "tertiaryTangy");
+            border-left: 3px solid map-get($map: $app-theme, $key: "tertiaryTangy");
+            border-radius: 3px;
+          }
+
+          &:before {
+            display: block;
+            content: "";
+            width: 50%;
+            height: 40%;
+            position: absolute;
+            bottom: -15px;
+            right: -15px;
+            border-bottom: 3px solid map-get($map: $app-theme, $key: "tertiaryTangy");
+            border-right: 3px solid map-get($map: $app-theme, $key: "tertiaryTangy");
+            border-radius: 3px;
+          }
+        }
+
+        &.img-add-user {
+          background-image: url("../../images/background/add_user.png");
+        }
+
+        &.img-edit-user {
+          background-image: url("../../images/background/edit_user.png");
+        }
+
+        .footer-btn {
+          height: 22%;
+          width: 100%;
+          background: map-get($map: $app-theme, $key: "primaryDark");
+          bottom: 0;
+          position: absolute;
+          border-bottom: 2px solid map-get($map: $app-theme, $key: "primaryElectric");
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-items: center;
+        }
+      }
+    }
+
+    .op-edit-user {
+      flex: 1;
+      .search-user-bar {
+        .title {
+          font-size: 16px;
+          letter-spacing: 1.4px;
+          color: map-get($map: $app-theme, $key: "baseFormal");
+        }
+        .search-bar {
+          .p-inputgroup {
+            height: 45px;
+            .p-inputgroup-addon {
+              color: map-get($map: $app-theme, $key: "baseWhite");
+              background: map-get($map: $app-theme, $key: "primaryLogin");
+              padding: 0.5rem 1rem;
+              border-top: 1px solid map-get($map: $app-theme, $key: "primaryLogin");
+              border-left: 1px solid map-get($map: $app-theme, $key: "primaryLogin");
+              border-bottom: 1px solid map-get($map: $app-theme, $key: "primaryLogin");
+
+              .pi {
+                font-size: 1.5rem;
+              }
+            }
+
+            .input-box {
+              .p-inputtext {
+                height: 45px;
+                background: map-get($map: $app-theme, $key: "baseTransparentWhite");
+                border: none;
+                color: map-get($map: $app-theme, $key: "baseLight");
+                font-size: 18px;
+                font-weight: bold;
+                letter-spacing: 2.2px;
+
+                &::placeholder {
+                  /* Chrome, Firefox, Opera, Safari 10.1+ */
+                  color: map-get($map: $app-theme, $key: "baseFormal");
+                  font-size: 18px;
+                  font-weight: normal;
+                  letter-spacing: 1.8px;
+                  opacity: 1; /* Firefox */
+                }
+              }
+              @media (max-width: 767px) {
+                .input-user {
+                  padding: 3px;
+                }
+                .p-inputtext {
+                  font-size: 12px;
+                  letter-spacing: 2px;
+                  font-weight: 800;
+                  &::placeholder {
+                    font-size: 0.85rem;
+                    letter-spacing: 1.5px;
+                  }
+                }
+              }
+            }
+
+            .p-button {
+              background: map-get($map: $app-theme, $key: "primaryLogin");
+              border: 1px solid map-get($map: $app-theme, $key: "primaryLogin");
+              &.p-button-icon-only {
+                padding: 0.5rem 1.5rem;
+              }
+
+              &:enabled:hover {
+                background: map-get($map: $app-theme, $key: "primaryButton");
+                border: 1px solid map-get($map: $app-theme, $key: "primaryButton");
+              }
+            }
+          }
+        }
+      }
+
+      .user-info-card {
+        background: transparent;
+        border-radius: 6px;
+        padding: 2rem 2rem;
+        margin-top: 2rem;
+
+        .user-info-card-right {
+          background: map-get($map: $app-theme, $key: "baseTransparentWhite");
+          border-radius: 6px;
+          width: 50%;
+
+          &.edit-mode {
+            border-left: 4px solid map-get($map: $app-theme, $key: "primaryElectricDark");
+          }
+
+          .info-details {
+            .title {
+              margin: 1rem 0;
+              span {
+                font-size: 28px;
+                letter-spacing: 1.4px;
+                color: map-get($map: $app-theme, $key: "baseLight");
+                padding-left: 0.5rem;
+              }
+            }
+
+            table {
+              tr {
+                th {
+                  font-size: 18px;
+                  font-weight: 600;
+                  letter-spacing: 1.4px;
+                  color: map-get($map: $app-theme, $key: "baseWhite");
+                }
+                td {
+                  font-size: 18px;
+                  font-weight: normal;
+                  letter-spacing: 1.4px;
+                  color: map-get($map: $app-theme, $key: "baseWhite");
+                }
+              }
+            }
+          }
+
+          .edit-info-details {
+            hr {
+              color: map-get($map: $app-theme, $key: "baseDimDust");
+              background-color: map-get($map: $app-theme, $key: "baseDimDust");
+              margin: 1rem 0;
+            }
+
+            .title {
+              font-size: 26px;
+              font-weight: bold;
+              letter-spacing: 2.8px;
+              color: map-get($map: $app-theme, $key: "baseLight");
+
+              .close-btn:hover {
+                cursor: pointer;
+              }
+            }
+
+            .edit-fields {
+              width: 100%;
+              display: flex;
+              flex-direction: row;
+
+              .field-title {
+                width: 45%;
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 2.2px;
+                color: map-get($map: $app-theme, $key: "baseWhite");
+                word-wrap: break-word;
+                display: flex;
+                align-items: center;
+              }
+
+              .field-value {
+                width: 55%;
+                font-size: 20px;
+                letter-spacing: 2.2px;
+                color: map-get($map: $app-theme, $key: "baseWhite");
+                word-wrap: break-word;
+
+                &.text-only {
+                  .p-inputtext {
+                    color: map-get($map: $app-theme, $key: "baseWhite");
+                    width: 100%;
+                    background: map-get($map: $app-theme, $key: "baseTransparentWhite") 0% 0%
+                      no-repeat padding-box !important;
+                    border: 2px solid map-get($map: $app-theme, $key: "baseTransparentWhite") !important;
+                    height: 45px;
+                    font-weight: bold;
+                    font-size: 18px;
+                  }
+                }
+
+                .form-group {
+                  margin-bottom: 0;
+                }
+
+                .p-inputswitch {
+                  &.p-inputswitch-checked {
+                    .p-inputswitch-slider {
+                      background: map-get($map: $app-theme, $key: "secondaryTechno");
+
+                      &::before {
+                        background: map-get($map: $app-theme, $key: "primaryDark");
+                      }
+                    }
+                  }
+                }
+
+                .custom-multi-select {
+                  min-width: unset !important;
+                }
+              }
+            }
+          }
+        }
+
+        .user-info-card-left {
+          padding: 2rem 3rem;
+          width: 50%;
+
+          .img-name {
+            .user-info-avatar {
+              border: 4px solid map-get($map: $app-theme, $key: "primaryElectricDark");
+              border-radius: 50%;
+              width: 210px;
+              height: 210px;
+              overflow: hidden;
+
+              .user-info-avatar-img {
+                width: 210px;
+                height: 210px;
+                object-fit: cover;
+              }
+            }
+            .user-info-msg {
+              .name {
+                font-size: 32px;
+                font-weight: 600;
+                letter-spacing: 3.2px;
+                color: map-get($map: $app-theme, $key: "baseWhite");
+                text-align: center;
+              }
+              .position {
+                font-size: 24px;
+                letter-spacing: 2.4px;
+                color: map-get($map: $app-theme, $key: "baseWhite");
+                text-align: center;
+              }
+            }
+          }
+
+          .user-action-btns {
+            margin-top: 2rem;
+
+            .p-button {
+              margin-top: 1.5rem;
+              display: unset;
+
+              .p-button-label {
+                letter-spacing: 2.4px;
+                color: map-get($map: $app-theme, $key: "baseLightWhite");
+                font-weight: bold;
+              }
+            }
+            .edit-btn {
+              .p-button {
+                background: map-get($map: $app-theme, $key: "primaryButton");
+                border: 1px solid map-get($map: $app-theme, $key: "primaryButton");
+
+                &:hover {
+                  background: map-get($map: $app-theme, $key: "primaryButtonHover");
+                  border: 1px solid map-get($map: $app-theme, $key: "primaryButtonHover");
+                }
+
+                &:disabled {
+                  background: map-get($map: $app-theme, $key: "baseDust") !important;
+                  border: 1px solid map-get($map: $app-theme, $key: "baseDust") !important;
+
+                  span {
+                    color: map-get($map: $app-theme, $key: "baseDimDust");
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .op-add-user {
+      width: 100%;
+      .add-user-container {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .left-container {
+          width: 35%;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+
+          svg {
+            font-size: 6rem;
+          }
+        }
+
+        .right-container {
+          padding: 2rem 2rem;
+          width: 60%;
+          background: map-get($map: $app-theme, $key: "primaryDark");
+          border-radius: 10px;
+
+          .add-user-form {
+            .title {
+              font-size: 26px;
+              letter-spacing: 1.4px;
+              color: map-get($map: $app-theme, $key: "baseLight");
+            }
+
+            .form-fields {
+              .field-title {
+                font-size: 18px;
+                letter-spacing: 1.4px;
+                color: map-get($map: $app-theme, $key: "baseLight");
+                word-wrap: break-word;
+                display: flex;
+                align-items: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .manage-accounts {
+    margin: 1.5rem 0 0 0;
+
+    .main-container {
+      .manage-options {
+        .option-container {
+          width: 45%;
+          height: 75%;
+        }
+      }
+
+      .op-edit-user {
+        .user-info-card {
+          padding: 1.5rem 1.5rem;
+          margin-top: 1.5rem;
+
+          .user-info-card-right {
+            width: 55%;
+
+            .info-details {
+              .title {
+                margin: 0.5rem 0;
+                span {
+                  font-size: 25px;
+                  letter-spacing: 3px;
+                }
+              }
+
+              table {
+                tr {
+                  th {
+                    font-size: 16px;
+                    letter-spacing: 2px;
+                  }
+                  td {
+                    font-size: 16px;
+                    letter-spacing: 2px;
+                  }
+                }
+              }
+            }
+          }
+
+          .user-info-card-left {
+            padding: 2rem 2rem;
+            width: 45%;
+
+            .img-name {
+              .user-info-msg {
+                .name {
+                  font-size: 25px;
+                  letter-spacing: 2.5px;
+                }
+                .position {
+                  font-size: 20px;
+                  letter-spacing: 2px;
+                }
+              }
+            }
+
+            .user-action-btns {
+              margin-top: 1rem;
+
+              .p-button {
+                margin-top: 1.5rem;
+                display: unset;
+
+                .p-button-label {
+                  font-size: 15px;
+                  letter-spacing: 2.2px;
+                  color: map-get($map: $app-theme, $key: "baseLightWhite");
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .op-add-user {
+        .add-user-container {
+          .left-container {
+            width: 100%;
+            margin-bottom: 2rem;
+
+            svg {
+              font-size: 3rem;
+            }
+          }
+
+          .right-container {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .manage-accounts {
+    margin: 1.5rem 0 0 0;
+
+    .main-container {
+      .op-edit-user {
+        .user-info-card {
+          .user-info-card-right {
+            width: 100%;
+          }
+          .user-info-card-left {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 829px) {
+  .manage-accounts {
+    margin: 1.5rem 0 0 0;
+
+    .main-container {
+      .manage-options {
+        .option-container {
+          width: 65%;
+          height: 45%;
+        }
+      }
+
+      .op-edit-user {
+        .user-info-card {
+          .user-info-card-left {
+            .user-action-btns {
+              margin-top: 1.5rem;
+
+              .p-button {
+                margin-top: 0;
+              }
+
+              .reset-btn {
+                .p-button {
+                  margin-top: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 646px) {
+  .manage-accounts {
+    .main-container {
+      .manage-options {
+        .option-container {
+          width: 75%;
+          height: 45%;
+        }
+      }
+
+      .op-edit-user {
+        .user-info-card {
+          .user-info-card-left {
+            .user-action-btns {
+              margin-top: 0rem;
+            }
+          }
+        }
+      }
+
+      .op-add-user {
+        .add-user-container {
+          .right-container {
+            .add-user-form {
+              .title {
+                font-size: 23px;
+              }
+
+              .form-fields {
+                .field-title {
+                  font-size: 17px;
+                  font-weight: 600;
+                  letter-spacing: 2.2px;
+                  color: map-get($map: $app-theme, $key: "baseLight");
+                  word-wrap: break-word;
+                  display: flex;
+                  align-items: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .manage-accounts {
+    margin: 1rem 1rem;
+    .main-container {
+      padding: 1rem 1.5rem;
+      .manage-options {
+        .option-container {
+          width: 90%;
+          height: 45%;
+        }
+      }
+
+      .op-edit-user {
+        .user-info-card {
+          .user-info-card-left {
+            padding: 0 0;
+            width: 100%;
+            margin-bottom: 1rem;
+
+            .user-action-btns {
+              .p-button {
+                padding: 0.25rem 0.5rem;
+
+                .p-button-label {
+                  font-size: 14px;
+                }
+              }
+
+              .edit-btn {
+                .p-button {
+                  background: map-get($map: $app-theme, $key: "primaryButton");
+                  border: 1px solid map-get($map: $app-theme, $key: "primaryButtonHover");
+
+                  &:hover {
+                    background: map-get($map: $app-theme, $key: "primaryButtonHover");
+                    border: 1px solid map-get($map: $app-theme, $key: "primaryButtonHover");
+                  }
+
+                  &:disabled {
+                    background: map-get($map: $app-theme, $key: "baseDust") !important;
+                    border: 1px solid map-get($map: $app-theme, $key: "baseDust") !important;
+
+                    span {
+                      color: map-get($map: $app-theme, $key: "baseDimDust");
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .user-info-card-right {
+            padding: 1rem 1.2rem !important;
+            .info-details {
+              .title {
+                margin: 0.5rem 0;
+                span {
+                  font-size: 22px;
+                  letter-spacing: 2.2px;
+                }
+              }
+
+              table {
+                tr {
+                  th {
+                    font-size: 15px;
+                    letter-spacing: 1.2px;
+                  }
+                  td {
+                    font-size: 15px;
+                    font-weight: normal;
+                    letter-spacing: 1.2px;
+                    color: map-get($map: $app-theme, $key: "baseWhite");
+                  }
+                }
+              }
+            }
+
+            .edit-info-details {
+              .title {
+                font-size: 22px;
+                letter-spacing: 2.2px;
+              }
+
+              .edit-fields {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                .field-title {
+                  width: 100%;
+                  font-size: 16px;
+                  font-weight: bold;
+                  margin-bottom: 5px;
+                }
+
+                .field-value {
+                  width: 100%;
+                  font-size: 16px;
+
+                  &.text-only {
+                    .p-inputtext {
+                      width: 100%;
+                      height: 39px;
+                      font-weight: normal;
+                      font-size: 14px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .op-add-user {
+        .add-user-container {
+          .left-container {
+            svg {
+              font-size: 2rem;
+              letter-spacing: 1.8px;
+            }
+          }
+
+          .right-container {
+            padding: 1rem 1.5rem;
+            .add-user-form {
+              .title {
+                font-size: 22px;
+                font-weight: bold;
+                letter-spacing: 2.8px;
+                color: map-get($map: $app-theme, $key: "baseLight");
+              }
+
+              .form-fields {
+                .field-title {
+                  font-size: 17px;
+                  font-weight: 600;
+                  letter-spacing: 2.2px;
+                  color: map-get($map: $app-theme, $key: "baseLight");
+                  word-wrap: break-word;
+                  display: flex;
+                  align-items: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

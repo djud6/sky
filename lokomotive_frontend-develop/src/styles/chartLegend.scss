@@ -1,0 +1,13 @@
+@import "./variables.scss";
+
+.legend-link {
+    color: map-get($map: $app-theme, $key: "primaryElectric") !important;
+    width: auto;
+    margin: auto;
+    display: block;
+}
+
+.legend-dialog {
+    display: none;
+    margin-bottom: 1rem;
+}

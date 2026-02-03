@@ -1,0 +1,113 @@
+@import "../../variables.scss";
+
+.darkTab.p-tabview {
+  &.darkTabwidth {
+    .p-tabview-nav {
+      &:before {
+        content: "";
+        height: 100%;
+        width: calc(100% + 10rem);
+        background: map-get($map: $app-theme, $key: "primaryDark") 0% 0% no-repeat padding-box;
+        position: absolute;
+        left: -5rem;
+        bottom: 0;
+      }
+    }
+  }
+
+  .p-tabview-nav {
+    position: relative;
+    background: transparent;
+    border: none !important;
+    display: flex;
+    .p-unselectable-text {
+      flex: 1;
+    }
+    &-link {
+      display: flex;
+      justify-content: center;
+      border: none !important;
+      margin: 0 !important;
+      padding: 0.7em !important;
+      border-radius: 0px !important;
+      &:hover {
+        background: rgba(28, 28, 30, 0.8) 0% 0% no-repeat padding-box !important;
+      }
+    }
+    .p-highlight {
+      background: map-get($map: $app-theme, $key: "primaryFaded") 0% 0% no-repeat padding-box !important;
+      box-shadow: 0px 8px 24px map-get($map: $app-theme, $key: "baseBoxShadow");
+      border-radius: 6px !important;
+      .p-tabview-nav-link {
+        background: map-get($map: $app-theme, $key: "primaryFaded") 0% 0% no-repeat padding-box !important;
+        border-radius: 6px !important;
+      }
+    }
+    .p-tabview-nav-link[aria-selected="false"] {
+      border-radius: 6px !important;
+    }
+  }
+  .p-tabview-title {
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    color: map-get($map: $app-theme, $key: "baseLightWhite");
+  }
+}
+
+.darkTab .p-tabview-nav li .p-tabview-nav-link {
+  background-color: rgba(28, 28, 30, 0.8);
+}
+
+.toggle-widget {
+  top: 2rem;
+  right: 2rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.react-grid-placeholder {
+  background-color: #FFFFFF;
+  background: #FFFFFF;
+}
+
+@media screen and (orientation: portrait) {
+  .toggle-widget {
+    top: 1.3rem;
+    right: 1.3rem;
+  }
+}
+// ====== This is a helper class for headers with more than 2 tabs as they must be spaced according to the design ======
+
+.spaced-tabs {
+  .p-tabview-nav {
+    justify-content: space-between;
+
+    .p-unselectable-text {
+      .p-tabview-nav-link[aria-selected="false"] {
+        background: map-get($map: $app-theme, $key: "primaryGreenLight") !important;
+      }
+    }
+  }
+
+  .p-unselectable-text {
+    margin: 0 1em 0.5rem 1em !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .darkTab.p-tabview {
+    .p-tabview-nav {
+      padding: 5px 0 !important;
+      .p-highlight {
+        .p-tabview-nav-link {
+          border-radius: 3px !important;
+        }
+      }
+      .p-tabview-title {
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        color: map-get($map: $app-theme, $key: "baseLightWhite");
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+@import "../variables.scss";
+
+.details-more-mobile {
+  .cost-summary-panel {
+    background: map-get($map: $app-theme, $key: "baseTransparentWhite");
+    border-radius: 0.5rem;
+    margin: 1rem 0.5rem;
+    color: map-get($map: $app-theme, $key: "baseWhite");
+    text-align: center;
+
+    .overall-cost {
+      font-size: 2rem;
+      font-weight: bold;
+      width: 46%;
+      word-break: break-word;
+      margin: auto 0.3rem;
+    }
+
+    .parts-cost-container,
+    .labour-cost-container {
+      width: 27%;
+      word-break: break-word;
+      margin: 1rem 0.3rem;
+
+      .parts-icon,
+      .labour-icon {
+        font-size: 3rem;
+      }
+      .parts-cost-value,
+      .labour-cost-value {
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+      .parts-cost-tax,
+      .labour-cost-tax {
+        font-size: 1rem;
+      }
+    }
+  }
+  .link-order {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 0 -2rem;
+    padding: 0 2rem;
+
+    .p-button {
+      padding: 0.7rem 0.5rem !important;
+    }
+    .p-button.p-button-link {
+      color: map-get($map: $app-theme, $key: "baseWhite") !important;
+      font-weight: bold;
+      letter-spacing: 0.9px;
+    }
+    .link-under {
+      .p-button-label {
+        text-decoration: underline;
+        text-underline-position: under;
+      }
+    }
+  }
+
+  .sub-sections {
+    h4 {
+      color: map-get($map: $app-theme, $key: "baseLightGrey") !important;
+      letter-spacing: 1.1px;
+      font-weight: bold;
+      font-size: 17px;
+      margin-bottom: 1rem;
+      padding-left: 0.5rem;
+    }
+
+    .p-datatable-header {
+      display: none;
+    }
+  }
+
+  .parts-cost-mobile {
+    .p-toolbar {
+      background: transparent;
+      border: none;
+      padding: 1.5rem 1rem 0.5rem 1rem;
+
+      .p-toolbar-group-left {
+        > .d-flex {
+          display: none !important;
+        }
+      }
+    }
+
+    .p-datatable {
+      .p-selectable-row {
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+
+        td {
+          .edit-delete {
+            h3 {
+              color: map-get($map: $app-theme, $key: "baseLightGrey");
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
+      .p-datatable-tbody {
+        .edit-delete-btn {
+          .p-button-edit-cost {
+            background: map-get($map: $app-theme, $key: "secondaryDark") !important;
+            border: 1px solid map-get($map: $app-theme, $key: "secondaryDark") !important;
+          }
+          .p-button-delete-cost {
+            background: map-get($map: $app-theme, $key: "tertiaryBlood");
+            border: 1px solid map-get($map: $app-theme, $key: "tertiaryBlood");
+          }
+        }
+      }
+    }
+  }
+}

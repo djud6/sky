@@ -1,0 +1,36 @@
+$gutter: 1rem;
+
+@import "~primeflex/primeflex.scss";
+@import "~prismjs/themes/prism-coy.css";
+@import "./AppDemo.scss";
+
+.layout-content {
+  position: relative;
+}
+
+.layout-wrapper {
+  video.bg-vid {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .layout-content {
+    padding: 0 5rem 4rem 5rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .layout-content {
+    padding: 0 0 !important;
+    .layout-content-inner {
+      padding: 0 0.5rem 0rem 0.5rem;
+    }
+  }
+}

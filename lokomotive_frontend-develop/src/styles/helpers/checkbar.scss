@@ -1,0 +1,23 @@
+
+.apply-similar {
+    .p-checkbox {
+      .p-checkbox-box {
+        background: transparent;
+
+        &.p-focus {
+          box-shadow: none;
+          border-color: #ced4da;
+        }
+
+        &.p-highlight {
+          border-color: #ced4da;
+        }
+      }
+    }
+
+    .apply-text {
+      color: #ffffff;
+      letter-spacing: 1.5px;
+      margin-left: 0.7rem;
+    }
+  }

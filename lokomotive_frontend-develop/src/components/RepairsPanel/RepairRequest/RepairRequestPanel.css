@@ -1,0 +1,12 @@
+input[type="radio"] {
+  transform: scale(2);
+}
+
+.spacing {
+  margin: 16px;
+}
+
+.no-match-msg {
+  color: #FEFEFE;
+  letter-spacing: 2px;
+}

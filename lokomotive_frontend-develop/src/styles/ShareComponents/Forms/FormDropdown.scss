@@ -1,0 +1,218 @@
+@import "../../variables.scss";
+// OVERRIDES FOR DROPDWN =================================================
+
+.FORMDROP .p-inputgroup .p-focus {
+  box-shadow: none !important;
+  border: 2px solid map-get($map: $app-theme, $key: "primaryElectricDark");
+}
+
+.dropdown-content-form {
+  &.p-dropdown-panel {
+    background: map-get($map: $app-theme, $key: "baseNight");
+    box-shadow: 0px 0px 9px map-get($map: $app-theme, $key: "primaryElectricDark") !important;
+    z-index: 9999 !important;
+  }
+  .p-dropdown-items {
+    background: map-get($map: $app-theme, $key: "baseNight") 0% 0% no-repeat padding-box;
+    position: relative;
+    text-transform: capitalize;
+
+    .p-highlight.p-dropdown-item {
+      color: map-get($map: $app-theme, $key: "baseLightDust") !important;
+      background: map-get($map: $app-theme, $key: "baseTransparentWhite") 0% 0% no-repeat
+        padding-box !important;
+    }
+  }
+
+  .p-dropdown-item {
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: map-get($map: $app-theme, $key: "baseFormal") !important;
+    opacity: 1;
+    border-bottom: 1px solid map-get($map: $app-theme, $key: "baseDimDust") !important;
+    padding-right: 0 !important;
+    margin: 0 1rem !important;
+
+    &:hover {
+      color: map-get($map: $app-theme, $key: "baseLightDust") !important;
+      background: map-get($map: $app-theme, $key: "baseTransparentWhite") 0% 0% no-repeat
+        padding-box !important;
+    }
+
+    &:last-child {
+      border-bottom: 0px !important;
+    }
+  }
+}
+
+.p-dropdown:not(.p-disabled).p-focus {
+  box-shadow: none !important;
+}
+// General styling ========================================================
+.default-styles {
+  &-inner {
+    background: map-get($map: $app-theme, $key: "baseTransparentWhite") 0% 0% no-repeat padding-box;
+    border: 2px solid map-get($map: $app-theme, $key: "baseTransparentWhite") !important;
+    &:hover {
+      border: 2px solid map-get($map: $app-theme, $key: "primaryElectricDark") !important;
+      background: map-get($map: $app-theme, $key: "baseTransparentWhite") 0% 0% no-repeat
+        padding-box;
+    }
+    span {
+      &.p-placeholder {
+        letter-spacing: 0.9px;
+        color: map-get($map: $app-theme, $key: "baseFormal");
+        text-align: left;
+        font: normal normal normal 12px Titillium Web;
+      }
+      &.pi-chevron-down {
+        font-size: 1rem;
+        transform: rotate(0deg);
+        transition: all 0.5s ease;
+        position: relative;
+      }
+    }
+    div {
+      &.p-dropdown-trigger {
+        color: map-get($map: $app-theme, $key: "baseFormal");
+        transform: rotate(0deg);
+        transition: all 0.5s ease;
+      }
+    }
+  }
+  &.left-status {
+    .default-styles-inner {
+      border-left: 4px solid map-get($map: $app-theme, $key: "primaryElectricDark") !important;
+    }
+  }
+}
+
+.activated-styles {
+  &-inner {
+    background: map-get($map: $app-theme, $key: "baseTransparentWhite") 0% 0% no-repeat padding-box !important;
+    border: 2px solid map-get($map: $app-theme, $key: "baseTransparentWhite") !important;
+    &:hover {
+      border: 2px solid map-get($map: $app-theme, $key: "primaryElectricDark") !important;
+      background: map-get($map: $app-theme, $key: "baseTransparentWhite") 0% 0% no-repeat
+        padding-box;
+    }
+    span {
+      &.p-dropdown-label {
+        letter-spacing: 1px;
+        text-align: left;
+        font-size: 18px;
+        letter-spacing: 0.9px;
+        color: map-get($map: $app-theme, $key: "baseLightWhite") !important;
+        text-transform: capitalize;
+      }
+      &.pi-chevron-down {
+        font-size: 1.5rem;
+        transition: all 0.5s ease;
+        position: relative;
+        color: map-get($map: $app-theme, $key: "secondaryTechno") !important;
+      }
+    }
+    div {
+      &.p-dropdown-trigger {
+        color: map-get($map: $app-theme, $key: "baseFormal");
+        transition: all 0.5s ease;
+      }
+    }
+  }
+  &.left-status {
+    .activated-styles-inner {
+      border-left: 4px solid map-get($map: $app-theme, $key: "secondaryTechno") !important;
+    }
+  }
+}
+
+// ANIMATION =================================================
+.focused {
+  &.default-styles-inner,
+  &.activated-styles-inner {
+    span {
+      &.pi-chevron-down {
+        transform: rotate(180deg) !important;
+      }
+    }
+  }
+  transition: all 1s ease;
+  // background: map-get($map: $app-theme, $key: "primary") 0% 0% no-repeat padding-box !important;
+  border: 2px solid map-get($map: $app-theme, $key: "primaryElectricDark") !important;
+}
+
+.loading {
+  &.default-styles-inner,
+  &.activated-styles-inner {
+    span {
+      &.pi-chevron-down {
+        opacity: 1 !important;
+        color: transparent;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        border-top: 2px solid map-get($map: $app-theme, $key: "tertiaryTangy");
+        border-bottom: 2px solid map-get($map: $app-theme, $key: "tertiaryTangy");
+        animation: anim4 1s linear infinite;
+        &:after {
+          content: "";
+          opacity: 1 !important;
+          border-radius: 50%;
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          top: 2.5px;
+          left: 2.5px;
+          border: 2px solid transparent;
+          border-left: 2px solid map-get($map: $app-theme, $key: "tertiaryTangy");
+          border-right: 2px solid map-get($map: $app-theme, $key: "tertiaryTangy");
+          animation: anim5 1.15s linear infinite !important;
+        }
+      }
+    }
+  }
+}
+
+@keyframes anim4 {
+  to {
+    transform: rotateZ(-360deg);
+  }
+}
+
+@keyframes anim5 {
+  to {
+    transform: rotateZ(720deg);
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .dropdown-content-form {
+    .p-dropdown-item {
+      font: normal normal normal 17px;
+    }
+  }
+  .default-styles {
+    &-inner {
+      span {
+        &.p-placeholder {
+          font: normal normal normal 17px;
+        }
+        &.pi-chevron-down {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  .activated-styles {
+    &-inner {
+      span {
+        &.p-dropdown-label {
+          font: normal normal normal 17px;
+        }
+        &.pi-chevron-down {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

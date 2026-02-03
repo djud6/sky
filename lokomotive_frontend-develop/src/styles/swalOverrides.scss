@@ -1,0 +1,100 @@
+@import "./variables.scss";
+
+.swal-modal {
+  background: map-get($map: $app-theme, $key: "primaryGreenShadow") 0% 0% no-repeat padding-box;
+  padding: 0.5rem 0.5rem;
+}
+
+.swal-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+}
+
+.swal-title {
+  color: white;
+  letter-spacing: 4.8px;
+  text-align: center;
+  font: normal normal bold;
+}
+
+.swal-content {
+  .swal-content__input {
+    background: map-get($map: $app-theme, $key: "baseTransparentWhite") 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    color: map-get($map: $app-theme, $key: "baseWhite");
+
+    &:focus {
+      border-color: map-get($map: $app-theme, $key: "primaryElectric");
+    }
+  }
+}
+
+.swal-text {
+  text-align: center;
+  font: normal normal normal;
+  font-size: 1.2rem;
+  letter-spacing: 3.6px;
+  color: map-get($map: $app-theme, $key: "baseWhite");
+}
+
+.swal-icon {
+  &--success__line {
+    background-color: map-get($map: $app-theme, $key: "secondaryTechno");
+  }
+  &--success__ring {
+    border-color: map-get($map: $app-theme, $key: "secondaryTechno");
+  }
+  &--success__hide-corners {
+    background: map-get($map: $app-theme, $key: "primaryGreenShadow") 0% 0% no-repeat padding-box;
+  }
+}
+.swal-footer {
+  .swal-button-container:first-child {
+    .swal-button {
+      background: transparent;
+      border: none;
+      letter-spacing: 2.4px;
+      color: map-get($map: $app-theme, $key: "baseLight");
+      transition: 0.5s;
+      border-radius: 0px;
+
+      &:hover {
+        color: map-get($map: $app-theme, $key: "primary");
+      }
+    }
+  }
+
+  .swal-button-container:last-child {
+    .swal-button {
+      background: transparent;
+      border: 1px solid map-get($map: $app-theme, $key: "baseLight");
+      letter-spacing: 2.4px;
+      color: map-get($map: $app-theme, $key: "baseLight");
+      transition: 0.5s;
+      border-radius: 0px;
+      padding: 0.7rem 1.5rem;
+
+      &:hover {
+        border: 1px solid map-get($map: $app-theme, $key: "primary");
+        color: map-get($map: $app-theme, $key: "primary");
+      }
+    }
+  }
+}
+
+.swal-button--cancel:hover {
+  color: black;
+}
+.swal-button--return:hover {
+  color: black;
+}
+
+
+.swal-footer {
+  display: flex;
+  justify-content: center;
+}
+.swal-icon--success:before,
+.swal-icon--success:after {
+  display: none;
+}

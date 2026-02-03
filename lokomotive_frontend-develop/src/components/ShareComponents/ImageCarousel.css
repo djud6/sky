@@ -1,0 +1,17 @@
+
+.carousel {
+  background-color: grey;
+}
+
+.carousel-indicators {
+  margin-bottom: 0px;
+}
+
+.carousel-indicators li{
+  width: 10px;
+  height: 10px;
+}
+
+.carousel-control-prev, .carousel-control-next{
+  z-index: 20;
+}

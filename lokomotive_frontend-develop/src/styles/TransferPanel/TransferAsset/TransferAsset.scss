@@ -1,0 +1,103 @@
+@import "../../variables.scss";
+
+.transfer-form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: map-get($map: $app-theme, $key: "baseBlackTransparent");
+  border-radius: 5px;
+  margin-top: 2rem;
+
+  .inner-container {
+    width: 50%;
+
+    .title {
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: 1.4px;
+      color: map-get($map: $app-theme, $key: "baseFormal");
+    }
+
+    .form-q {
+      width: 40%;
+      label {
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 1.1px;
+        color: map-get($map: $app-theme, $key: "baseLightWhite");
+      }
+    }
+
+    .form-a {
+      width: 60%;
+    }
+
+    .mobile-form {
+      .card {
+        padding: 0.75rem;
+        label {
+          font-size: 18px;
+          letter-spacing: 1.0px;
+          color: map-get($map: $app-theme, $key: "baseLightWhite");
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1550px) and (min-width: 1181px) {
+  .transfer-form-container {
+    .inner-container {
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (max-width: 1180px) and (min-width: 769px) {
+  .transfer-form-container {
+    .inner-container {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .transfer-form-container {
+    .inner-container {
+      width: 95%;
+
+      .title {
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .transfer-form-container {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    
+    .inner-container {
+      width: 90%;
+
+      .title {
+        margin: 1rem 0;
+        font-size: 18px;
+        letter-spacing: 1.0px;
+        color: map-get($map: $app-theme, $key: "baseFormal");
+      }
+
+      .mobile-form {
+        .card {
+          padding: 0.6rem;
+          label {
+            font-size: 17px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@import "../variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap");
+
+.YNCard {
+  background: map-get($map: $app-theme, $key: "baseBlackTransparent") 0% 0% no-repeat padding-box;
+  box-shadow: 0px 13px 25px map-get($map: $app-theme, $key: "baseBoxShadow");
+  opacity: 1;
+  border: none !important;
+  border-left: 5px solid map-get($map: $app-theme, $key: "primaryElectric") !important;
+  backdrop-filter: blur(31px);
+  -webkit-backdrop-filter: blur(31px);
+  letter-spacing: 1.4px;
+  color: map-get($map: $app-theme, $key: "baseWhite");
+  &.widget-overview-box-3 {
+    border-left: 5px solid map-get($map: $app-theme, $key: "secondaryTechno") !important;
+  }
+  &.widget-overview-box.widget-overview-box-4 {
+    border-left: 5px solid map-get($map: $app-theme, $key: "primaryElectric") !important;
+  }
+  .p-d-flex.p-ai-center {
+    padding-right: 1em;
+    label {
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
+  }
+
+  //Radio button styles
+  .p-radiobutton,
+  .p-radiobutton-box,
+  .p-radiobutton-icon {
+    transition: none !important;
+  }
+
+  .p-radiobutton-box {
+    border: 2px solid map-get($map: $app-theme, $key: "baseLightGrey");
+    background-color: transparent;
+  }
+  .p-radiobutton-box:hover {
+    border: 2px solid map-get($map: $app-theme, $key: "baseLightGrey") !important;
+  }
+
+  .p-highlight,
+  .p-radiobutton-checked,
+  .p-radiobutton-focused,
+  .p-focused {
+    box-shadow: 0px 0px 25px map-get($map: $app-theme, $key: "primaryElectric") !important;
+    border-radius: 50%;
+  }
+  .p-highlight {
+    border: 2px solid white !important;
+    background-color: transparent !important;
+  }
+  .p-highlight:hover {
+    border: 2px solid white !important;
+    background-color: transparent !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .YNCard {
+    .h5 {
+      font-size: 1.2rem;
+    }
+  }
+}

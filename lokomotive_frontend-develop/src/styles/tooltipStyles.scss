@@ -1,0 +1,51 @@
+@import "./variables.scss";
+
+.form-tooltip {
+  .__react_component_tooltip {
+    background: map-get($map: $app-theme, $key: "primaryDark") 0% 0% no-repeat padding-box !important;
+    border: 2px solid map-get($map: $app-theme, $key: "tertiaryTangy") !important;
+    border-left: none !important;
+    opacity: 1 !important;
+    backdrop-filter: blur(35px);
+    -webkit-backdrop-filter: blur(35px);
+    margin-left: 2em !important;
+    padding-left: 5px !important;
+    max-width: 35vw;
+    &:after {
+      content: "";
+      border: none !important;
+      background-color: map-get($map: $app-theme, $key: "primaryDark") !important;
+      clip-path: polygon(100% 0, 0 50%, 100% 100%);
+      height: calc(100% - 2px) !important;
+      width: 13px;
+      margin: 0 !important;
+      padding: 0 !important;
+      top: 1px !important;
+      left: -12px !important;
+    }
+    &:before {
+      content: "";
+      border: none !important;
+      background: map-get($map: $app-theme, $key: "tertiaryTangy") 0% 0% no-repeat padding-box !important;
+      height: calc(100% + 4px);
+      width: 15px;
+      position: absolute;
+      clip-path: polygon(100% 0, 0 50%, 100% 100%);
+      top: -2px !important;
+      left: -14px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+  }
+}
+.topbar-tooltip.__react_component_tooltip {
+  background: map-get($map: $app-theme, $key: "primaryDark") 0% 0% no-repeat padding-box !important;
+  border: 1px solid map-get($map: $app-theme, $key: "tertiaryTangy") !important;
+  &:after {
+    background-color: map-get($map: $app-theme, $key: "tertiaryTangy") !important;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    height: 8px;
+    transform: translateY(-2px);
+    border-bottom-color: map-get($map: $app-theme, $key: "primaryDark") !important;
+  }
+}

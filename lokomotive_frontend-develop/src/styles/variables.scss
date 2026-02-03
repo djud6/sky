@@ -1,0 +1,95 @@
+$app-theme: (
+  "primary": #b340bf,
+  "primaryGreen": #172830,
+  "primaryGreenLight": #223441,
+  "primaryGreenShadow": #112836d9,
+  "primaryLogin": #8d2498,
+  "primaryKlein": #3e2840,
+  "primaryLight": #b340bf,
+  "primaryShade": #8d24984d,
+  "primaryHover": #8d249899,
+  "primaryFaded": #8d2498,
+  "primaryAssistant": #231724,
+  "primaryTableFilter": #b340bf,
+  "primaryTableRowOdd": #b340bf,
+  "primaryFadedLight": #b340bf,
+  "primaryDark": #240524,
+  "primaryDarkPurple": #190219,
+  "primaryVeryDark": #0a0006,
+  "primaryDarkShadow60": #0a000699,
+  "primaryDarkShadow50": #0a000680,
+  "primaryButton": #953991,
+  "primaryButtonHover": #e548f7,
+  "primaryElectricDark": #b340bf,
+  "primaryElectricHover": #5a0268b5,
+  "primaryElectric": #7d2387,
+  "primaryElectricShadow": #8d2498,
+  "secondaryDark": #1f7474,
+  "secondary": #40bf6f,
+  "secondaryTechno": #40bf6f,
+  "secondaryDynamic": #e8cd61,
+  "secondaryDynamicShade": #e8cd6180,
+  "secondaryDynamicDark": #e8cd61,
+  "tertiaryLabel": #131113,
+  "tertiaryBlood": #ef5f5f,
+  "tertiarySystem": #ef5f5f,
+  "tertiaryTransparent": #d9534f,
+  "tertiaryTangy": #e8cd61,
+  "tertiaryTangyFaded": #e8cd61,
+  "tertiaryYellow": #e8cd61,
+  "tertiaryTangyShade": #e8cd6133,
+  "baseBoxShadow": #262a36,
+  "baseBoxShadowSec": #131113,
+  "baseBoxShadowLogin": #131113,
+  "baseGrey": #2b2b37,
+  "baseNight": #18071f,
+  "baseDust": #eff3f3,
+  "baseDimDust": #686969,
+  "baseLightDust": #eff3f3,
+  "baseLightGrey": #eff3f3,
+  "baseFormal": #eff3f3,
+  "baseLight": #eff3f3,
+  "baseLightWhite": #eff3f3,
+  "baseWhite": #ffffff,
+  "baseTransparentWhite": #ffffff2b,
+  "baseTransparentWhiteLight": #ffffff00,
+  "baseBlack": #000000,
+  "baseBlackTransparent": #00000073,
+  "baseBlackLight": #2a2d2a,
+  "baseGreyBlack": #121114,
+);
+
+$theme-colors: (
+  "dark": rgb(21, 43, 64),
+  "info": rgb(21, 146, 230),
+  "secondary": #23506f,
+  "active": rgb(42, 100, 139),
+  "grey": #999,
+  "primary": rgb(2, 7, 115),
+  "light": rgb(248, 249, 252),
+  "danger": rgb(242, 69, 29),
+  "tablehighlight": rgb(98, 110, 209),
+);
+$chart-colors: (
+  "green": #54d67b,
+  "red": #cc5545,
+  "yellow": #cfcd61,
+  "blue": #626ed1,
+  "orange": #f6c04d,
+  "darkBlue": #020773,
+  "vividBlue": #0a4fd9,
+  "cyan": #00cbf0,
+);
+
+:export {
+  green: map-get($map: $chart-colors, $key: "green");
+  red: map-get($map: $chart-colors, $key: "red");
+  blue: map-get($map: $chart-colors, $key: "blue");
+  orange: map-get($map: $chart-colors, $key: "orange");
+  darkBlue: map-get($map: $chart-colors, $key: "darkBlue");
+  yellow: map-get($map: $chart-colors, $key: "yellow");
+  vividBlue: map-get($map: $chart-colors, $key: "vividBlue");
+  cyan: map-get($map: $chart-colors, $key: "cyan");
+}
+
+$mb-bp: 480px;

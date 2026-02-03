@@ -1,0 +1,53 @@
+@import "../variables.scss";
+
+// helper ==============================================
+.error404 {
+  .flex-cent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  background: transparent;
+  &-display {
+    padding-top: 4rem;
+  }
+  &-num {
+    color: map-get($map: $app-theme, $key: "baseWhite");
+    opacity: 0.3;
+    font-size: 300px;
+    margin-bottom: 0;
+  }
+  &-msg {
+    text-align: center;
+    letter-spacing: 0.7px;
+    color: map-get($map: $app-theme, $key: "baseFormal");
+    font-size: 1.5rem;
+    margin-top: 4rem;
+  }
+  &-img {
+    width: auto;
+    height: 400px;
+  }
+}
+
+//Mobile styling ===============================================
+@media only screen and (max-width: 480px) {
+  .error404 {
+    &-display {
+      padding-top: 8rem;
+    }
+    &-msg {
+      font-size: 13px;
+      margin: 2rem;
+      word-wrap: break-word;
+    }
+    &-num {
+      font-size: 120px;
+    }
+    &-img {
+      width: auto;
+      height: 200px;
+    }
+  }
+}

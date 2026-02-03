@@ -1,0 +1,28 @@
+@import "../../variables.scss";
+
+.forecasted-maintenance-mobile {
+  .title-hint {
+    margin: 1.5rem 0;
+    h6 {
+      font-size: 14px;
+      letter-spacing: 0.6px;
+      color: map-get($map: $app-theme, $key: "baseWhite");
+    }
+  }
+
+  .search-bar-container {
+    .card {
+      padding: 1rem;
+
+      .form-group {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  hr {
+    margin: 16px 0 !important;
+    color: map-get($map: $app-theme, $key: "baseDimDust");
+    background-color: map-get($map: $app-theme, $key: "baseDimDust");
+  }
+}

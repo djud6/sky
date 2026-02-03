@@ -1,0 +1,13 @@
+/* Add your customizations of the theme variables here */
+
+// Overrides for light theme
+$shade500:#adb5bd !default;
+$shade_main:#205273 !default;   
+
+$tableHeaderCellBg: $shade_main;
+$tableHeaderCellTextColor: $shade100 !important;
+
+$tabviewHeaderPadding:$panelHeaderPadding 30px;
+
+$tabviewHeaderActiveBorderColor:$shade_main !important;
+$tabviewHeaderTextActiveColor:$shade_main !important;

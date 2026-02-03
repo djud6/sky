@@ -1,0 +1,27 @@
+.avg-m-card {
+  .avg-m-chart {
+    height: 80%;
+    position: relative;
+    text-align: center;
+    color: #f16f58;
+    flex: 1 0 auto;
+  
+    img {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  
+    .avg-m-text {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Noto Sans', sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 28px;
+    }
+  }
+}

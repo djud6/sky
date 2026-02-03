@@ -1,0 +1,27 @@
+@import "../variables.scss";
+
+.input-files-container {
+  height: 40px;
+
+  .custom-file-input {
+    height: 40px;
+  }
+
+  .custom-file-label {
+    height: 40px;
+    line-height: 28px;
+    color: map-get($map: $app-theme, $key: "baseFormal");
+    background-color: map-get($map: $app-theme, $key: "baseTransparentWhite");
+    border: none;
+    vertical-align: center;
+    overflow: hidden;
+    letter-spacing: 1.7px;
+    font-size: 16px;
+  }
+  .custom-file-label::after {
+    height: 40px;
+    line-height: 28px;
+    color: map-get($map: $app-theme, $key: "baseFormal");
+    background-color: map-get($map: $app-theme, $key: "primaryButton");
+  }
+}

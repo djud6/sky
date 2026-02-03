@@ -1,0 +1,128 @@
+@import "../variables.scss";
+
+.asset-manage-page {
+  .asset-manage-content {
+    .asset-order {
+      height: 75vh;
+      background: map-get($map: $app-theme, $key: "baseBlackTransparent");
+      border-radius: 4px;
+      overflow-y: scroll;
+
+      ::-webkit-scrollbar-thumb {
+        background: map-get($map: $app-theme, $key: "baseLightGrey");
+      }
+
+      .asset-request-form {
+        .header {
+          color: map-get($map: $app-theme, $key: "baseFormal");
+          letter-spacing: 1.4px;
+
+          h3 {
+            font-weight: 500;
+            letter-spacing: 1.1px;
+          }
+        }
+        .p-inputtext {
+          font-size: 18px;
+        }
+        .form-group {
+          margin-bottom: 0;
+        }
+        label {
+          color: map-get($map: $app-theme, $key: "baseLightWhite");
+          font-weight: 400;
+          letter-spacing: 1.1px;
+        }
+
+        .date-picker {
+          .p-inputtext {
+            height: 45.1px;
+          }
+          .p-calendar {
+            width: 100%;
+          }
+        }
+
+        .email-field {
+          .p-inputtext {
+            height: 45.1px;
+          }
+        }
+
+        .tradein-msg-container {
+          .p-inputtext {
+            font-size: 15px;
+          }
+          .darkTable {
+            border: 1px solid map-get($map: $app-theme, $key: "baseDimDust");
+            border-radius: 3px;
+          }
+          .tradein-msg {
+            background-color: map-get($map: $app-theme, $key: "secondaryDynamicShade");
+            border-radius: 3px;
+          }
+          .tradein-msg-pending {
+            background-color: map-get($map: $app-theme, $key: "baseNight");
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+
+    .live-asset-map {
+      height: 75vh;
+
+      .fleet-card-title {
+        color: map-get($map: $app-theme, $key: "baseFormal");
+        letter-spacing: 1.6px;
+  
+        .chart-card-title {
+          font-size: 22px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  // For mobile form
+  .asset-request-form-mobile {
+    margin: 0 0.8rem;
+    .back-btn {
+      margin: 1.5em 0 2em 0;
+
+      .p-button {
+        padding: 0 0;
+        color: map-get($map: $app-theme, $key: "baseWhite");
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: 1.3px;
+
+        .p-button-label {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .header {
+      h3 {
+        color: map-get($map: $app-theme, $key: "baseWhite") !important;
+      }
+    }
+    label {
+      font-size: 18px;
+      letter-spacing: 0.7px;
+      color: map-get($map: $app-theme, $key: "baseFormal");
+    }
+
+    .card {
+      padding: 0.8rem 1.25rem 1rem 1.25rem;
+      .form-group {
+        margin-bottom: 0;
+      }
+    }
+
+    .tradein-msg-container {
+      font-size: 16px;
+    }
+  }
+}

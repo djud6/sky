@@ -1,0 +1,13 @@
+/* Add your customizations of the layout styles here */
+.layout-content {
+  padding: 0 0 !important;
+}
+
+/* ============= Side navigation menu ======================= */
+.layout-sidebar .layout-root-menuitem .p-badge{
+  transform: translate(-10%,-50%);
+}
+
+.layout-sidebar .layout-root-menuitem .layout-menu .p-badge{
+  transform: translate(0%,0%);
+}
